@@ -1,18 +1,21 @@
 {
-	"name": "optimizedhtml",
-	"version": "4.0.0",
-	"description": "OptimizedHTML 4 - Start HTML Template",
-	"main": "index.js",
+	"name": "unlim",
+	"version": "1.0.0",
+	"description": "Unlim",
+	"main": "index.html",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "WebDesign Master",
+	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"@babel/core": "^7.8.4",
+		"@babel/preset-env": "^7.8.4",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.1",
+		"gulp-babel": "^8.0.0",
 		"gulp-clean-css": "^4.2.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-image-resize": "^0.13.1",
@@ -22,9 +25,12 @@
 		"gulp-rsync": "0.0.8",
 		"gulp-sass": "^4.0.2",
 		"gulp-uglify": "^3.0.2",
-		"gulp-util": "^3.0.8"
+		"gulp-util": "^3.0.8",
+		"webpack-stream": "^5.2.1"
 	},
 	"dependencies": {
-		"imask": "^6.0.3"
+		"bootstrap": "^4.4.1",
+		"imask": "^6.0.3",
+		"jquery": "^3.4.1"
 	}
 }

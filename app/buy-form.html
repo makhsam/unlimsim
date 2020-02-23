@@ -2,29 +2,23 @@
 <html lang="ru">
 
 <head>
-
 	<meta charset="utf-8">
-	<!-- <base href="/"> -->
 
 	<title>Unlim</title>
-	<meta name="description" content="">
 
+	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="path/to/image.jpg">
+
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-	<!-- Template Basic Images End -->
-	
-	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
-	<!-- Custom Browsers Color End -->
 
-	<link rel="stylesheet" href="css/main.min.css">
-	<script src="https://unpkg.com/imask"></script>
+	<!-- Change the Color of Header Bar in Browsers --> 
+	<meta name="theme-color" content="#FF0000"> 
+	<meta name="msapplication-navbutton-color" content="#FF0000"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="#FF0000">
 
+	<link rel="stylesheet" href="dist/main.css">
 </head>
 
 <body>
@@ -32,124 +26,141 @@
 	<!-- Custom HTML -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
 		<div class="container">
-			
+
 			<a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
 			</button>
-		
+
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto mt-4">
-				<li class="nav-item active">
-				<a class="nav-link" href="#">WORLDWIDE DATA <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="#">COUNTRY DATA</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="#">MAP COVERAGE</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 mt-lg-3">
-				<input class="unlim-search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			</form>
-			<ul class="navbar-nav mr-auto mt-4">
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  $ US
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="#">RUB</a>
-					  <a class="dropdown-item" href="#">UZD</a>
-					  <!-- <div class="dropdown-divider"></div>
-					  <a class="dropdown-item" href="#">Something else here</a>
-					</div> -->
-				  </li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					ENG
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="#">RUS</a>
-					  <a class="dropdown-item" href="#">UZB</a>
-					  <!-- <div class="dropdown-divider"></div>
-					  <a class="dropdown-item" href="#">Something else here</a>
-					</div> -->
-				  </li>
-			</ul>
+				<ul class="navbar-nav mr-auto mt-4">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">WORLDWIDE DATA</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">COUNTRY DATA</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">MAP COVERAGE</a>
+					</li>
+				</ul>
+
+				<form class="form-inline my-2 mt-lg-3">
+					<input class="unlim-search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				</form>
+
+				<ul class="navbar-nav mr-auto mt-4">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							$ US
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">RUB</a>
+							<a class="dropdown-item" href="#">UZD</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							ENG
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">RUS</a>
+							<a class="dropdown-item" href="#">UZB</a>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-12">
-                <div class="title">
-                    <div class="red-line mx-auto mt-5"></div>
-                    <h4 class="title-heading text-center"> <b> Placing your order</b></h4>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="offset-xl-2 offset-lg-2 offset-md-2 col-xl-8 col-lg-8 col-md-8 col-12">
-                <form action="" class="form-group form-check">
-                    <p>Contact information</p>
-                    <input type="email" class="form-control my-2" id="email" placeholder="email" required data-validate>
-                    <p class="mt-4">Billing information</p>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" id="f_name" placeholder="First name" required data-validate>
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control" id="l_name" placeholder="Last name" required data-validate>
-                        </div>
-                     </div>
-                     <input type="text" class="form-control my-2" id="address" placeholder="Address" required data-validate>
-                     <input type="text" class="form-control my-2" id="address_detail" placeholder="Apartment, suite, etc." required data-validate>
-                     <input type="text" class="form-control my-2" id="city" placeholder="City" required data-validate>
-                     <div class="row">
-                         <div class="col">
-                            <select name="" id="" class="form-control">
-                                <option value="">Ukraine</option>
-                                <option value="">Russia</option>
-                                <option value="">Uzbekistan</option>
-                            </select>
-                         </div>
-                         <div class="col">
-                             <input type="text" class="form-control" id="post_code" placeholder="Post code" required data-validate>
-                         </div>
-                     </div>
-                     <input type="text" class="form-control my-2" id="phone_number" placeholder="Phone number" id="phoneNumber" required data-validate>
-                     <div class="form-check">
 
-                         <input type="checkbox" class="form-check-input" id="checker">
-                         <label for="checker" class="form-check-label text-secondary">Save this information for the next time</label>
-                        </div>
-				<div class="img-filter w-100 mt-5">
-				<div class="row">
-						<div class="col-xl-3 col-lg-3 col-md-3 col-3">
-							<img src="img/icons/plan-red.svg" alt="" class="w-100">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-12">
+				<div class="title">
+					<div class="red-line mx-auto mt-5"></div>
+					<h4 class="title-heading text-center"> <b> Placing your order</b></h4>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="offset-xl-2 col-xl-8 col-lg-12">
+				<form action="" class="form-group form-check">
+					<p>Contact information</p>
+					<input type="email" class="form-control my-2" id="email" placeholder="Email" required data-validate>
+					<p class="mt-4">Billing information</p>
+					<div class="row">
+						<div class="col">
+							<input type="text" class="form-control" id="f_name" placeholder="First name" required
+								data-validate>
 						</div>
-						<div class="col-xl-9 col-lg-9 col-md-9 col-12">
-							<span class="red-line"></span>
-							<h3 class="img-filter-headline">1 GB Worldwide data (1 per/30 days) <span>$ <span> 216</span> us/month</span> </h3>
-							<div class="d-flex mt-3">
-								<a href="" class="mx-2"><img src="img/icons/apple.svg" alt=""></a>
-								<a href="" class="mx-2"><img src="img/icons/mc.svg" alt=""></a>
-								<a href="" class="mx-2"><img src="img/icons/visa.svg" alt=""></a>
-								<a href="" class="mx-2"><img src="img/icons/gpay.svg" alt=""></a>
-							</div>
+						<div class="col">
+							<input type="text" class="form-control" id="l_name" placeholder="Last name" required
+								data-validate>
 						</div>
 					</div>
+					<input type="text" class="form-control my-2" id="address" placeholder="Address" required
+						data-validate>
+					<input type="text" class="form-control my-2" id="address_detail"
+						placeholder="Apartment, suite, etc." required data-validate>
+					<input type="text" class="form-control my-2" id="city" placeholder="City" required data-validate>
+					
 					<div class="row">
-						<input type="submit" class="buy-link-red ml-auto" value="Continue to payment">
-						<!-- <a href="#" class="buy-link-red ml-auto">Continue to payment</a> -->
+						<div class="col">
+							<select name="" id="" class="form-control">
+								<option value="">Ukraine</option>
+								<option value="">Russia</option>
+								<option value="">Uzbekistan</option>
+							</select>
+						</div>
+						<div class="col">
+							<input type="text" class="form-control" id="post_code" placeholder="Post code" required
+								data-validate>
+						</div>
+					</div>
+
+					<input type="text" class="form-control my-2" id="phone_number" placeholder="Phone number"
+						id="phoneNumber" required data-validate>
+					
+					<div class="form-check">
+						<input type="checkbox" class="form-check-input" id="checker">
+						<label for="checker" class="form-check-label text-secondary">Save this information for the next time</label>
+					</div>
+
+					<div class="img-filter w-100 mt-5">
+						<div class="row">
+							<div class="col-xl-3 col-lg-3 col-md-3 col-3">
+								<img src="img/icons/plan-red.svg" alt="" class="w-100">
+							</div>
+							<div class="col-xl-9 col-lg-9 col-md-9 col-12">
+								<span class="red-line"></span>
+								<h3 class="img-filter-headline">1 GB Worldwide data (1 per/30 days) <span>$ <span>
+											216</span> us/month</span> </h3>
+								<div class="d-flex mt-3">
+									<a href="" class="mx-2"><img src="img/icons/apple.svg" alt=""></a>
+									<a href="" class="mx-2"><img src="img/icons/mc.svg" alt=""></a>
+									<a href="" class="mx-2"><img src="img/icons/visa.svg" alt=""></a>
+									<a href="" class="mx-2"><img src="img/icons/gpay.svg" alt=""></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<input type="submit" class="buy-link-red ml-auto" value="Continue to payment">
+						</div>
 					</div>
 				</form>
 
-				</div>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
+
 	<div class="container-fluid footer mt-5 pb-3">
 		<div class="row">
 			<div class="container mt-5">
@@ -158,18 +169,21 @@
 						<h4>CONTACT US</h4>
 					</div>
 
-					<div class="col-xl-3 col-lg-3 col-sm-6">
+					<div class="col-lg-3 col-sm-6">
 						<p>WhatsApp</p>
 						<p>+49 36628 60335</p>
 					</div>
-					<div class="col-xl-3 col-lg-3 col-sm-6">
+
+					<div class="col-lg-3 col-sm-6">
 						<p>Email</p>
 						<p>support@unlim.de</p>
 					</div>
-					<div class="offset-xl-3 offset-lg-3 col-xl-3 col-lg-3 col-sm-3 col-xs-3">
-						<img src="img/logo.svg" alt="" class="w-100">
+
+					<div class="col-lg-6 col-sm-12">
+						<img src="img/logo.svg" alt="" class="footer-logo d-block ml-auto">
 					</div>
 				</div>
+
 				<div class="row mt-5">
 					<div class="col-3 text-left">
 						<span class="small-text"> © 2020 UNLIM </span>
@@ -189,38 +203,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/scripts.min.js"></script>
-	<script>
-
-		var full = false;
-
-		$('.form-check').on("change", function(){
-			var form = $(this);
-			var field = [];
-			form.find('input[data-validate]').each(function(){
-				field.push('input[data-validate]');
-				var value = $(this).val(),
-					line = $(this).closest('.some-form__line');
-
-				for(var i = 0; i < field.length; i++){
-					if(!value){
-						full = false;
-					}
-					else{
-						full = true;
-					}
-				}
-				if(full){
-					$('.img-filter').css('filter', 'grayscale(0)')
-				}
-				else{
-					$('.img-filter').css('filter', 'grayscale(1)')
-				}
-			})
-		})
 
 
-				
-	</script>
+	<script src="dist/main.js"></script>
 </body>
+
 </html>
