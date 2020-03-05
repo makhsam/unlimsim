@@ -27,8 +27,9 @@ $('.country-list').children().click(function(){
 	$(this).addClass('active')
 });
 
+
 // Changing value of price
-$('.tarif').on("change", function(){
+$('.tarif').change(function(){
 	$('.big-price').html($(this).val() * 276)
 });
 
@@ -37,7 +38,40 @@ $('.toggle-active').click(function(){
 });
 
 $('#number_of_periods_select').on("change", function(){
-	$('#change_period').html($(this).val()*30)
+	var index = $(this).val();
+	$('.period_val').html(index * 30);
+	$('.period_index').html(index);
+
+	$('#actual_price').html(index * 276);
+	$('#sale_price').html(Math.round(index * 276 * 0.8));
+});
+
+
+// Search block
+$('#search-btn').click(function(){
+	$('.search-block').css("left", "0")
+})
+
+$('.search-close').click(function(){
+	$('.search-block').css("left", "100vw")
+	console.log('left: 0')
+})
+
+
+// 
+var degree = 180;
+
+$('#table-toggler').click(function(){
+	$('#dashboard-table').slideToggle("slow");
+	$('.arrow').css("transform", "rotate(" + degree +"deg)")
+	degree += 180;
+});
+
+
+$('.map-country-list').children('li').click(function(){
+	$('#chosen_country').val($(this).text())
+	$('.map-country-list').children('li').removeClass('active')
+	$(this).addClass('active')
 });
 
 
@@ -59,10 +93,14 @@ $('.form-check').on("change", function () {
 				isFormValid = true;
 			}
 		}
+
 		if (isFormValid) {
-			$('.img-filter').css('filter', 'grayscale(0)')
-		} else {
-			$('.img-filter').css('filter', 'grayscale(1)')
+			$('.img-filter').css('filter', 'grayscale(0)');
+			$('.img-filter').css('opacity', '1');
+		}
+		else {
+			$('.img-filter').css('filter', 'grayscale(1)');
+			$('.img-filter').css('opacity', '0.5');
 		}
 	})
 });

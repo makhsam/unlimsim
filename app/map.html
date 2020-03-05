@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Unlim</title>
+
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+
+    <!-- Change the Color of Header Bar in Browsers -->
+    <meta name="theme-color" content="#FF0000">
+    <meta name="msapplication-navbutton-color" content="#FF0000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FF0000">
+
+    <link rel="stylesheet" href="dist/main.css">
+</head>
+
+<body>
+    <!-- Search block -->
+    <div class="search-block">
+        <div class="container">
+            <div class="row">
+                <button class="search-close"><img src="img/close_white.png" alt=""></button>
+                <div class="offset-lg-3 offset-md-3 col-lg-6 col-md-6 col-12">
+                    <form action="">
+                        <div class="search-capsule">
+                            <input type="search" placeholder="Search" class="search-input">
+                            <input type="submit" value="Search" class="search-submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of search block -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mt-4">
+                    <li class="nav-item active ml-2rem">
+                        <a class="nav-link" href="#">WORLDWIDE DATA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">COUNTRY DATA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">MAP COVERAGE</a>
+                    </li>
+                    <li class="nav-item ml-2rem">
+                        <a href="cooperation.html" class="unlim-btn">COOPERATION</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mt-4">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            $ US
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">RUB</a>
+                            <a class="dropdown-item" href="#">UZD</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ENG
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">RUS</a>
+                            <a class="dropdown-item" href="#">UZB</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <img src="img/search.svg" alt="" class="search-btn" id="search-btn">
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="">
+                            <img src="img/user.svg" alt="" class="user-btn">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<!-- End of navbar -->
+
+
+    <!-- Main content -->
+    <div class="container height">
+        <div class="row mt-5">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+                <div class="title">
+                    <div class="red-line mx-auto mb-2"></div>
+                    <h4 class="title-heading text-center"> <b>Map Coverage</b></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row map-filter mb-3">
+            <div class="col-12">
+                <p class="map-filter-headline my-2">Find a destination</p>
+                <form class="d-flex justify-content-between">
+                    <div class="flex-grow-1 mr-4">
+                        <input type="text" class="map-filter-input w-100" id="chosen_country" placeholder="Select the country below" disabled>
+                    </div>
+
+                    <div class="mr-4">
+                        <select name="" id="gb" class="map-filter-input">
+                            <option value="">1 Gb</option>
+                            <option value="">2 Gb</option>
+                            <option value="">3 Gb</option>
+                        </select>
+                    </div>
+
+                    <div class="mr-4">
+                        <select name="" id="period" class="map-filter-input">
+                            <option value="">1 per / 30 days</option>
+                            <option value="">1 per / 60 days</option>
+                            <option value="">1 per / 90 days</option>
+                        </select>
+                    </div>
+
+                    <div class="mr-4">
+                        <p class="red-text f-22 font-italic font-semibold lh-0">$
+                            <span class="text-big">0</span> 
+                            <span class="text-secondary font-weight-normal">us/month</span>
+                        </p>
+                    </div>
+
+                    <div class="">
+                        <a href="" class="outlined-btn f-31 font-semibold">BUY</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 map-country mt-3 d-flex justify-content-between">
+                <ul class="map-country-list">
+                    <li>AUSTRALIA</li>
+                    <li>AUSTRIA</li>
+                    <li>AZERBAIJAN</li>
+                    <li>ALBANIA</li>
+                    <li>ARMENIA</li>
+                    <li>BAHRAIN</li>
+                    <li>BELARUS</li>
+                    <li>BELGIUM</li>
+                    <li>BULGARIA</li>
+                    <li>BOSNIA</li>
+                    <li>BRAZIL</li>
+                    <li>VANUATU</li>
+                    <li>GREAT BRITAIN</li>
+                    <li>HUNGARY</li>
+                    <li>VENEZUELA</li>
+                    <li>GHANA</li>
+                    <li>GUADELOUPE</li>
+                    <li>GUATEMALA</li>
+                    <li>GERMANY</li>
+                    <li>GIBRALTAR</li>
+                </ul>
+                <ul class="map-country-list">
+                    <li>DUTCH ANTILES</li>
+                    <li>HONG KONG</li>
+                    <li>GRENADA</li>
+                    <li>GREECE</li>
+                    <li>GEORGIA</li>
+                    <li>DENMARK</li>
+                    <li>EGYPT</li>
+                    <li>ISRAEL</li>
+                    <li>INDONESIA</li>
+                    <li>IRAN</li>
+                    <li>IRELAND</li>
+                    <li>ICELAND</li>
+                    <li>SPAIN</li>
+                    <li>ITALY</li>
+                    <li>KAZAKHSTAN</li>
+                    <li>CAMBODIA</li>
+                    <li>CANADA</li>
+                    <li>CYPRUS</li>
+                    <li>KYRGYZSTAN</li>
+                    <li>CHINA</li>
+                </ul>
+                <ul class="map-country-list">
+                    <li>COLOMBIA</li>
+                    <li>KOREA</li>
+                    <li>COSTA RICA</li>
+                    <li>KUWAIT</li>
+                    <li>LATVIA</li>
+                    <li>LITHUANIA</li>
+                    <li>LIECHTENSTEIN</li>
+                    <li>LUXEMBOURG</li>
+                    <li>MACEDONIA</li>
+                    <li>MALAYSIA</li>
+                    <li>MALTA</li>
+                    <li>MEXICO</li>
+                    <li>NETHERLANDS</li>
+                    <li>NICARAGUA</li>
+                    <li>NEW ZEALAND</li>
+                    <li>NORWAY</li>
+                    <li>PANAMA</li>
+                    <li>PAPUA NEW GUINEA</li>
+                    <li>PARAGUAY</li>
+                    <li>PERU</li>
+                </ul>
+                <ul class="map-country-list">
+                    <li>POLAND</li>
+                    <li>PORTUGAL</li>
+                    <li>Puerto rico</li>
+                    <li>REUNION</li>
+                    <li>ROMANIA</li>
+                    <li>SALVADOR</li>
+                    <li>SAUDI ARABIA</li>
+                    <li>SERBIA</li>
+                    <li>SINGAPORE</li>
+                    <li>SLOVAKIA</li>
+                    <li>SLOVENIA</li>
+                    <li>SURINAM</li>
+                    <li>USA</li>
+                    <li>TAJIKISTAN</li>
+                    <li>TAIWAN</li>
+                    <li>THAILAND</li>
+                    <li>TONGA</li>
+                    <li>TURKEY</li>
+                    <li>UKRAINE</li>
+                    <li>URUGUAY</li>
+                </ul>
+                <ul class="map-country-list">
+                    <li>FIJI</li>
+                    <li>FINLAND</li>
+                    <li>FRANCE</li>
+                    <li>FRENCH GUIANA</li>
+                    <li>CROATIA</li>
+                    <li>MONTENEGRO</li>
+                    <li>CZECH</li>
+                    <li>CHILE</li>
+                    <li>SWITZERLAND</li>
+                    <li>SWEDEN</li>
+                    <li>ECUADOR</li>
+                    <li>ESTONIA</li>
+                    <li>South Africa</li>
+                    <li>JAMAICA</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+	<div class="container-fluid footer mt-5 pb-3">
+		<div class="row">
+			<div class="container mt-5">
+				<div class="row">
+					<div class="col-12 mb-2">
+						<h4>CONTACT US</h4>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<p>WhatsApp</p>
+						<p>+49 36628 60335</p>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<p>Email</p>
+						<p>info@unlimsim.com</p>
+					</div>
+
+					<div class="col-lg-6 col-sm-12">
+						<img src="img/logo.svg" alt="" class="footer-logo d-block ml-auto">
+					</div>
+				</div>
+
+				<div class="row mt-5">
+					<div class="col-3 text-left">
+						<span class="small-text"> © 2020 UNLIM </span>
+					</div>
+					<div class="col-6 text-center">
+						<a href="#"><img src="img/icons/fb.svg" alt=""></a>
+						<a href="#"><img src="img/icons/in.svg" alt=""></a>
+						<a href="#"><img src="img/icons/ig.svg" alt=""></a>
+					</div>
+					<div class="col-3 text-right">
+						<a href=""><img src="img/icons/pay-2.svg" alt=""></a>
+						<a href=""><img src="img/icons/pay-3.svg" alt=""></a>
+						<a href=""><img src="img/icons/pay-4.svg" alt=""></a>
+						<a href=""><img src="img/icons/pay-1.svg" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- JS Files -->
+	<script src="dist/main.js"></script>
+</body>
+
+</html>

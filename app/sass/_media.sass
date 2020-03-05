@@ -12,6 +12,27 @@
         .carousel-title
             h1
                 font-size: 35px
+    .map
+        &-filter
+            .d-flex
+                flex-direction: column
+                input
+                    width: 100%
+                select
+                    width: 100%
+                    float: left
+                a
+                    display: block
+                    text-align: center
+        &-country
+            flex-direction: column
+            &-list
+                width: 50%
+                float: left
+                li
+                    text-align: center
+                    width: 100%
+                    display: block
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -30,13 +51,41 @@
     .ordered-block
         -webkit-box-ordinal-group: 14
         order: 13
+    .user
+        .d-flex
+            flex-direction: column
+    .buy-link-red
+        font-size: 18px
+
 
 // ≥576px
 +media-breakpoint-down(xs)
+    .navbar-brand
+        img
+            width: 100px
     .carousel-caption
         .carousel-title
             h1
                 font-size: 18px
+    .content-1-plan-title
+        margin-top: 15px
+    .content-1-plan-size
+        font-size: 90px
+        span
+            font-size: 60px
+    .content-1-plan-price
+        font-size: 18px
+        span
+            font-size: 24px
+    .content-1-plan
+        .unlim-px-5
+            padding: 0
+    .h2a
+        .d-flex
+            flex-direction: column
+            .link
+                display: block
+                width: 100%
 
 
 /*==========  Mobile First  ==========*/

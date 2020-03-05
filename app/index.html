@@ -34,61 +34,85 @@
 	<!-- ========= Background Blurry Overlay ========= -->
 
 	
+	<!-- Search block -->
+    <div class="search-block">
+        <div class="container">
+            <div class="row">
+                <button class="search-close"><img src="img/close_white.png" alt=""></button>
+                <div class="offset-lg-3 offset-md-3 col-lg-6 col-md-6 col-12">
+                    <form action="">
+                        <div class="search-capsule">
+                            <input type="search" placeholder="Search" class="search-input">
+                            <input type="submit" value="Search" class="search-submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of search block -->
 
-	<!-- Custom HTML -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
-		<div class="container">
 
-			<a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
-			
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
+        <div class="container">
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto mt-4">
-					<li class="nav-item active">
-						<a class="nav-link" href="#worldwide-data">WORLDWIDE DATA <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#country-data">COUNTRY DATA</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="countries.html">MAP COVERAGE</a>
-					</li>
-				</ul>
+            <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-				<form class="form-inline my-2 mt-lg-3">
-					<input class="unlim-search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				</form>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mt-4">
+                    <li class="nav-item active ml-2rem">
+                        <a class="nav-link" href="#worldwide-data">WORLDWIDE DATA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#country-data">COUNTRY DATA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">MAP COVERAGE</a>
+                    </li>
+                    <li class="nav-item ml-2rem">
+                        <a href="cooperation.html" class="unlim-btn">COOPERATION</a>
+                    </li>
+                </ul>
 
-				<ul class="navbar-nav mt-4">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							$ US
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">RUB</a>
-							<a class="dropdown-item" href="#">UZD</a>
-						</div>
-					</li>
-
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							ENG
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">RUS</a>
-							<a class="dropdown-item" href="#">UZB</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+                <ul class="navbar-nav mt-4">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            $ US
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">RUB</a>
+                            <a class="dropdown-item" href="#">UZD</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ENG
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">RUS</a>
+                            <a class="dropdown-item" href="#">UZB</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <img src="img/search.svg" alt="" class="search-btn" id="search-btn">
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="">
+                            <img src="img/user.svg" alt="" class="user-btn">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<!-- End of navbar -->
 
 	<!-- <div class="container-fluid"> -->
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -132,7 +156,7 @@
 
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<span class="red-line"></span>
+				<span class="red-line mb-2"></span>
 				<h3 class="content-1-headline">Buy Worldwide Data</h3>
 				<p class="content-1-paragraph">included 75 countries</p>
 			</div>
@@ -203,8 +227,9 @@
 					</div>
 
 					<div class="item">
-						<p class="text-red">$ <span class="big-price">646</span> <span
-								class="text-dark">us/month</span></p>
+						<p class="text-red">
+							$ <span class="big-price">0</span> <span class="text-dark">us/month</span>
+						</p>
 					</div>
 
 					<div class="item">
@@ -216,7 +241,7 @@
 
 		<div class="row mt-5">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<span class="red-line"></span>
+				<span class="red-line mb-2"></span>
 				<h3 class="content-1-headline">Choose your favorite country</h3>
 			</div>
 		</div>
@@ -292,7 +317,9 @@
 						<input type="number" min="0" class="form-control tarif" placeholder="Enter or choose Gb">
 					</div>
 					<div class="item">
-						<p class="text-red">$ <span class="big-price">646</span> <span class="text-dark">us/month</span></p>
+						<p class="text-red">
+							$ <span class="big-price">0</span> <span class="text-dark">us/month</span>
+						</p>
 					</div>
 					<div class="item">
 						<a href="buy.html" class="buy-link">BUY</a>
@@ -335,7 +362,7 @@
 					<div class="empty"></div>
 					<div>
 						<div class="red-line float-right"></div>
-						<h3 class="headline text-right mt-3">UnlimSim</h3>
+						<h3 class="headline text-right mt-2">UnlimSim</h3>
 						<p class="text-right">Through our website or application, you can connect to any
 							operator with whom we are currently cooperating.</p>
 					</div>
@@ -354,8 +381,8 @@
 				<div class="d-flex flex-column justify-content-between h-100">
 					<div class="empty"></div>
 					<div>
-						<div class="red-line float-left"></div>
-						<h3 class="headline text-left mt-2">Worldwide Coverage</h3>
+						<div class="red-line"></div>
+						<h3 class="headline mt-2">Worldwide Coverage</h3>
 						<p>With our service, you can use eSim technology in more than 150
 							countries of the world.</p>
 					</div>
@@ -400,39 +427,39 @@
 		<div class="row instruction mt-5" id="instruction">
 			<div class="offset-2 col-8">
 
-				<p> <b> Please follow the steps below to activate the <span class="text-danger">UNLIM</span>
-						feature on an <span class="text-danger">eSIM</span>-enabled iPhone.</b></p>
+				<p> <b> Please follow the steps below to activate the <span class="red-text">UNLIM</span>
+						feature on an <span class="red-text">eSIM</span>-enabled iPhone.</b></p>
 
 				<p> <span class="red-border">1</span> Go to <span class="semibold"> Settings > Cellular / Mobile
 						Data > Add Cellular Plan / Add Data Plan</span></p>
 				<img src="img/src/phone-1.png" alt="" class="w-75">
 
 				<p> <span class="red-border">2</span> <span class="semibold">Scan the QR code</span> in your email</p>
-				<img src="img/src/phone-2.png" alt="" class="w-75">
+				<img src="img/src/phone-2.png" alt="" class="w-38">
 
 				<p> <span class="red-border">3</span> Tap <span class="semibold">Add Data Plan</span></p>
-				<img src="img/src/phone-3.png" alt="" class="w-75">
+				<img src="img/src/phone-3.png" alt="" class="w-38">
 
 				<p> <span class="red-border">4</span> Choose <span class="semibold"> Secondary Label.</span>
 					Name the label <span class="semibold">"UNLIM"</span></p>
 				<img src="img/src/phone-4.png" alt="" class="w-75">
 
 				<p>Choose <span class="semibold"> Use "UNLIM"</span> for mobile data only</p>
-				<img src="img/src/phone-5.png" alt="" class="w-75">
+				<img src="img/src/phone-5.png" alt="" class="w-38">
 
 				<p> <span class="red-border">5</span> Go to <span class="semibold"> Settings > Mobile Data >
 						Mobile Data > Select Flexiroam</span></p>
-				<img src="img/src/phone-6.png" alt="" class="w-75">
+				<img src="img/src/phone-6.png" alt="" class="w-38">
 
 				<p>Choose <span class="semibold"> Use "UNLIM"</span> for mobile data only</p>
-				<img src="img/src/phone-7.png" alt="" class="w-75">
+				<img src="img/src/phone-7.png" alt="" class="w-38">
 
 			</div>
 		</div>
 
 	</div>
 
-
+	<!-- Footer -->
 	<div class="container-fluid footer mt-5 pb-3">
 		<div class="row">
 			<div class="container mt-5">
@@ -448,7 +475,7 @@
 
 					<div class="col-lg-3 col-sm-6">
 						<p>Email</p>
-						<p>support@unlim.de</p>
+						<p>info@unlimsim.com</p>
 					</div>
 
 					<div class="col-lg-6 col-sm-12">
@@ -476,6 +503,7 @@
 		</div>
 	</div>
 
+	<!-- JS Files -->
 	<script src="dist/main.js"></script>
 </body>
 
