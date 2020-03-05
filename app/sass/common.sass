@@ -35,9 +35,13 @@ body
 .bg-red
 	background-color: $accent
 .nav-link
-	color: #fff!important
+	color: #fff !important
 	font-size: 12px
-	font-weight: bold
+	font-weight: 600
+.nav-item.push-top
+	position: relative
+	bottom: 5px
+	// word-spacing: 1px
 .unlim-search
 	padding: 5px 15px 5px 30px
 	border-radius: 30px
@@ -58,73 +62,65 @@ body
 	margin: 0 0.5rem
 	border-radius: 16px
 	font-weight: bold
-	box-shadow: 0 5px 10px rgba(0,0,0,0.16)
 	text-decoration: none
 	border: 1px solid #FFF
-	transition: all 0.2s 0.2s ease
+	// transition: all 0.2s 0.2s ease
 	&:hover
+		color: $accent
 		text-decoration: none
-		color: #FFF
-		background-color: $accent
+		box-shadow: 0 5px 10px rgba(0,0,0,0.16)
 .search-btn
 	cursor: pointer
 
 .search-block
 	position: fixed
 	left: 100%
-	// right: 0
 	top: 0
 	width: 100%
-	height: 100%
-	background-color: rgba($accent, .9)
+	height: 77.5px
+	background-color: rgba($accent, 1)
 	z-index: 9999
-	transition: all 0.2s 0.2s ease
+	.search-wrapper
+		display: flex
+		padding: 22px 0
+		// justify-content: center
 	.search-close
 		background-color: transparent
 		border: none
-		position: absolute
-		right: 30px
-		top: 30px
 		outline: none
 		z-index: 9999
 		img
-			width: 36px
-	.search-capsule
-		display: flex
-		justify-content: space-between
-		margin-top: 40%
-		.search
-			&-input
-				width: 100%
-				background-color: transparent
-				border: none
-				border-bottom: 1px solid #FFF
-				padding-bottom: 5px
-				color: #FFF
-				&::selection
-					background-color: #fff
-					color: $accent
-			&-submit
+			width: 32px
+	.search-form
+		// display: flex
+		// justify-content: space-between
+
+		input
+			width: 500px
+			height: 100%
+			font-size: 20px
+			background-color: transparent
+			border: none
+			letter-spacing: 1px
+			// word-spacing: 3px
+			// border-bottom: 1px solid #FFF
+			color: #fff
+			&::placeholder
+				color: #ffcccc
+			&::selection
 				background-color: #fff
 				color: $accent
-				border: none
-				margin-left: 10px
-				border-radius: 4px
-				padding: 5px 15px
-				font-weight: bold
 
 .carousel-caption
-	top: 20%
+	bottom: 65px
 	.carousel-title
 		.red-element
-			float: left
 			width: 60px
 			height: 5px
 			background-color: $accent
 			padding-bottom: 0px
 		h1
 			margin-top: 10px
-			float: left
 			position: relative
 			font-size: 52px
 			text-align: left
@@ -160,9 +156,11 @@ body
 		border-radius: 20px
 		padding: 30px
 		overflow: hidden
+		cursor: pointer
 		transition: all 0.1s 0.1s ease
 		&:hover
-			box-shadow: 0px 10px 20px #8a959e
+			box-shadow: 0px 0px 5px 5px rgba(255,0,0,1)
+			// box-shadow: 0px 0px 10px 5px rgba(255,0,0,1)
 		img
 			display: block
 			width: 70px
@@ -302,8 +300,7 @@ body
 			text-align: center
 			font-weight: bold
 			cursor: pointer
-			transition: all 0.1s 0.1s ease
-			&:hover
+			&.active
 				background-color: $accent
 				color: #FFF
 				text-decoration: none
@@ -483,12 +480,15 @@ body
 					width: 50%
 					border-radius: 30px
 			&-button
+				display: block
+				text-align: center
 				background-color: $accent
 				padding: 0px 50px
 				font-size: 26px
 				border: none
 				border-radius: 15px
 				color: #FFF
+				text-decoration: none
 		&-bottom
 			&-title
 				font-size: 10px
@@ -632,6 +632,16 @@ b, strong
 
 .ml-2rem
 	margin-left: 2rem
+.mt-12px
+	margin-top: 12px
+.mb-20px
+	margin-bottom: 20px
+.mb-80px
+	margin-bottom: 80px
+.mb-42px
+	margin-bottom: 42px
+.mb-46px
+	margin-bottom: 46px
 
 .w-38
 	width: 38%!important
@@ -645,3 +655,26 @@ b, strong
 
 .table-toggler
 	width: 260px !important
+
+.user-btn
+	width: 21px
+
+.drowdown-icon
+	width: 10px
+	height: auto
+	margin-left: 3px
+
+// Update bootstrap dropdown toggle icon
+.dropdown-toggle::after
+    display: none
+
+.scroll-to-top
+	display: block
+	text-decoration: none
+	cursor: pointer
+	&:hover
+		text-decoration: none
+
+	img
+		width: 30px
+		height: auto

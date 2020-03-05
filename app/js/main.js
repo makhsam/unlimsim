@@ -10,6 +10,20 @@ $(function() {
 	});
 });
 
+
+$('a[href*="#"]').on('click', function(e) {
+	e.preventDefault();
+
+	var target = $(this).attr('href');
+
+	console.log($(target).offset().top);
+
+	$('html, body').animate({
+		scrollTop: $(target).offset().top - 100,
+	}, 500);
+});
+
+
 // Set blurry overlay background
 setTimeout(function () {
 	$('.backdrop-image').css('display', 'none')
@@ -33,8 +47,20 @@ $('.tarif').change(function(){
 	$('.big-price').html($(this).val() * 276)
 });
 
-$('.toggle-active').click(function(){
-	$('.instruction').toggle()
+$('.toggle-ios').click(function(){
+	$(this).toggleClass('active');
+	$('.toggle-android').removeClass('active');
+
+	$('#instruction-ios').toggle();
+	$('#instruction-android').hide();
+});
+
+$('.toggle-android').click(function(){
+	$(this).toggleClass('active');
+	$('.toggle-ios').removeClass('active');
+
+	$('#instruction-android').toggle();
+	$('#instruction-ios').hide();
 });
 
 $('#number_of_periods_select').on("change", function(){
@@ -49,12 +75,12 @@ $('#number_of_periods_select').on("change", function(){
 
 // Search block
 $('#search-btn').click(function(){
-	$('.search-block').css("left", "0")
+	$('.search-block').css("left", "0");
+	$('#search-input').focus();
 })
 
 $('.search-close').click(function(){
-	$('.search-block').css("left", "100vw")
-	console.log('left: 0')
+	$('.search-block').css("left", "100%")
 })
 
 

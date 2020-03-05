@@ -110,28 +110,61 @@
 			<div class="col-lg-4 col-md-5 col-sm-12">
 				<div class="content-1-plan">
 					<img src="img/logo.svg" alt="">
-					<p class="content-1-plan-title">SuperNet <b>START</b></p>
-					<p class="content-1-plan-size">1<span>Gb</span></p>
-					<div class="white-line my-5"></div>
-					<h5 class="text-white text-center mt-3">valid for 30 days</h5>
+					<p class="content-1-plan-title">PERSONAL</p>
+					<p class="content-1-plan-size">6<span>Gb</span></p>
+                    <div class="white-line my-4"></div>
+                    <h3 class="text-white text-center">ICLAND</h3>
+					<h5 class="text-white text-center mt-3">valid for 60 days</h5>
 				</div>
 			</div>
 
 			<div class="col-lg-8 col-md-7 col-sm-12">
-				<div class="mb-80px">
+				<div class="mb-20px">
 					<span class="red-line mb-2"></span>
-					<h3 class="content-1-headline"> <span class="period_index">1</span> GB Worldwide data (valid for <span class="period_val">30</span> days)</h3>
+					<h3 class="content-1-headline mb-3"> <span class="">6</span> GB Personal (valid for <span class="">60</span> days)</h3>
 
-					<p class="mt-5">Number of periods (<span class="period_index">1</span> per / <span class="period_val">30</span> days)</p>
-					<select name="periods" id="number_of_periods_select" class="form-control w-25">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-					</select>
+                    <div class="row w-75">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="select-country">You can change the country</label>
+                                <select class="form-control" id="select-country">
+                                    <option value="" selected>Icland</option>
+                                    <option value="">Russia</option>
+                                    <option value="">Ukraine</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row w-75">
+                        <div class="col-md-6 col-12">
+                            <!-- Change GB -->
+                            <div class="form-group">
+                                <label for="select-traffic">Change GB</label>
+                                <select class="form-control" id="select-traffic">
+                                    <option>6 GB</option>
+                                    <option>12 GB</option>
+                                    <option>18 GB</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-12">
+                            <!-- Change periods -->
+                            <div class="form-group">
+                                <label for="select-period">Change periods</label>
+                                <select class="form-control" id="select-period">
+                                    <option value="1">1 per / 30 days</option>
+                                    <option value="2" selected>2 per / 60 days</option>
+                                    <option value="3">3 per / 90 days</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 
 				<div>
-					<div class="d-flex align-items-baseline mb-46px">
+					<div class="d-flex align-items-baseline mb-42px">
 						<p class="text-red mb-0 mr-3">
 							$ <span class="big-price" id="sale_price">221</span> <span class="text-dark">us/month</span>
 						</p>
@@ -141,7 +174,7 @@
 						</p>
 					</div>
 	
-					<a href="buy-form.html" class="buy-link-red">BUY IT NOW</a>
+					<a href="index.html?display=thankyou" class="buy-link-red">BUY IT NOW</a>
 				</div>
 			</div>
 		</div>

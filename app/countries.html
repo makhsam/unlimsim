@@ -22,24 +22,20 @@
 </head>
 
 <body>
-
 	<!-- Search block -->
     <div class="search-block">
         <div class="container">
-            <div class="row">
-                <button class="search-close"><img src="img/close_white.png" alt=""></button>
-                <div class="offset-lg-3 offset-md-3 col-lg-6 col-md-6 col-12">
-                    <form action="">
-                        <div class="search-capsule">
-                            <input type="search" placeholder="Search" class="search-input">
-                            <input type="submit" value="Search" class="search-submit">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+			<div class="search-wrapper">
+				<form action="/" method="GET" class="search-form">
+					<input type="text" name="search" id="search-input" placeholder="Search keyword and hit enter ...">
+				</form>
+		
+				<button class="search-close ml-auto"><img src="img/close_white.png" alt=""></button>
+			</div>
+		</div>
     </div>
-    <!-- End of search block -->
+	<!-- End of search block -->
+	
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
@@ -54,10 +50,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mt-4">
                     <li class="nav-item active ml-2rem">
-                        <a class="nav-link" href="#">WORLDWIDE DATA</a>
+                        <a class="nav-link" href="#worldwide-data">WORLDWIDE DATA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">COUNTRY DATA</a>
+                        <a class="nav-link" href="#country-data">COUNTRY DATA</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="map.html">MAP COVERAGE</a>
@@ -68,32 +64,35 @@
                 </ul>
 
                 <ul class="navbar-nav mt-4">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            $ US
+                    <li class="nav-item dropdown mr-1">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            $ US <img src="img/down-arrow.svg" class="drowdown-icon" alt="">
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">RUB</a>
                             <a class="dropdown-item" href="#">UZD</a>
                         </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            ENG
+					</li>
+					
+                    <li class="nav-item dropdown mr-1">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ENG <img src="img/down-arrow.svg" class="drowdown-icon" alt="">
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">RUS</a>
                             <a class="dropdown-item" href="#">UZB</a>
                         </div>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <img src="img/search.svg" alt="" class="search-btn" id="search-btn">
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a href="">
-                            <img src="img/user.svg" alt="" class="user-btn">
+					</li>
+					
+                    <li class="nav-item push-top mr-1">
+                        <a href="#" class="nav-link">
+							<img src="img/search.svg" alt="search" class="search-btn" id="search-btn">
+						</a>
+					</li>
+					
+                    <li class="nav-item push-top">
+                        <a href="dashboard.html" class="nav-link">
+                            <img src="img/user-3.svg" alt="user" class="user-btn">
                         </a>
                     </li>
                 </ul>
@@ -137,7 +136,7 @@
 					<div class="white-line"></div>
 					<p class="content-1-plan-price">$ <span>276</span> us/month</p>
 					<div class="d-block px-5">
-						<a href="#" class="content-1-plan-link">BUY</a>
+						<a href="buy.html" class="content-1-plan-link">BUY</a>
 					</div>
 				</div>
 			</div>
@@ -150,7 +149,7 @@
 					<div class="white-line"></div>
 					<p class="content-1-plan-price">$ <span>546</span> us/month</p>
 					<div class="d-block px-5">
-						<a href="#" class="content-1-plan-link">BUY</a>
+						<a href="buy.html" class="content-1-plan-link">BUY</a>
 					</div>
 				</div>
 			</div>
@@ -163,7 +162,7 @@
 					<div class="white-line"></div>
 					<p class="content-1-plan-price">$ <span>866</span> us/month</p>
 					<div class="d-block px-5">
-						<a href="#" class="content-1-plan-link">BUY</a>
+						<a href="buy.html" class="content-1-plan-link">BUY</a>
 					</div>
 				</div>
 			</div>
@@ -200,7 +199,7 @@
 						</p>
 					</div>
 					<div class="item">
-						<a href="" class="buy-link">BUY</a>
+						<a href="buy.html" class="buy-link">BUY</a>
 					</div>
 				</div>
 			</div>
