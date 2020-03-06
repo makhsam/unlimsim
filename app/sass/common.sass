@@ -15,16 +15,20 @@ body
 	color: $text
 	background-image: url('../img/Map.png')
 	background-attachment: fixed
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
 
-	.height
-		min-height: 100vh
+input, textarea
+	border: #666 1px solid
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+.form-control
+	border-radius: .5rem !important
+
+.height
+	min-height: 100vh
 
 .img-responsive
 	display: block
@@ -115,6 +119,7 @@ body
 	bottom: 65px
 	.carousel-title
 		.red-element
+			display: block
 			width: 60px
 			height: 5px
 			background-color: $accent
@@ -126,11 +131,6 @@ body
 			text-align: left
 			font-weight: 600
 .carousel-indicators
-	li
-		width: 50px
-		height: 4px
-		margin-right: 10px
-		margin-left: 10px
 	li.active
 		background-color: $accent
 .text-center
@@ -284,8 +284,14 @@ body
 		text-align: center
 		font-weight: 600
 		&-heading
+			font-weight: 600
 			span
 				color: $accent
+		&-heading-large
+			font-size: 28px
+		&-subtitle
+			font-size: 18px
+			margin-bottom: 0
 	.headline
 		span
 			color: $accent
@@ -629,6 +635,7 @@ b, strong
 .footer-logo
 	width: 150px
 	height: auto
+	cursor: pointer
 
 .ml-2rem
 	margin-left: 2rem
@@ -678,3 +685,6 @@ b, strong
 	img
 		width: 30px
 		height: auto
+
+#close-instructions
+	display: none

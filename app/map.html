@@ -19,6 +19,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#FF0000">
 
     <link rel="stylesheet" href="dist/main.css">
+
+    <style>
+		@media (min-width: 1200px) {
+			.container {
+				max-width: 1100px !important;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -50,10 +58,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mt-4">
                     <li class="nav-item active ml-2rem">
-                        <a class="nav-link" href="#worldwide-data">WORLDWIDE DATA</a>
+                        <a class="nav-link" href="countries.html">WORLDWIDE DATA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#country-data">COUNTRY DATA</a>
+                        <a class="nav-link" href="index.html#country-data">COUNTRY DATA</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="map.html">MAP COVERAGE</a>
@@ -118,11 +126,11 @@
                 <p class="map-filter-headline my-2">Find a destination</p>
                 <form class="d-flex justify-content-between">
                     <div class="flex-grow-1 mr-4">
-                        <input type="text" class="map-filter-input w-100" id="chosen_country" placeholder="Select the country below" disabled>
+                        <input type="text" class="map-filter-input w-100" id="chosen_country" placeholder="Select the country below" readonly>
                     </div>
 
                     <div class="mr-4">
-                        <select name="" id="gb" class="map-filter-input">
+                        <select name="" id="gb" class="map-filter-input" style="width: 150px;">
                             <option value="">1 Gb</option>
                             <option value="">2 Gb</option>
                             <option value="">3 Gb</option>
@@ -130,15 +138,15 @@
                     </div>
 
                     <div class="mr-4">
-                        <select name="" id="period" class="map-filter-input">
+                        <select name="" id="period" class="map-filter-input" style="width: 150px;">
                             <option value="">1 per / 30 days</option>
-                            <option value="">1 per / 60 days</option>
-                            <option value="">1 per / 90 days</option>
+                            <option value="">2 per / 60 days</option>
+                            <option value="">3 per / 90 days</option>
                         </select>
                     </div>
 
                     <div class="mr-4">
-                        <p class="red-text f-22 font-italic font-semibold lh-0">$
+                        <p class="red-text f-22 font-italic font-semibold lh-0 mx-4">$
                             <span class="text-big">0</span> 
                             <span class="text-secondary font-weight-normal">us/month</span>
                         </p>
@@ -295,10 +303,10 @@
 						<a href="#"><img src="img/icons/ig.svg" alt=""></a>
 					</div>
 					<div class="col-3 text-right">
-						<a href=""><img src="img/icons/pay-2.svg" alt=""></a>
-						<a href=""><img src="img/icons/pay-3.svg" alt=""></a>
-						<a href=""><img src="img/icons/pay-4.svg" alt=""></a>
-						<a href=""><img src="img/icons/pay-1.svg" alt=""></a>
+						<a href="#"><img src="img/icons/pay-2.svg" alt=""></a>
+						<a href="#"><img src="img/icons/pay-3.svg" alt=""></a>
+						<a href="#"><img src="img/icons/pay-4.svg" alt=""></a>
+						<a href="#"><img src="img/icons/pay-1.svg" alt=""></a>
 					</div>
 				</div>
 			</div>
