@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8">
 
-    <title>Unlim</title>
+    <title>Unlim - Login</title>
 
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,88 +18,57 @@
     <meta name="msapplication-navbutton-color" content="#FF0000"> 
     <meta name="apple-mobile-web-app-status-bar-style" content="#FF0000">
 
-    <link rel="stylesheet" href="dist/login.css">
-
-    <style>
-        html { 
-            background: url(./img/login-background.jpg) no-repeat center center fixed; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            height: 100%;
-        }
-
-        body {
-            background: none;
-            height: 100%;
-            overflow-x: hidden;
-        }
-
-        .text-white-shadow {
-            color: #fff;
-            text-shadow: 1px 1px 5px #333;
-        }
-    </style>
+    <link rel="stylesheet" href="dist/main.css">
 </head>
 
-<body>
-
-    <div class="main-content">
-        <div class="container py-7">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-5 col-md-7">
-        
-                    <div class="card bg-secondary shadow border-0">
-        
-                        <div class="card-body p-lg-5">
-                            <div class="text-center text-muted mb-4">
-                                <small>Welcome</small>
-                            </div>
-        
-                            <form method="POST" action="/" role="form">        
-                                <div class="form-group mb-3">
-                                    <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-single-02"></i></span>
-                                        </div>
-                                        
-                                        <!-- Username -->
-                                        <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
-                                    </div>
-                                </div>
-        
-                                <div class="form-group">
-                                    <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-                                        </div>
-                                        
-                                        <!-- Password -->
-                                        <input type="password" class="form-control" placeholder="Password" name="password" required>
-                                    </div>
-                                </div>
-        
-                                <div class="custom-control custom-control-alternative custom-checkbox">
-                                    <input class="custom-control-input" id="rememberme" type="checkbox" name="remember">
-                                    <label class="custom-control-label" for="rememberme">
-                                        <span class="text-muted">Remember me</span>
-                                    </label>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary mt-4">Sign in</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!--/card-->
+<body class="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-sm-12">
+                <div class="login-wrapper">
+                    <a href="index.html">
+                        <img src="img/logo-login.svg" alt="" class="login-logo">
+                    </a>
                 </div>
             </div>
-          </div>
+
+            <div class="offset-xl-1 col-xl-5 col-lg-6 col-sm-12">
+                <div class="login-wrapper">
+                    <div class="login-form-block">
+                        <h5 class="text-center mb-5">
+                            Welcome to <span class="font-italic"><span class="red-text">Unlim</span>Mobile</span>
+                        </h5>
+                        
+                        <form action="/" method="POST">
+                            <!-- Phone Number -->
+                            <div class="form-group">
+                                <label for="phoneNumber">Login</label>
+                                <input type="text" class="form-control" id="email-phone" required placeholder="Email / Phone">
+                            </div>
+
+                            <!-- Password -->
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" required placeholder="Enter your password">
+                            </div>
+                            
+                            <!-- Action links -->
+                            <div class="login-action">
+                                <a href="#">Forgot Password</a>
+                                <span class="mx-2">/</span>
+                                <a href="registration.html">Registration</a>
+                            </div>
+                            
+                            <input type="submit" class="login-submit" value="Login">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
+        
     <!-- JS Files -->
-    <script src="/js/login.js"></script>
-</body>
+    <script src="dist/main.js"></script>
 
+</body>
 </html>

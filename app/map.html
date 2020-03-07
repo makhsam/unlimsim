@@ -130,29 +130,29 @@
                     </div>
 
                     <div class="mr-4">
-                        <select name="" id="gb" class="map-filter-input" style="width: 150px;">
-                            <option value="">1 Gb</option>
-                            <option value="">2 Gb</option>
-                            <option value="">3 Gb</option>
+                        <select name="" id="packet" class="map-filter-input" style="width: 150px;">
+                            <option value="1">1 Gb</option>
+                            <option value="2">2 Gb</option>
+                            <option value="3">3 Gb</option>
                         </select>
                     </div>
 
                     <div class="mr-4">
                         <select name="" id="period" class="map-filter-input" style="width: 150px;">
-                            <option value="">1 per / 30 days</option>
-                            <option value="">2 per / 60 days</option>
-                            <option value="">3 per / 90 days</option>
+                            <option value="1">1 per / 30 days</option>
+                            <option value="2">2 per / 60 days</option>
+                            <option value="3">3 per / 90 days</option>
                         </select>
                     </div>
 
                     <div class="mr-4">
                         <p class="red-text f-22 font-italic font-semibold lh-0 mx-4">$
-                            <span class="text-big">0</span> 
+                            <span class="text-big" id="changed-price">0</span> 
                             <span class="text-secondary font-weight-normal">us/month</span>
                         </p>
                     </div>
 
-                    <div class="">
+                    <div>
                         <a href="buy-map.html" class="outlined-btn f-31 font-semibold">BUY</a>
                     </div>
                 </form>
@@ -314,7 +314,25 @@
 	</div>
 
     <!-- JS Files -->
-	<script src="dist/main.js"></script>
+    <script src="dist/main.js"></script>
+    
+    <script>
+        var packet = 1;
+        var period = 1;
+        var basicPrice = 259;
+
+        $('#changed-price').html(packet*period*basicPrice);
+
+        $('#packet').change(function(){
+            packet = $(this).val();
+            $('#changed-price').html(packet*period*basicPrice);
+        });
+
+        $('#period').change(function(){
+            period = $(this).val();
+            $('#changed-price').html(packet*period*basicPrice);
+        })      
+    </script>
 </body>
 
 </html>

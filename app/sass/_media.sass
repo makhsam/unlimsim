@@ -3,10 +3,10 @@
 
 /*==========  Desktop First  ==========*/
 
-// ≥1200px
+// ≤1200px
 +media-breakpoint-down(lg)
 
-// ≥992px
+// ≤992px
 +media-breakpoint-down(md)
     .carousel-caption
         .carousel-title
@@ -33,8 +33,16 @@
                     text-align: center
                     width: 100%
                     display: block
+    // .w-100-toggle
+    //     width: 100%!important
+    // .content-1-plan-size
+    //     font-size: 80px
+    //     span
+    //         font-size: 60px
+    // .content-1-plan-title
+    //     margin-top: 15px
 
-// ≥768px
+// ≤768px
 +media-breakpoint-down(sm)
     .carousel-caption
         .carousel-title
@@ -59,7 +67,7 @@
         font-size: 18px
 
 
-// ≥576px
+// ≤576px
 +media-breakpoint-down(xs)
     .navbar-brand
         img
@@ -87,14 +95,20 @@
             .link
                 display: block
                 width: 100%
+    // .w-100-toggle
+    //     flex-direction: column
+    //     .flex-item
+    //         width: 100%!important
+    // .media-w-100
+    //     width: 100%!important
 
 
 /*==========  Mobile First  ==========*/
 
-// ≤576px
+// ≥576px
 +media-breakpoint-up(sm)
 
-// ≤768px
+// ≥768px
 +media-breakpoint-up(md)
     .carousel-indicators
         li
@@ -103,8 +117,11 @@
             margin-right: 10px
             margin-left: 10px
 
-// ≤992px
+// ≥992px
 +media-breakpoint-up(lg)
 
-// ≤1200px
+// ≥1200px
 +media-breakpoint-up(xl)
+    // .login
+    //     .container
+    //         max-width: 1140px
