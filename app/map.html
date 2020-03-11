@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="dist/main.css">
 
     <style>
-		@media (min-width: 1200px) {
+		/* @media (min-width: 1200px) {
 			.container {
 				max-width: 1100px !important;
 			}
-		}
+		} */
 	</style>
 </head>
 
@@ -57,7 +57,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mt-4">
-                    <li class="nav-item active ml-2rem">
+                    <li class="nav-item active">
                         <a class="nav-link" href="countries.html">WORLDWIDE DATA</a>
                     </li>
                     <li class="nav-item">
@@ -321,7 +321,7 @@
         var period = 1;
         var basicPrice = 259;
 
-        $('#changed-price').html(packet*period*basicPrice);
+        // $('#changed-price').html(packet*period*basicPrice);
 
         $('#packet').change(function(){
             packet = $(this).val();

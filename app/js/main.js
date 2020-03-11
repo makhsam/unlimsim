@@ -77,8 +77,6 @@ $('.toggle-ios').click(function(){
 
 	$('#instruction-ios').toggle();
 	$('#instruction-android').hide();
-
-	$('#close-instructions').addClass('d-block');
 });
 
 $('.toggle-android').click(function(){
@@ -87,11 +85,9 @@ $('.toggle-android').click(function(){
 
 	$('#instruction-android').toggle();
 	$('#instruction-ios').hide();
-
-	$('#close-instructions').addClass('d-block');
 });
 
-$('#close-instructions').click(function(e) {
+$('.close-instructions').click(function(e) {
 	e.preventDefault();
 
 	$('.toggle-android').removeClass('active');
