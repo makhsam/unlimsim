@@ -8,6 +8,8 @@ $(function() {
 	}).on('complete', function() {
 		//
 	});
+
+	// $('.selectpicker').selectpicker();
 });
 
 
@@ -65,10 +67,27 @@ $('.country-list').children().click(function(){
 	$(this).addClass('active')
 });
 
+var priceList = {
+	1: 25, // 1 Gb => $25
+	2: 50, 
+	3: 70, 
+	4: 80, 
+	5: 85
+};
 
 // Changing value of price
-$('.tarif').change(function(){
-	$('.big-price').html($(this).val() * 276)
+$('.tarif').change(function() {
+	var val = $(this).val(); // value in GB
+	var price = 0;
+
+	if (val > 0 && val <= 5) {
+		price = priceList[val];
+	}
+	else if(val > 5 && val <= 100) {
+		price = 85 + 17 * (val - 5);
+	}
+
+	$('.big-price').html(price);
 });
 
 $('.toggle-ios').click(function(){

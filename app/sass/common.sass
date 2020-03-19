@@ -24,7 +24,7 @@ input, textarea
 	&:required:valid
 		border-color: green
 
-.form-control
+input, select, textarea
 	border-radius: .5rem !important
 
 .height
@@ -383,7 +383,7 @@ input, textarea
 	h4
 		font-weight: 600
 	p
-		line-height: .5
+		margin-bottom: 0
 	.small-text
 		font-size: 12px
 .img-filter
@@ -764,3 +764,52 @@ b, strong
 
 #close-instructions
 	display: none
+
+// Mobile apps
+.app_grid
+	.apple_btn, .play_store_btn
+		position: relative
+		color: #fff
+		background-color: #EE0000
+		border: none
+		border-radius: 5px
+		height: 75px
+		margin-bottom: 15px
+		margin-right: 0
+		width: 100%
+		text-align: left
+		line-height: normal
+		-webkit-transition: all 0.3s ease
+		-o-transition: all 0.3s ease
+		transition: all 0.3s ease
+		&:hover
+			background-color: #D50000
+		span
+			color: #ccc
+			margin-right: 5px
+			&.title
+				color: #fff
+		.icon
+			font-size: 36px
+			float: left
+			padding: 6px 0
+			margin-right: 10px
+			margin-left: 12px
+			img
+				display: block
+				width: 36px
+		.title
+			display: block
+			font-size: 16px
+			font-family: $default-font
+			margin-top: 3px
+		.subtitle
+			font-size: 13px
+			font-family: $default-font
+		
+	.play_store_btn
+		margin-bottom: 0
+		.icon
+			padding: 6px 0
+			img
+				width: 36px
