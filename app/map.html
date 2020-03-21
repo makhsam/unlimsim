@@ -49,7 +49,22 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
         <div class="container">
 
-            <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
+			<a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
+
+			<ul class="navbar-nav mr-3 ml-auto flex-row extra-bar-toggle">
+				<li class="nav-item mr-3">
+					<a href="#" class="nav-link">
+						<img src="img/search.svg" alt="search" class="search-btn">
+					</a>
+				</li>
+				
+				<li class="nav-item">
+					<a href="dashboard.html" class="nav-link">
+						<img src="img/user-3.svg" alt="user" class="user-btn">
+					</a>
+				</li>
+			</ul>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -94,20 +109,20 @@
                         </div>
 					</li>
 					
-                    <li class="nav-item push-top mr-1">
+                    <li class="nav-item mr-1 extra-bar-toggle-large">
                         <a href="#" class="nav-link">
-							<img src="img/search.svg" alt="search" class="search-btn" id="search-btn">
+							<img src="img/search.svg" alt="search" class="search-btn">
 						</a>
 					</li>
 					
-                    <li class="nav-item push-top">
-                        <a href="dashboard.html" class="nav-link">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link extra-bar-toggle-large">
                             <img src="img/user-3.svg" alt="user" class="user-btn">
                         </a>
                     </li>
                 </ul>
-            </div>
-        </div>
+			</div>
+		</div>
     </nav>
 	<!-- End of navbar -->
 
@@ -126,35 +141,35 @@
         <div class="row map-filter mb-3">
             <div class="col-12">
                 <p class="map-filter-headline my-2">Find a destination</p>
-                <form class="d-flex justify-content-between">
-                    <div class="flex-grow-1 mr-4">
-                        <input type="text" class="map-filter-input w-100" id="chosen_country" placeholder="Select the country below" readonly>
+                <form class="d-flex justify-content-between flex-wrap">
+                    <div class="map-item-1 flex-grow-1">
+                        <input type="text" class="map-filter-input" id="chosen_country" placeholder="Select the country below" readonly>
                     </div>
 
-                    <div class="mr-4">
-                        <select name="" id="packet" class="map-filter-input" style="width: 150px;">
+                    <div class="map-item-2">
+                        <select name="" id="packet" class="map-filter-input">
                             <option value="1">1 Gb</option>
                             <option value="2">2 Gb</option>
                             <option value="3">3 Gb</option>
                         </select>
                     </div>
 
-                    <div class="mr-4">
-                        <select name="" id="period" class="map-filter-input" style="width: 150px;">
+                    <div class="map-item-3">
+                        <select name="" id="period" class="map-filter-input">
                             <option value="1">1 per / 30 days</option>
                             <option value="2">2 per / 60 days</option>
                             <option value="3">3 per / 90 days</option>
                         </select>
                     </div>
 
-                    <div class="mr-4">
-                        <p class="red-text f-22 font-italic font-semibold lh-0 mx-4">$
+                    <div class="map-item-4">
+                        <p class="text-red f-22 font-italic font-semibold lh-0">$
                             <span class="text-big" id="changed-price">0</span> 
                             <span class="text-secondary font-weight-normal">us/month</span>
                         </p>
                     </div>
 
-                    <div>
+                    <div class="map-item-5">
                         <a href="buy-map.html" class="outlined-btn f-31 font-semibold">BUY</a>
                     </div>
                 </form>
@@ -162,7 +177,7 @@
         </div>
 
         <div class="row">
-            <div class="col-12 map-country mt-3 d-flex justify-content-between">
+            <div class="col-12 map-country mt-3">
                 <ul class="map-country-list">
                     <li>AUSTRALIA</li>
                     <li>AUSTRIA</li>
@@ -280,31 +295,60 @@
 						<h4>CONTACT US</h4>
 					</div>
 
-					<div class="col-lg-3 col-sm-6">
-						<p>WhatsApp</p>
+					<!-- Contact Us -->
+					<div class="col-lg-3 col-sm-6 mb-3">
+						<p class="font-weight-semibold">WhatsApp</p>
 						<p>+49 36628 60335</p>
-					</div>
 
-					<div class="col-lg-3 col-sm-6">
-						<p>Email</p>
+						<p class="font-weight-semibold mt-3">Email</p>
 						<p>info@unlimsim.com</p>
+						<p>help@unlimsim.com</p>
 					</div>
 
-					<div class="col-lg-6 col-sm-12">
-						<img src="img/logo.svg" alt="" class="footer-logo d-block ml-auto">
+					<div class="col-lg-9 col-sm-6">
+						<div class="row">
+							<!-- Address -->
+							<div class="col-xl-8 col-lg-6 col-sm-12 mb-3">
+								<p class="font-weight-semibold">Address</p>
+								<p>Germany: 07937 Zeulenroda Triebes, August-Bebel-Str. 8</p>
+							</div>
+
+							<!-- Mobile application -->
+							<div class="col-xl-4 col-lg-6 col-sm-12">
+								<p class="font-weight-semibold mb-2">Mobile</p>
+								
+								<!-- Download mobile app -->
+								<div class="app_grid">
+									<button class="apple_btn">
+										<span class="icon">
+											<img src="./img/icons/app-store.svg" alt="ios">
+										</span>
+										<span class="title">App Store</span>
+										<span class="subtitle">Available now on the</span>
+									</button>
+									<button class="play_store_btn">
+										<span class="icon">
+											<img src="./img/icons/google-play.svg" alt="android">
+										</span>
+										<span class="title">Google Play</span>
+										<span class="subtitle">Get in on</span>
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<div class="row mt-5">
-					<div class="col-3 text-left">
+					<div class="col-md-4 col-6 footer-el-1">
 						<span class="small-text"> © 2020 UNLIM </span>
 					</div>
-					<div class="col-6 text-center">
+					<div class="col-md-4 col-6 footer-el-2">
 						<a href="#"><img src="img/icons/fb.svg" alt=""></a>
 						<a href="#"><img src="img/icons/in.svg" alt=""></a>
 						<a href="#"><img src="img/icons/ig.svg" alt=""></a>
 					</div>
-					<div class="col-3 text-right">
+					<div class="col-md-4 col-12 footer-el-3">
 						<a href="#"><img src="img/icons/pay-2.svg" alt=""></a>
 						<a href="#"><img src="img/icons/pay-3.svg" alt=""></a>
 						<a href="#"><img src="img/icons/pay-4.svg" alt=""></a>

@@ -5,49 +5,55 @@
 
 // ≤1200px
 +media-breakpoint-down(lg)
+    .carousel-caption
+        .carousel-title
+            h1
+                font-size: 45px
 
 // ≤992px
 +media-breakpoint-down(md)
+    .extra-bar-toggle
+        display: flex
+    .extra-bar-toggle-large
+        display: none
     .carousel-caption
         .carousel-title
             h1
                 font-size: 35px
-    .map
-        &-filter
-            .d-flex
-                flex-direction: column
-                input
-                    width: 100%
-                select
-                    width: 100%
-                    float: left
-                a
-                    display: block
-                    text-align: center
-        &-country
-            flex-direction: column
-            &-list
-                width: 50%
-                float: left
-                li
-                    text-align: center
-                    width: 100%
-                    display: block
-    // .w-100-toggle
-    //     width: 100%!important
-    // .content-1-plan-size
-    //     font-size: 80px
-    //     span
-    //         font-size: 60px
-    // .content-1-plan-title
-    //     margin-top: 15px
-
+    .map-filter
+        .map-item-1, .map-item-2, .map-item-3
+            margin-bottom: 1.5rem
+        div.map-item-3
+            margin-right: 0
+    .map-country-list
+        width: 33.3333%
+    .ml-2rem
+        margin-left: 0
+        margin-top: 1rem
+    .unlim-btn
+        margin-left: 0
+    // .flex-item
+    //     margin: 0 10px 20px 10px
+        
 // ≤768px
 +media-breakpoint-down(sm)
+    .search-block
+        height: 59px
+        .search-wrapper
+            padding: 14px 0
+            padding-left: 10px
+        .search-close
+            img
+                width: 26px
+        .search-form
+            input
+                font-size: 18px
+    .search-btn, .user-btn
+        width: 17px
     .carousel-caption
         .carousel-title
             h1
-                font-size: 28px
+                font-size: 30px
             .red-element
                 width: 40px
                 height: 3px
@@ -60,11 +66,41 @@
     .ordered-block
         -webkit-box-ordinal-group: 14
         order: 13
-    .user
+
+    div[class^="map-item-"]
+        margin-right: 0!important
+        margin-bottom: 1.5rem
+    .map-filter
         .d-flex
             flex-direction: column
+        &-input
+            display: block
+            width: 100% !important
+        a, p
+            display: block
+            text-align: center
+    .map-country-list
+        width: 50%
+     
+    .content-1
+        .country-list
+            justify-content: space-around
+
     .buy-link-red
-        font-size: 18px
+        float: none
+        // font-size: 17px
+    .ml-2rem
+        margin-left: 0
+        margin-top: 1rem
+    .unlim-btn
+        margin-left: 0
+    .mb-80px
+        margin-top: 40px
+        margin-bottom: 30px
+    .mb-44px
+        margin-bottom: 30px
+    .mb-20px
+        margin-top: 30px
 
 
 // ≤576px
@@ -73,11 +109,15 @@
         img
             width: 100px
     .carousel-caption
+        bottom: 30px
         .carousel-title
             h1
-                font-size: 18px
-    .content-1-plan-title
-        margin-top: 15px
+                font-size: 22px
+    .content-1
+	    margin-top: 30px
+    .content-1-plan
+        .unlim-px-5
+            padding: 0
     .content-1-plan-size
         font-size: 90px
         span
@@ -86,27 +126,63 @@
         font-size: 18px
         span
             font-size: 24px
-    .content-1-plan
-        .unlim-px-5
-            padding: 0
     .h2a
         .d-flex
             flex-direction: column
             .link
                 display: block
                 width: 100%
-    // .w-100-toggle
-    //     flex-direction: column
-    //     .flex-item
-    //         width: 100%!important
-    // .media-w-100
-    //     width: 100%!important
-
+    .content-1
+        .country-list
+            padding-right: 30px
+            padding-left: 30px
+            flex-direction: column
+            justify-content: center
+            li
+                padding: 4px 30px
+                margin-bottom: 8px
+        .country-text
+            width: 91%
+            text-align: justify
+    .content-1 .h2a .link
+        margin-left: 0
+        margin-top: 5px
+        margin-bottom: 5px
+    .footer-logo
+        width: 100px
+    .buy-link-red
+        display: block
+    .flex-item
+        text-align: center
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 10px
+    .user-order
+        flex-direction: column
+        .user-info
+            justify-content: center
+            margin-bottom: 1.5rem
+    .sale-card
+        justify-content: space-between
+        &-item
+            margin-right: 0
+    .buy-form-plan
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 1.5rem
+    .cooperation-content
+        h6, a
+            text-align: center
+    .dashboard-content
+        flex-direction: column
+            
 
 /*==========  Mobile First  ==========*/
 
 // ≥576px
 +media-breakpoint-up(sm)
+    .buy-form-text
+        margin-top: 36px
 
 // ≥768px
 +media-breakpoint-up(md)
@@ -116,12 +192,25 @@
             height: 4px
             margin-right: 10px
             margin-left: 10px
+    .dashboard-content
+        margin-right: -1rem
+    .flex-item
+        margin-right: 1rem
+    .footer-el-1
+        text-align: left
+    .footer-el-2
+        text-align: center
+    .footer-el-3
+        text-align: right
+        margin-top: 0
 
 // ≥992px
 +media-breakpoint-up(lg)
+    .map-item-4 p
+        margin-left: 1rem
+        margin-right: 1rem
 
 // ≥1200px
 +media-breakpoint-up(xl)
-    // .login
-    //     .container
-    //         max-width: 1140px
+    // .login .container
+    //     max-width: 1140px

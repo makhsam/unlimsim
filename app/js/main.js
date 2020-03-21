@@ -122,13 +122,13 @@ $('#number_of_periods_select').on("change", function(){
 	$('.period_val').html(index * 30);
 	$('.period_index').html(index);
 
-	$('#actual_price').html(index * 276);
-	$('#sale_price').html(Math.round(index * 276 * 0.8));
+	$('#actual_price').html(index * 25);
+	$('#sale_price').html(Math.round(index * 25 * 0.8));
 });
 
 
 // Search block
-$('#search-btn').click(function(){
+$('.search-btn').click(function(){
 	$('.search-block').css("left", "0");
 	$('#search-input').focus();
 })
@@ -154,6 +154,11 @@ $('.map-country-list').children('li').click(function(){
 	$(this).addClass('active')
 });
 
+
+// Update progress bar
+$('#progress-bar').css('width', function() {
+    return $(this).data('value') + "%";
+});
 
 // Validate the form
 var isFormValid = false;

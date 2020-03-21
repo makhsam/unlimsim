@@ -49,7 +49,22 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
         <div class="container">
 
-            <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
+			<a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
+
+			<ul class="navbar-nav mr-3 ml-auto flex-row extra-bar-toggle">
+				<li class="nav-item mr-3">
+					<a href="#" class="nav-link">
+						<img src="img/search.svg" alt="search" class="search-btn">
+					</a>
+				</li>
+				
+				<li class="nav-item">
+					<a href="dashboard.html" class="nav-link">
+						<img src="img/user-3.svg" alt="user" class="user-btn">
+					</a>
+				</li>
+			</ul>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -94,42 +109,38 @@
                         </div>
 					</li>
 					
-                    <li class="nav-item push-top mr-1">
+                    <li class="nav-item mr-1 extra-bar-toggle-large">
                         <a href="#" class="nav-link">
-							<img src="img/search.svg" alt="search" class="search-btn" id="search-btn">
+							<img src="img/search.svg" alt="search" class="search-btn">
 						</a>
 					</li>
 					
-                    <li class="nav-item push-top">
-                        <a href="dashboard.html" class="nav-link">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link extra-bar-toggle-large">
                             <img src="img/user-3.svg" alt="user" class="user-btn">
                         </a>
                     </li>
                 </ul>
-            </div>
-        </div>
+			</div>
+		</div>
     </nav>
 	<!-- End of navbar -->
 
     <!-- Content -->
     <div class="container height">
-        <div class="row dashboard-user-info">
-            <div class="col-12">
-                <div class="float-right mt-1">
-                    <ul>
-                        <li><img src="img/icons/flag.svg" alt=""> +38 (063) 584-54-78</li>
-                        <li><img src="img/icons/mail.svg" alt=""> nemo@gmail.com</li>
-                        <li><img src="img/icons/location.svg" alt="">apt 5, Pirogova St 54, Vinnitsya, Ukraine, 21000
-                        </li>
-                        <li><a href="#">edit</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div class="dashboard-user-info">
+            <ul class="mt-2">
+                <li><img src="img/icons/flag.svg" alt=""> +38 (063) 584-54-78</li>
+                <li><img src="img/icons/mail.svg" alt=""> nemo@gmail.com</li>
+                <li><img src="img/icons/location.svg" alt="">apt 5, Pirogova St 54, Vinnitsya, Ukraine, 21000
+                </li>
+                <li><a href="#">edit</a></li>
+            </ul>
         </div>
 
         <div class="row user dashboard">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div class="d-flex justify-content-between">
+                <div class="d-flex dashboard-content">
 
                     <div class="flex-item">
                         <div class="user-info d-flex">
@@ -140,14 +151,14 @@
                                 <span class="red-line mb-2"></span>
                                 <h4>Denys NEMO</h4>
                                 <span>eSim number</span>
-                                <p class="red-text"> <b> +44 (77) 875-00-77 </b></p>
+                                <p class="text-red"> <b> +44 (77) 875-00-77 </b></p>
                             </div>
                         </div>
                     </div>
 
                     <div class="flex-item">
                         <div class="flex-item-top">
-                            <h1 class="flex-item-top-title red-text font-semibold">5<span>Gb/2per</span></h1>
+                            <h1 class="flex-item-top-title text-red font-semibold">5<span>Gb/2per</span></h1>
                         </div>
                         <div class="flex-item-center">
                             <h6 class="flex-item-center-title font-semibold">SuperNetMax</h6>
@@ -159,11 +170,11 @@
 
                     <div class="flex-item">
                         <div class="flex-item-top">
-                            <h1 class="flex-item-top-title red-text font-semibold font-bigger">2.5<span>Gb</span></h1>
+                            <h1 class="flex-item-top-title text-red font-semibold font-bigger">2.5<span>Gb</span></h1>
                         </div>
                         <div class="flex-item-center">
                             <div class="flex-item-center-progress">
-                                <div class="flex-item-center-progress-fill"></div>
+                                <div class="flex-item-center-progress-fill" id="progress-bar" data-value="50"></div>
                             </div>
                         </div>
                         <div class="flex-item-bottom">
@@ -173,7 +184,7 @@
 
                     <div class="flex-item">
                         <div class="flex-item-top">
-                            <h1 class="flex-item-top-title red-text font-semibold">38<span>days</span></h1>
+                            <h1 class="flex-item-top-title text-red font-semibold">38<span>days</span></h1>
                         </div>
                         <div class="flex-item-center">
                             <h6 class="flex-item-center-title font-semibold">11/03/2020 expire</h6>
@@ -199,10 +210,10 @@
                         </div>
                     </div>
 
-                    <div class="flex-item">
+                    <div class="flex-item mt-12px">
                         <div class="flex-item-top">
-                            <h1 class="flex-item-top-title red-text font-semibold font-italic custom-margin">
-                                <span class="text-small">$</span>276
+                            <h1 class="flex-item-top-title text-red font-semibold font-italic custom-margin">
+                                <span class="text-small">$</span>25
                                 <span class="text-small text-dark font-weight-light">us/per</span>
                             </h1>
                         </div>
@@ -216,13 +227,13 @@
         </div>
 
 
-        <div class="row mt-5">
+        <div class="row mt-4">
             <div class="col-12">
                 <div class="d-flex">
-                    <div class="text red-text table-toggler" id="table-toggler">
+                    <div class="text text-red table-toggler" id="table-toggler">
                         History of your tariff plan <img src="img/arrow.svg" alt="" class="arrow ml-1">
                     </div>
-                    <div class="line w-100 mt-4"></div>
+                    <div class="line"></div>
                 </div>
             </div>
         </div>
@@ -243,70 +254,70 @@
                         <th></th>
                     </tr>
                     <tr>
-                        <td>SuperNet Start</td>
+                        <td class="cell-wider">SuperNet Start</td>
                         <td>5Gb</td>
                         <td>+1Gb</td>
                         <td>1per/30days</td>
                         <td>12.01.2020/12.02.2020</td>
                         <td>$ 516</td>
                         <td>$ 116</td>
-                        <td class="red-text">$ 632</td>
-                        <td class="text-right"><a href="#" class="buy-again">BUY AGAIN</a></td>
+                        <td class="text-red">$ 632</td>
+                        <td class="cell-wider"><a href="#" class="buy-again">BUY AGAIN</a></td>
                     </tr>
                     <tr>
-                        <td>SuperNet Start</td>
+                        <td class="cell-wider">SuperNet Start</td>
                         <td>5Gb</td>
                         <td>+1Gb</td>
                         <td>1per/30days</td>
                         <td>12.01.2020/12.02.2020</td>
                         <td>$ 516</td>
                         <td>$ 116</td>
-                        <td class="red-text">$ 632</td>
-                        <td class="text-right"><a href="#" class="buy-again">BUY AGAIN</a></td>
+                        <td class="text-red">$ 632</td>
+                        <td class="cell-wider"><a href="#" class="buy-again">BUY AGAIN</a></td>
                     </tr>
                     <tr>
-                        <td>SuperNet Start</td>
+                        <td class="cell-wider">SuperNet Start</td>
                         <td>5Gb</td>
                         <td>+1Gb</td>
                         <td>1per/30days</td>
                         <td>12.01.2020/12.02.2020</td>
                         <td>$ 516</td>
                         <td>$ 116</td>
-                        <td class="red-text">$ 632</td>
-                        <td class="text-right"><a href="#" class="buy-again">BUY AGAIN</a></td>
+                        <td class="text-red">$ 632</td>
+                        <td class="cell-wider"><a href="#" class="buy-again">BUY AGAIN</a></td>
                     </tr>
                     <tr>
-                        <td>SuperNet Start</td>
+                        <td class="cell-wider">SuperNet Start</td>
                         <td>5Gb</td>
                         <td>+1Gb</td>
                         <td>1per/30days</td>
                         <td>12.01.2020/12.02.2020</td>
                         <td>$ 516</td>
                         <td>$ 116</td>
-                        <td class="red-text">$ 632</td>
-                        <td class="text-right"><a href="#" class="buy-again">BUY AGAIN</a></td>
+                        <td class="text-red">$ 632</td>
+                        <td class="cell-wider"><a href="#" class="buy-again">BUY AGAIN</a></td>
                     </tr>
                     <tr>
-                        <td>SuperNet Start</td>
+                        <td class="cell-wider">SuperNet Start</td>
                         <td>5Gb</td>
                         <td>+1Gb</td>
                         <td>1per/30days</td>
                         <td>12.01.2020/12.02.2020</td>
                         <td>$ 516</td>
                         <td>$ 116</td>
-                        <td class="red-text">$ 632</td>
-                        <td class="text-right"><a href="#" class="buy-again">BUY AGAIN</a></td>
+                        <td class="text-red">$ 632</td>
+                        <td class="cell-wider"><a href="#" class="buy-again">BUY AGAIN</a></td>
                     </tr>
                     <tr>
-                        <td>SuperNet Start</td>
+                        <td class="cell-wider">SuperNet Start</td>
                         <td>5Gb</td>
                         <td>+1Gb</td>
                         <td>1per/30days</td>
                         <td>12.01.2020/12.02.2020</td>
                         <td>$ 516</td>
                         <td>$ 116</td>
-                        <td class="red-text">$ 632</td>
-                        <td class="text-right"><a href="#" class="buy-again">BUY AGAIN</a></td>
+                        <td class="text-red">$ 632</td>
+                        <td class="cell-wider"><a href="#" class="buy-again">BUY AGAIN</a></td>
                     </tr>
                 </table>
             </div>
@@ -316,24 +327,24 @@
         <div class="row mt-5">
             <div class="col-12">
                 <div class="d-flex">
-                    <div class="red-text red-text table-toggler" style="font-size:120%">
+                    <div class="text-red table-toggler table-toggler-sm">
                         <span class="font-weight-bold font-italic">SALE •</span> Special Offer
                     </div>
 
-                    <div class="line w-100 mt-4"></div>
+                    <div class="line"></div>
                 </div>
             </div>
         </div>
 
-        <div class="row mt-3">
-            <div class="col-2">
+        <div class="d-flex sale-card">
+            <div class="sale-card-item">
+                <a href="#"><img src="img/plans/5gb.svg" alt=""></a>
+            </div>
+            <div class="sale-card-item">
                 <a href="#"><img src="img/plans/10gb.svg" alt=""></a>
             </div>
-            <div class="col-2">
+            <div class="sale-card-item">
                 <a href="#"><img src="img/plans/30gb.svg" alt=""></a>
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/plans/5gb.svg" alt=""></a>
             </div>
         </div>
     </div>
@@ -348,31 +359,60 @@
 						<h4>CONTACT US</h4>
 					</div>
 
-					<div class="col-lg-3 col-sm-6">
-						<p>WhatsApp</p>
+					<!-- Contact Us -->
+					<div class="col-lg-3 col-sm-6 mb-3">
+						<p class="font-weight-semibold">WhatsApp</p>
 						<p>+49 36628 60335</p>
-					</div>
 
-					<div class="col-lg-3 col-sm-6">
-						<p>Email</p>
+						<p class="font-weight-semibold mt-3">Email</p>
 						<p>info@unlimsim.com</p>
+						<p>help@unlimsim.com</p>
 					</div>
 
-					<div class="col-lg-6 col-sm-12">
-						<img src="img/logo.svg" alt="" class="footer-logo d-block ml-auto">
+					<div class="col-lg-9 col-sm-6">
+						<div class="row">
+							<!-- Address -->
+							<div class="col-xl-8 col-lg-6 col-sm-12 mb-3">
+								<p class="font-weight-semibold">Address</p>
+								<p>Germany: 07937 Zeulenroda Triebes, August-Bebel-Str. 8</p>
+							</div>
+
+							<!-- Mobile application -->
+							<div class="col-xl-4 col-lg-6 col-sm-12">
+								<p class="font-weight-semibold mb-2">Mobile</p>
+								
+								<!-- Download mobile app -->
+								<div class="app_grid">
+									<button class="apple_btn">
+										<span class="icon">
+											<img src="./img/icons/app-store.svg" alt="ios">
+										</span>
+										<span class="title">App Store</span>
+										<span class="subtitle">Available now on the</span>
+									</button>
+									<button class="play_store_btn">
+										<span class="icon">
+											<img src="./img/icons/google-play.svg" alt="android">
+										</span>
+										<span class="title">Google Play</span>
+										<span class="subtitle">Get in on</span>
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<div class="row mt-5">
-					<div class="col-3 text-left">
+					<div class="col-md-4 col-6 footer-el-1">
 						<span class="small-text"> © 2020 UNLIM </span>
 					</div>
-					<div class="col-6 text-center">
+					<div class="col-md-4 col-6 footer-el-2">
 						<a href="#"><img src="img/icons/fb.svg" alt=""></a>
 						<a href="#"><img src="img/icons/in.svg" alt=""></a>
 						<a href="#"><img src="img/icons/ig.svg" alt=""></a>
 					</div>
-					<div class="col-3 text-right">
+					<div class="col-md-4 col-12 footer-el-3">
 						<a href="#"><img src="img/icons/pay-2.svg" alt=""></a>
 						<a href="#"><img src="img/icons/pay-3.svg" alt=""></a>
 						<a href="#"><img src="img/icons/pay-4.svg" alt=""></a>
