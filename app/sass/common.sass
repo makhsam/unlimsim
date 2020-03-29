@@ -441,13 +441,14 @@ h1, h2, h3, h4, h5, h6
 	right: 0
 	z-index: 8888
 .backdrop-image
-	display: block
+	display: flex
+	height: 100vh
+	justify-content: center
+	align-items: center
 	width: 100%
 	position: fixed
 	z-index: 9999
-	margin-top: 20%
 	.tu-img
-		margin: auto
 		display: block
 		width: 50%
 .instruction
@@ -822,8 +823,11 @@ b, strong
 		width: 16px
 		height: 16px
 
-// .table-toggler
-// 	width: 260px !important
+.cooperation-content
+	align-items: flex-end
+	margin-top: 2rem
+	img
+		width: 100%
 
 .drowdown-icon
 	width: 10px
