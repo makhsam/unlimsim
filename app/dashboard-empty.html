@@ -349,53 +349,54 @@
 	<div class="container-fluid footer mt-5 pb-3">
 		<div class="row">
 			<div class="container mt-5">
-				<div class="row">
-					<div class="col-12 mb-2">
-						<h4>CONTACT US</h4>
-					</div>
+				<div class="d-flex mb-2">
+					<h4>CONTACT US</h4>
+				</div>
 
-					<!-- Contact Us -->
+				<div class="row">
+					<!-- WhatsApp -->
 					<div class="col-lg-3 col-sm-6 mb-3">
 						<p class="font-weight-semibold">WhatsApp</p>
 						<p>+49 36628 60335</p>
+					</div>
 
-						<p class="font-weight-semibold mt-3">Email</p>
+					<!-- Email -->
+					<div class="col-lg-3 col-sm-6 mb-3">
+						<p class="font-weight-semibold">Email</p>
 						<p>info@unlimsim.com</p>
 						<p>help@unlimsim.com</p>
 					</div>
 
-					<div class="col-lg-9 col-sm-6">
-						<div class="row">
-							<!-- Address -->
-							<div class="col-xl-8 col-lg-6 col-sm-12 mb-3">
-								<p class="font-weight-semibold">Address</p>
-								<p>Germany: 07937 Zeulenroda Triebes, August-Bebel-Str. 8</p>
-							</div>
-
-							<!-- Mobile application -->
-							<div class="col-xl-4 col-lg-6 col-sm-12">
-								<p class="font-weight-semibold mb-2">Mobile</p>
-								
-								<!-- Download mobile app -->
-								<div class="app_grid">
-									<button class="apple_btn">
-										<span class="icon">
-											<img src="./img/icons/app-store.svg" alt="ios">
-										</span>
-										<span class="title">App Store</span>
-										<span class="subtitle">Available now on the</span>
-									</button>
-									<button class="play_store_btn">
-										<span class="icon">
-											<img src="./img/icons/google-play.svg" alt="android">
-										</span>
-										<span class="title">Google Play</span>
-										<span class="subtitle">Get in on</span>
-									</button>
-								</div>
-							</div>
-						</div>
+					<div class="col-lg-6 col-sm-12 mb-3">
+						<p class="font-weight-semibold">Address</p>
+						<p>Germany: 07937 Zeulenroda Triebes, August-Bebel-Str. 8</p>
 					</div>
+				</div>
+
+				<!-- Mobile Apps -->
+				<div class="row">
+					<div class="offset-lg-3 col-lg-9 col-sm-12">
+						<p class="font-weight-semibold mb-2">Mobile App</p>
+						
+						<!-- Download mobile app -->
+						<div class="app_grid">
+							<button class="apple_btn" data-toggle="modal" data-target="#appStoreModal">
+								<span class="icon">
+									<img src="./img/icons/apple-store.svg" alt="ios">
+								</span>
+								<span class="title">App Store</span>
+								<span class="subtitle">Available now on the</span>
+							</button>
+
+							<button class="play_store_btn" data-toggle="modal" data-target="#appStoreModal">
+								<span class="icon">
+									<img src="./img/icons/google-play.svg" alt="android">
+								</span>
+								<span class="title">Google Play</span>
+								<span class="subtitle">Get in on</span>
+							</button>
+						</div>
+					</div>	
 				</div>
 
 				<div class="row mt-5">
