@@ -141,7 +141,7 @@
         <div class="row map-filter mb-3">
             <div class="col-12">
                 <p class="map-filter-headline my-2">Find a destination</p>
-                <form class="d-flex justify-content-between flex-wrap">
+                <form class="d-flex justify-content-between flex-wrap-md">
                     <div class="map-item-1 flex-grow-1">
                         <input type="text" class="map-filter-input" id="chosen_country" placeholder="Select the country below" readonly>
                     </div>
@@ -163,14 +163,14 @@
                     </div>
 
                     <div class="map-item-4">
-                        <p class="text-red f-22 font-italic font-semibold lh-0">$
+                        <p class="text-red f-22 font-italic font-semibold white-space-nowrap lh-0">$
                             <span class="text-big" id="changed-price">0</span> 
                             <span class="text-secondary font-weight-normal">us/month</span>
                         </p>
                     </div>
 
                     <div class="map-item-5">
-                        <a href="buy-map.html" class="outlined-btn f-31 font-semibold">BUY</a>
+                        <a href="buy-map.html" class="outlined-btn f-23 font-semibold">BUY</a>
                     </div>
                 </form>
             </div>
@@ -366,7 +366,7 @@
     <script>
         var packet = 1;
         var period = 1;
-        var basicPrice = 259;
+        var basicPrice = 25;
 
         // $('#changed-price').html(packet*period*basicPrice);
 
