@@ -18,7 +18,7 @@ $(function() {
  */
 var hash = window.location.hash;
 
-if (hash && hash != '#') {	
+if (hash && hash != '#' && hash.length > 3) {	
 	var target = $(hash);
 
 	if (target.length) {
@@ -75,9 +75,7 @@ var priceList = {
 	5: 85
 };
 
-// Changing value of price
-$('.tarif').change(function() {
-	var val = $(this).val(); // value in GB
+var changeTarifPrice = function(val) {
 	var price = 0;
 
 	if (val > 0 && val <= 5) {
@@ -88,7 +86,26 @@ $('.tarif').change(function() {
 	}
 
 	$('.big-price').html(price);
+}
+
+// Changing value of price
+$('.tarif').keyup(function() {
+	changeTarifPrice($(this).val()); // value in GB
 });
+
+// Search box autocomplete
+$('.tarif').autoComplete({
+	minLength: 1,
+    resolverSettings: {
+        url: '../tarif-amount.json'
+    }
+}).on('autocomplete.select', function (evt, item) {
+	changeTarifPrice(item); // value in GB
+});
+
+// $(".tarif").focus(function() {
+// 	$(this).next(".bootstrap-autocomplete").addClass("show");
+// });
 
 $('.toggle-ios').click(function(){
 	$(this).toggleClass('active');
@@ -117,13 +134,15 @@ $('.close-instructions').click(function(e) {
 });
 
 
-$('#number_of_periods_select').on("change", function(){
+$('#no_periods_select').on("change", function(){
 	var index = $(this).val();
+	var price = index * 30;
+
 	$('.period_val').html(index * 30);
 	$('.period_index').html(index);
 
-	$('#actual_price').html(index * 25);
-	$('#sale_price').html(Math.round(index * 25 * 0.8));
+	$('#actual_price').html(price);
+	$('#sale_price').html(Math.round(price * 0.83));
 });
 
 
