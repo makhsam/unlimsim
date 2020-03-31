@@ -515,7 +515,6 @@ h1, h2, h3, h4, h5, h6
 				outline: none
 			.custom-margin
 				font-size: 33px
-				text-align: left
 		&-center
 			&-title
 				font-size: 16px
@@ -824,6 +823,8 @@ b, strong
 
 .w-38
 	width: 38%!important
+.mw-190
+	max-width: 190px
 
 .input-inline-icon
 	border-left: none
@@ -913,13 +914,11 @@ b, strong
 			img
 				width: 36px
 
-.footer-el-1
-	text-align: left
-.footer-el-2
-	text-align: right
-.footer-el-3
-	text-align: center
-	margin-top: 1rem
+.footer-bottom
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-between
 
 #appStoreModal
 	.modal-header, .modal-footer
