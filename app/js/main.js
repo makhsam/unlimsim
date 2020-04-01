@@ -62,10 +62,43 @@ $('.backdrop-overlay').click(function () {
 	$('.backdrop-overlay').css('display', 'none')
 });
 
-$('.country-list').children().click(function(){
-	$(this).siblings().removeClass('active')  	
-	$(this).addClass('active')
+/**
+ * Get countries of selected continent
+ */
+var loadCountryList = function (selectedContinent) {
+	// get data
+	$.getJSON("../data/countries.json", function (data) {
+		var countries = data.find(function (element) {
+			return element.continent == selectedContinent;
+		}).countries;
+
+		// Sort countries in alphabetical order
+		countries.sort();
+
+		var options = [];
+		$.each(countries, function(key, val) {
+			options.push("<option value='" + key + "'>" + val + "</option>");
+		});
+
+		$("#countries-list")
+			.empty()
+			.append(options.join(""));
+	});
+}
+
+// Load first continent when page loads
+loadCountryList('All');
+
+$('#continent-list').children().click(function(){
+	var selectedContinent = $(this).text();
+	// console.log('Selected continent: ', selectedContinent);
+
+	$(this).siblings().removeClass('active');	
+	$(this).addClass('active');
+
+	loadCountryList(selectedContinent);
 });
+
 
 var priceList = {
 	1: 25, // 1 Gb => $25
@@ -97,7 +130,7 @@ $('.tarif').keyup(function() {
 $('.tarif').autoComplete({
 	minLength: 1,
     resolverSettings: {
-        url: '../tarif-amount.json'
+        url: '../data/tarif-amount.json'
     }
 }).on('autocomplete.select', function (evt, item) {
 	changeTarifPrice(item); // value in GB
