@@ -285,6 +285,25 @@ h1, h2, h3, h4, h5, h6
 					background-color: $accent
 					color: #FFF
 					text-decoration: none
+				&.disabled
+					color: $accent
+					background-color: transparent
+					filter: grayscale(1)
+					opacity: .5
+					cursor: not-allowed
+					text-decoration: none
+	.tarif-wrapper
+		position: relative
+		&::after
+			position: absolute
+			top: 6px
+			right: 13px
+			font-size: .9em
+			color: #999
+			transition: all .05s ease-in-out
+		&.suffix-gb::after
+			content: 'GB'
+
 	.continent-list
 		list-style-type: none
 		margin: 0
@@ -668,6 +687,13 @@ h1, h2, h3, h4, h5, h6
 				text-decoration: none
 				color: #FFF 
 				background-color: $accent
+			&.disabled
+				color: $accent
+				background-color: transparent
+				filter: grayscale(1)
+				opacity: .5
+				cursor: not-allowed
+				text-decoration: none
 		.f-23
 			font-size: 23px
 		.lh-0

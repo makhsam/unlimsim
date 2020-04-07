@@ -3,10 +3,6 @@ $(function() {
 		mask: '+{7} (000) 000-00-00',
 		lazy: false,  // make placeholder always visible
 		placeholderChar: '_'     // defaults to '_'
-	}).on('accept', function() {
-		//
-	}).on('complete', function() {
-		//
 	});
 
 	// $('.selectpicker').selectpicker();
@@ -108,7 +104,9 @@ var priceList = {
 	5: 85
 };
 
-var changeTarifPrice = function(val) {
+var changeTarifPrice = function(val, obj) {
+	val = val.replace(/[^0-9]/g, ''); // remove all chars except numbers
+
 	var price = 0;
 
 	if (val > 0 && val <= 5) {
@@ -118,12 +116,20 @@ var changeTarifPrice = function(val) {
 		price = 85 + 17 * (val - 5);
 	}
 
-	$('.big-price').html(price);
+	obj.closest('.ptw').find('.big-price').html(price);
+
+	if (price) {
+		obj.closest('.ptw').find('.buy-link').removeClass('disabled');
+	} 
+	else {
+		obj.closest('.ptw').find('.buy-link').addClass('disabled');
+	}
 }
 
 // Changing value of price
 $('.tarif').keyup(function() {
-	changeTarifPrice($(this).val()); // value in GB
+	var $this = $(this);
+	changeTarifPrice($this.val(), $this); // value in GB
 });
 
 // Search box autocomplete
@@ -133,7 +139,7 @@ $('.tarif').autoComplete({
         url: '../data/tarif-amount.json'
     }
 }).on('autocomplete.select', function (evt, item) {
-	changeTarifPrice(item); // value in GB
+	changeTarifPrice(item, $(this)); // value in GB
 });
 
 // $(".tarif").focus(function() {
