@@ -142,9 +142,15 @@ $('.tarif').autoComplete({
 	changeTarifPrice(item, $(this)); // value in GB
 });
 
-// $(".tarif").focus(function() {
-// 	$(this).next(".bootstrap-autocomplete").addClass("show");
-// });
+$(".tarif").blur(function() {
+	var this$ = $(this);
+
+	setTimeout(function () {
+		if (this$.val() && !this$.val().includes('GB')) {
+			this$.val(this$.val() + ' GB');
+		}
+    }, 100);
+});
 
 $('.toggle-ios').click(function(){
 	$(this).toggleClass('active');
