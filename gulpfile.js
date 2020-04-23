@@ -35,7 +35,7 @@ gulp.task('styles', function() {
 	return gulp.src('app/sass/main.sass')
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(autoprefixer())
-	.pipe(cleancss()) // Opt., comment out when debugging
+	// .pipe(cleancss()) // Opt., comment out when debugging
 	.pipe(gulp.dest('app/dist'))
 	.pipe(browserSync.stream())
 });
@@ -50,7 +50,7 @@ gulp.task('scripts', function() {
 		'app/js/main.js', // Always at the end
 	])
 	.pipe(concat('main.js'))
-	.pipe(uglify()) // Minify js (opt.)
+	// .pipe(uglify()) // Minify js (opt.)
 	.pipe(gulp.dest('app/dist'))
 	.pipe(browserSync.reload({ stream: true }))
 });
