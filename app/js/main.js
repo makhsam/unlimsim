@@ -211,6 +211,23 @@ $('#table-toggler').click(function(){
 	degree += 180;
 });
 
+$('#edit-button').click(function() {
+	$('#contact-information').slideToggle();
+	$('#dashboard-container').toggleClass('filter-gray');
+
+	$('#dashboard-table').hide(); // this is optional
+});
+
+$('#submit-button').click(function(e) {
+	e.preventDefault();
+
+	// scroll to top
+	$('html, body').animate({ scrollTop: 0 }, 400, 'swing');
+
+	$('#contact-information').slideUp();
+	$('#dashboard-container').removeClass('filter-gray');
+});
+
 
 $('.map-country-list').children('li').click(function(){
 	$('#chosen_country').val($(this).text())
