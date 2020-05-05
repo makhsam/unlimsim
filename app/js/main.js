@@ -4,8 +4,11 @@ $(function() {
 		lazy: false,  // make placeholder always visible
 		placeholderChar: '_'     // defaults to '_'
 	});
+});
 
-	// $('.selectpicker').selectpicker();
+$(function () {
+	// Enable tooltips everywhere
+	$('[data-toggle="tooltip"]').tooltip()
 });
 
 
@@ -239,6 +242,12 @@ $('.map-country-list').children('li').click(function(){
 // Update progress bar
 $('#progress-bar').css('width', function() {
     return $(this).data('value') + "%";
+});
+
+// Reference link on press question mark in form input
+$('.input-inline-icon').click(function() {
+	var url = $(this).data("url");
+	window.open(url, '_blank');
 });
 
 // Validate the form

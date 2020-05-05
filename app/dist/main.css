@@ -11036,8 +11036,8 @@ strong {
 }
 
 .input-inline-icon {
-  border-left: none;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .input-inline-icon img {

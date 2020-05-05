@@ -44,9 +44,10 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'node_modules/jquery/dist/jquery.js',
-		'node_modules/bootstrap/dist/js/bootstrap.js',
+		'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
 		'node_modules/imask/dist/imask.js',
 		'node_modules/bootstrap-autocomplete/dist/latest/bootstrap-autocomplete.js',
+		'node_modules/bootstrap-validate/dist/bootstrap-validate.js',
 		'app/js/main.js', // Always at the end
 	])
 	.pipe(concat('main.js'))
