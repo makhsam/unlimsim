@@ -132,7 +132,7 @@
 
 		<div class="row">
 			<div class="offset-lg-2 col-lg-8 col-md-12">
-				<form action="" class="d-block">
+				<form action="" class="d-block" id="buy-form">
 					<p>Contact information</p>
 					
 					<div class="input-group">
@@ -144,12 +144,12 @@
 					<div class="row mb-3">
 						<div class="col-md-6 mb-3 mb-md-0">
 							<div class="input-group">
-								<input type="text" class="form-control" id="f_name" placeholder="* First name">
+								<input type="text" class="form-control" id="first_name" placeholder="* First name">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="input-group">
-								<input type="text" class="form-control" id="l_name" placeholder="* Last name">
+								<input type="text" class="form-control" id="last_name" placeholder="* Last name">
 							</div>
 						</div>
 					</div>
@@ -159,7 +159,7 @@
 					</div>
 
 					<div class="input-group mb-3">
-						<input type="password" class="form-control" id="repeat-password" placeholder="* Repeat your password">
+						<input type="password" class="form-control" id="repeat_password" placeholder="* Repeat your password">
 					</div>
 
 					<div class="input-group mb-3">
@@ -177,8 +177,8 @@
 					<div class="row mb-3">
 						<div class="col-md-6 mb-3 mb-md-0">
 							<div class="input-group">
-								<select name="" id="country" class="form-control">
-									<option value="" disabled selected>* Country/Region</option>
+								<select name="country" id="country" class="form-control">
+									<option value="" selected>* Country/Region</option>
 									<option value="ukraine">Ukraine</option>
 									<option value="russia">Russia</option>
 									<option value="uzbekistan">Uzbekistan</option>
@@ -194,7 +194,7 @@
 					</div>
 
 					<div class="input-group border-right-none mb-3">
-						<input type="text" class="form-control" id="phone_number" placeholder="Phone number" id="phoneNumber">
+						<input type="text" class="form-control" id="phone_number" placeholder="Phone number">
 						
 						<div class="input-group-append">
 							<span class="input-group-text input-inline-icon" data-url="http://google.com" data-toggle="tooltip" data-placement="bottom" title="Reference: http://google.com">
@@ -246,8 +246,8 @@
 
 						<div class="row mt-3">
 							<div class="offset-lg-3 col-lg-9 offset-sm-4 col-sm-8 col-12">
-								<a href="index.html?display=thankyou" class="buy-link-red ml-auto">Continue to payment</a>
-								<!-- <input type="submit" class="buy-link-red ml-auto" value="Continue to payment"> -->
+								<!-- <a href="index.html?display=thankyou" class="buy-link-red ml-auto">Continue to payment</a> -->
+								<input type="submit" class="buy-link-red ml-auto" value="Continue to payment">
 							</div>
 						</div>
 					</div>

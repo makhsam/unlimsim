@@ -1,14 +1,44 @@
 $(function() {
-	IMask(document.getElementById('phoneNumber'), {
+	// Enable tooltips everywhere
+	$('[data-toggle="tooltip"]').tooltip()
+
+	// iMask for phone fields
+	IMask(document.getElementById('phone_number'), {
 		mask: '+{7} (000) 000-00-00',
 		lazy: false,  // make placeholder always visible
 		placeholderChar: '_'     // defaults to '_'
 	});
-});
 
-$(function () {
-	// Enable tooltips everywhere
-	$('[data-toggle="tooltip"]').tooltip()
+	// Required & Optional Fields
+	var requiredFields = ['#email', '#first_name', '#last_name', '#password', '#repeat_password', '#city', '#country'];
+	var optionalFields = ['#address', '#address_detail', '#post_code', '#phone_number'];
+
+	bootstrapValidate(requiredFields, 'required:This field is required.');
+	bootstrapValidate('#email', 'email:Please enter a valid email.');
+	bootstrapValidate('#repeat_password', 'matches:#password:Password confirmation does not match.');
+
+
+	// Validate the form
+	$('#buy-form').on("change", function () {
+		var isFormValid = true;
+
+		for (var i = 0; i < requiredFields.length; i++) {
+			const selector = requiredFields[i];
+
+			if (!$(selector).val()) { // if empty
+				isFormValid = false;
+			}
+		}
+		
+		if (isFormValid) {
+			$('.img-filter').css('filter', 'grayscale(0)');
+			$('.img-filter').css('opacity', '1');
+		}
+		else {
+			$('.img-filter').css('filter', 'grayscale(1)');
+			$('.img-filter').css('opacity', '0.5');
+		}
+	});
 });
 
 
@@ -248,36 +278,6 @@ $('#progress-bar').css('width', function() {
 $('.input-inline-icon').click(function() {
 	var url = $(this).data("url");
 	window.open(url, '_blank');
-});
-
-// Validate the form
-var isFormValid = false;
-
-$('.form-check').on("change", function () {
-	var form = $(this);
-	var field = [];
-	form.find('input[data-validate]').each(function () {
-		field.push('input[data-validate]');
-		var value = $(this).val(),
-			line = $(this).closest('.some-form__line');
-
-		for (var i = 0; i < field.length; i++) {
-			if (!value) {
-				isFormValid = false;
-			} else {
-				isFormValid = true;
-			}
-		}
-
-		if (isFormValid) {
-			$('.img-filter').css('filter', 'grayscale(0)');
-			$('.img-filter').css('opacity', '1');
-		}
-		else {
-			$('.img-filter').css('filter', 'grayscale(1)');
-			$('.img-filter').css('opacity', '0.5');
-		}
-	})
 });
 
 
