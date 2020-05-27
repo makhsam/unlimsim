@@ -9,8 +9,8 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"@babel/core": "^7.9.6",
-		"@babel/preset-env": "^7.9.6",
+		"@babel/core": "^7.10.0",
+		"@babel/preset-env": "^7.10.0",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
 		"gulp": "^4.0.2",
@@ -30,11 +30,11 @@
 	},
 	"dependencies": {
 		"@popperjs/core": "^2.4.0",
-		"bootstrap": "^4.4.1",
+		"bootstrap": "^4.5.0",
 		"bootstrap-autocomplete": "^2.3.5",
-		"bootstrap-select": "^1.13.16",
+		"bootstrap-select": "^1.13.17",
 		"bootstrap-validate": "^2.2.0",
-		"imask": "^6.0.3",
+		"imask": "^6.0.5",
 		"jquery": "^3.5.0"
 	}
 }
