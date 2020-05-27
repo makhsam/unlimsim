@@ -32,7 +32,7 @@ gulp.task('browser-sync', function() {
 
 // Sass|Scss Styles
 gulp.task('styles', function() {
-	return gulp.src('app/sass/main.sass')
+	return gulp.src(['app/sass/main.sass', 'app/sass/index.scss'])
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(autoprefixer())
 	// .pipe(cleancss()) // Opt., comment out when debugging
@@ -48,7 +48,8 @@ gulp.task('scripts', function() {
 		'node_modules/imask/dist/imask.js',
 		'node_modules/bootstrap-autocomplete/dist/latest/bootstrap-autocomplete.js',
 		'node_modules/bootstrap-validate/dist/bootstrap-validate.js',
-		'app/js/main.js', // Always at the end
+		'app/js/main.js',
+		'app/js/index.js',
 	])
 	.pipe(concat('main.js'))
 	// .pipe(uglify()) // Minify js (opt.)

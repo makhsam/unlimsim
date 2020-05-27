@@ -2,613 +2,1896 @@
 <html lang="ru">
 
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8" />
 
-	<title>Unlim</title>
+  <title>Unlim</title>
 
-	<meta name="description" content="">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-	<link rel="icon" href="img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" href="img/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png" />
 
-	<!-- Change the Color of Header Bar in Browsers --> 
-	<meta name="theme-color" content="#FF0000"> 
-	<meta name="msapplication-navbutton-color" content="#FF0000"> 
-	<meta name="apple-mobile-web-app-status-bar-style" content="#FF0000">
+  <!-- Change the Color of Header Bar in Browsers -->
+  <meta name="theme-color" content="#FF0000" />
+  <meta name="msapplication-navbutton-color" content="#FF0000" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#FF0000" />
 
-	<link rel="stylesheet" href="dist/main.css">
+  <link rel="stylesheet" href="./dist/main.css" />
+  <link rel="stylesheet" href="./dist/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 </head>
 
-
 <body>
-	<!-- ========= Background Blurry Overlay ========= -->
-	<div style="display: none;">
-		<div class="backdrop-image">
-			<img src="img/icons/tu.svg" class="tu-img">
-		</div>
-		
-		<div class="backdrop-overlay"></div>
-	</div>
-	<!-- ========= Background Blurry Overlay ========= -->
+  <!-- modal -->
+  <!-- Modal -->
 
-	
-	<!-- Search block -->
-    <div class="search-block">
-        <div class="container">
-			<div class="search-wrapper">
-				<form action="/" method="GET" class="search-form">
-					<input type="text" name="search" id="search-input" placeholder="Search keyword and hit enter ...">
-				</form>
-		
-				<button class="search-close ml-auto"><img src="img/icons/close_white.png" alt=""></button>
-			</div>
-		</div>
+  <div class="modal fade modal-add" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <span class="modal-line"></span>
+            compatibile devices
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="title-box">
+            <p>Apple iPhones</p>
+            <span class="tit-line"></span>
+          </div>
+
+          <ul>
+            <li>iPhone 11</li>
+            <li>iPhone 11 Pro</li>
+            <li>iPhone 11 Pro Max</li>
+            <li>iPhone XS</li>
+            <li>iPhone XS Max</li>
+            <li>iPhone XS Max Global</li>
+            <li>iPhone XR</li>
+          </ul>
+
+          <div class="title-box">
+            <p>Apple iPads</p>
+            <span class="tit-line"></span>
+          </div>
+
+          <ul>
+            <li>iPad Pro 3rd Gen (12.9 inch, WiFi+Cellular)</li>
+            <li>iPad Pro 3rd Gen (12.9 inch, 1TB, WiFi+Cellular)</li>
+            <li>iPad mini 5th Gen</li>
+            <li>iPad Air 3rd Gen</li>
+          </ul>
+          <div class="title-box">
+            <p>Google</p>
+            <span class="tit-line"></span>
+          </div>
+
+          <ul>
+            <li>Pixel 3</li>
+            <li>Pixel 3 XL</li>
+            <li>Pixel 4</li>
+          </ul>
+          <div class="title-box">
+            <p>Samsung</p>
+            <span class="tit-line"></span>
+          </div>
+
+          <ul>
+            <li>Galaxy Fold LTE</li>
+            <li>Samsung Galaxy Z Flip</li>
+            <li>Samsung Galaxy S20, s20+ and S20 Ultra</li>
+            <li style="list-style: none;">
+              (Single SIM Nano-SIM and/or eSIM models )
+            </li>
+          </ul>
+
+          <div class="under-footer">
+            <ul>
+              <li>* Not compatible with carrier-locked phone</li>
+              <li>
+                * Not compatible with iPhone XR, XS models and 11 models
+                purchased in Hong Kong, Macau and Mainland China
+              </li>
+              <li>
+                * Not compatible with iPhones with 2 physical SIM card slots
+              </li>
+              <li>
+                * Not compatible with Pixel devices purchased in Australia
+              </li>
+              <li>
+                * Not compatible with devices on Android Q Beta versions
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-	<!-- End of search block -->
-	
+  </div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
+  <!-- ========= Background Blurry Overlay ========= -->
+  <div style="display: none;">
+    <div class="backdrop-image">
+      <img src="img/icons/tu.svg" class="tu-img" />
+    </div>
+
+    <div class="backdrop-overlay"></div>
+  </div>
+  <!-- ========= Background Blurry Overlay ========= -->
+
+  <!-- Search block -->
+  <div class="search-block">
+    <div class="container">
+      <div class="search-wrapper">
+        <form action="/" method="GET" class="search-form">
+          <input type="text" name="search" id="search-input" placeholder="Search keyword and hit enter ..." />
+        </form>
+
+        <button class="search-close ml-auto">
+          <img src="img/icons/close_white.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- End of search block -->
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
+    <div class="under-nav">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Worldwide Plans</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Region Plans</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Country PLans</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Personal Plans</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="" /></a>
+
+      <ul class="navbar-nav flex-row extra-bar-toggle">
+        <li class="nav-item mr-3">
+          <a href="#" class="nav-link">
+            <img src="img/icons/search.svg" alt="search" class="search-btn" />
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="dashboard.html" class="nav-link">
+            <img src="img/icons/user.svg" alt="user" class="user-btn" />
+          </a>
+        </li>
+        <li class="nav-item ml-3">
+          <a href="#" class="nav-link">
+            <img src="img/icons/basket.svg" alt="user" class="user-btn" />
+          </a>
+        </li>
+      </ul>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mt-4">
+          <li class="nav-item drop-down-btn">
+            <a class="nav-link" href="#">
+              <span class="line-top"></span>
+              PLANS
+              <img src="img/icons/down-arrow.svg" class="drowdown-icon" alt="" /></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#country-data">
+              <span class="line-top"></span> OUR SERVICES
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="map.html">
+              <span class="line-top"></span> COVERAGE</a>
+          </li>
+          <li class="nav-item ml-2rem">
+            <a href="cooperation.html" class="unlim-btn">COOPERATION</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav mt-4">
+          <li class="nav-item dropdown mr-1">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              USD
+              <img src="img/icons/down-arrow.svg" class="drowdown-icon" alt="" />
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">USD</a>
+              <a class="dropdown-item" href="#">RUB</a>
+              <a class="dropdown-item" href="#">EUR</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown mr-1">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              ENG
+              <img src="img/icons/down-arrow.svg" class="drowdown-icon" alt="" />
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">RUS</a>
+              <a class="dropdown-item" href="#">ENG</a>
+              <a class="dropdown-item" href="#">DEU</a>
+            </div>
+          </li>
+
+          <li class="nav-item mr-1 extra-bar-toggle-large">
+            <a href="#" class="nav-link">
+              <img src="img/icons/search.svg" alt="search" class="search-btn" />
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link extra-bar-toggle-large link-user">
+              <img src="img/icons/user.svg" alt="user" class="user-btn" />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-bas">
+              <img src="img/icons/basket.svg" class="user-btn" alt="bra" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End of navbar -->
+
+  <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselIndicators" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/banner/slide-sm.jpg" srcset="
+              img/banner/slide-md.jpg 1000w,
+              img/banner/slide-lg.jpg 2000w
+            " class="d-block w-100" alt="slide" />
+        <div class="carousel-caption">
+          <div class="offset-md-6 col-md-6 col-sm-12 carousel-title">
+            <span class="red-element"></span>
+            <h1>
+              Affordable communication around the world,
+              <span class="white-space-nowrap">at home</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/banner/slide-sm.jpg" srcset="
+              img/banner/slide-md.jpg 1000w,
+              img/banner/slide-lg.jpg 2000w
+            " class="d-block w-100" alt="slide" />
+        <div class="carousel-caption">
+          <div class="offset-md-6 col-md-6 col-sm-12 carousel-title">
+            <span class="red-element"></span>
+            <h1>
+              Affordable communication around the world,
+              <span class="white-space-nowrap">at home</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/banner/slide-sm.jpg" srcset="
+              img/banner/slide-md.jpg 1000w,
+              img/banner/slide-lg.jpg 2000w
+            " class="d-block w-100" alt="slide" />
+        <div class="carousel-caption">
+          <div class="offset-md-6 col-md-6 col-sm-12 carousel-title">
+            <span class="red-element"></span>
+            <h1>
+              Affordable communication around the world,
+              <span class="white-space-nowrap">at home</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-tab my-5">
+    <div class="wrapper-tab">
+      <div class="tabs">
         <div class="container">
+          <span class="tab">
+            <div class="line line-one"></div>
+            <p>Worldwide Plan</p>
+          </span>
+          <span class="tab">
+            <div class="line line-two"></div>
+            <p>Region Plan</p>
+          </span>
+          <span class="tab">
+            <div class="line line-three"></div>
+            <p>Country Plan</p>
+          </span>
+          <span class="tab">
+            <div class="line line-four"></div>
+            <p>Personal Plan</p>
+          </span>
+        </div>
+      </div>
+      <div class="tab_content">
+        <div class="bg-img">
+          <div class="bg-text-img">
+            <form action="#">
+              <div class="container">
+                <div class="tab_item">
+                  <div class="prev prev1">
+                    <i class="fas fa-angle-left"></i>
+                  </div>
+                  <div class="next next1">
+                    <i class="fas fa-angle-right"></i>
+                  </div>
+                  <div class="wrapper">
+                    <div class="carousel">
+                      <div class="inner">
+                        <div class="slide active">
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
 
-			<a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
 
-			<ul class="navbar-nav flex-row extra-bar-toggle">
-				<li class="nav-item mr-3">
-					<a href="#" class="nav-link">
-						<img src="img/icons/search.svg" alt="search" class="search-btn">
-					</a>
-				</li>
-				
-				<li class="nav-item">
-					<a href="dashboard.html" class="nav-link">
-						<img src="img/icons/user.svg" alt="user" class="user-btn">
-					</a>
-				</li>
-			</ul>
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p>YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
+                                <p style="padding-top: 10px;">
+                                  Voice and SMS
+                                </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
+                                <p style="padding-top: 10px;">
+                                  Substitution of numbers
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto mt-4">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="countries.html">WORLDWIDE DATA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#country-data">COUNTRY DATA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="map.html">MAP COVERAGE</a>
-                    </li>
-                    <li class="nav-item ml-2rem">
-                        <a href="cooperation.html" class="unlim-btn">COOPERATION</a>
-                    </li>
-                </ul>
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
 
-                <ul class="navbar-nav mt-4">
-                    <li class="nav-item dropdown mr-1">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            USD <img src="img/icons/down-arrow.svg" class="drowdown-icon" alt="">
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">USD</a>
-                            <a class="dropdown-item" href="#">RUB</a>
-                            <a class="dropdown-item" href="#">EUR</a>
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
+
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p>YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
+                                <p style="padding-top: 10px;">
+                                  Voice and SMS
+                                </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
+                                <p style="padding-top: 10px;">
+                                  Substitution of numbers
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
+
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
+
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
+
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p>YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
+                                <p style="padding-top: 10px;">
+                                  Voice and SMS
+                                </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
+                                <p style="padding-top: 10px;">
+                                  Substitution of numbers
+                                </p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-					</li>
-					
-                    <li class="nav-item dropdown mr-1">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            ENG <img src="img/icons/down-arrow.svg" class="drowdown-icon" alt="">
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">RUS</a>
-                            <a class="dropdown-item" href="#">ENG</a>
-                            <a class="dropdown-item" href="#">DEU</a>
+                        <div class="slide">
+                          <h1>2</h1>
                         </div>
-					</li>
-					
-                    <li class="nav-item mr-1 extra-bar-toggle-large">
-                        <a href="#" class="nav-link">
-							<img src="img/icons/search.svg" alt="search" class="search-btn">
-						</a>
-					</li>
-					
-                    <li class="nav-item">
-                        <a href="dashboard.html" class="nav-link extra-bar-toggle-large">
-                            <img src="img/icons/user.svg" alt="user" class="user-btn">
-                        </a>
-                    </li>
-                </ul>
-			</div>
-		</div>
-    </nav>
-	<!-- End of navbar -->
+                      </div>
+                      <div class="arrow arrow-left"></div>
+                      <div class="arrow arrow-right"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_item">
+                  <div class="prev prev2">
+                    <i class="fas fa-angle-left"></i>
+                  </div>
+                  <div class="next next2">
+                    <i class="fas fa-angle-right"></i>
+                  </div>
+                  <div class="wrapper">
+                    <div class="top-header pt-4">
+                      <h3>PLEASE SELECT THE REGION</h3>
+                      <span class="my-2 line"></span>
 
-	<div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselIndicators" data-slide-to="2"></li>
-		</ol>
+                      <div class="select-box mt-4">
+                        <ul class="nav">
+                          <li class="nav-item">
+                            <a href="#" class="nav-link"> ASSIA </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#" class="nav-link"> AFRICA </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#" class="nav-link"> EUROPE </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#" class="nav-link"> OCEANIA </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#" class="nav-link"> NORTH AMERICA </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#" class="nav-link"> SOUTH AMERICA </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
 
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="img/banner/slide-sm.jpg" srcset="img/banner/slide-md.jpg 1000w, img/banner/slide-lg.jpg 2000w" class="d-block w-100" alt="slide">
-				<div class="carousel-caption">
-					<div class="offset-md-6 col-md-6 col-sm-12 carousel-title">
-						<span class="red-element"></span>
-						<h1>Affordable communication around the world, <span class="white-space-nowrap">at home</span></h1>
-					</div>
-				</div>
-			</div>
+                    <div class="carousel2">
+                      <div class="inner">
+                        <div class="slide active">
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
 
-			<div class="carousel-item">
-				<img src="img/banner/slide-sm.jpg" srcset="img/banner/slide-md.jpg 1000w, img/banner/slide-lg.jpg 2000w" class="d-block w-100" alt="slide">
-				<div class="carousel-caption">
-					<div class="offset-md-6 col-md-6 col-sm-12 carousel-title">
-						<span class="red-element"></span>
-						<h1>Affordable communication around the world, <span class="white-space-nowrap">at home</span></h1>
-					</div>
-				</div>
-			</div>
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
 
-			<div class="carousel-item">
-				<img src="img/banner/slide-sm.jpg" srcset="img/banner/slide-md.jpg 1000w, img/banner/slide-lg.jpg 2000w" class="d-block w-100" alt="slide">
-				<div class="carousel-caption">
-					<div class="offset-md-6 col-md-6 col-sm-12 carousel-title">
-						<span class="red-element"></span>
-						<h1>Affordable communication around the world, <span class="white-space-nowrap">at home</span></h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
 
-	<div class="container unlim">
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p>YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
+                                <p style="padding-top: 10px;">
+                                  Voice and SMS
+                                </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
+                                <p style="padding-top: 10px;">
+                                  Substitution of numbers
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
 
-		<div class="row" id="worldwide-data">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-				<span class="red-line mb-2"></span>
-				<h3 class="unlim-headline">Buy Worldwide Data</h3>
-				<p class="unlim-paragraph">included 75 countries</p>
-			</div>
-		</div>
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
 
-		<div class="row justify-content-center">
-			<div class="unlim-wrapper col-xl-4 col-lg-4 col-md-6 col-sm-12">
-				<div class="unlim-plan scale-on-hover">
-					<img src="img/logo.svg" alt="">
-					<p class="unlim-plan-title">SuperNet <b>START</b></p>
-					<p class="unlim-plan-size">1<span class="size-gb">Gb</span></p>
-					<div class="white-line"></div>
-					<p class="unlim-plan-price">$ <span>25</span> us/month</p>
-					<div class="d-block px-5">
-						<a href="buy.html" class="unlim-plan-link">BUY</a>
-					</div>
-				</div>
-			</div>
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
 
-			<div class="unlim-wrapper col-xl-4 col-lg-4 col-md-6 col-sm-12">
-				<div class="unlim-plan scale-on-hover">
-					<img src="img/logo.svg" alt="">
-					<p class="unlim-plan-title">SuperNet <b>PRO</b></p>
-					<p class="unlim-plan-size">3<span class="size-gb">Gb</span></p>
-					<div class="white-line"></div>
-					<p class="unlim-plan-price">$ <span>70</span> us/month</p>
-					<div class="d-block px-5">
-						<a href="buy.html" class="unlim-plan-link">BUY</a>
-					</div>
-				</div>
-			</div>
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p>YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
+                                <p style="padding-top: 10px;">
+                                  Voice and SMS
+                                </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
+                                <p style="padding-top: 10px;">
+                                  Substitution of numbers
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
 
-			<div class="unlim-wrapper col-xl-4 col-lg-4 col-md-6 col-sm-12">
-				<div class="unlim-plan scale-on-hover">
-					<img src="img/logo.svg" alt="">
-					<p class="unlim-plan-title">SuperNet <b>MAX</b></p>
-					<p class="unlim-plan-size">5<span class="size-gb">Gb</span></p>
-					<div class="white-line"></div>
-					<p class="unlim-plan-price">$ <span>85</span> us/month</p>
-					<div class="d-block px-5">
-						<a href="buy.html" class="unlim-plan-link">BUY</a>
-					</div>
-				</div>
-			</div>
-		</div>
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
 
-		<div class="row">
-			<div class="col-12">
-				<div class="unlim-additional mt-4">
-					<p>Price for one extra megabyte 5 euro cents</p>
-					<p>• The approximate amounts of debiting from the balance of the registered and authorized UNLIM client
-						while in the selected country are shown above, and in fact there may be severalhigher or lower!</p>
-				</div>
-			</div>
-		</div>
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
 
-		<div class="row mt-5">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<span class="red-line mb-2"></span>
-				<h3 class="unlim-headline">Personal Tariff Worldwide</h3>
-			</div>
-		</div>
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p>YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
+                                <p style="padding-top: 10px;">
+                                  Voice and SMS
+                                </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
+                                <p style="padding-top: 10px;">
+                                  Substitution of numbers
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slide">
+                          <h1>2</h1>
+                        </div>
+                      </div>
+                      <div class="arrow arrow-left2"></div>
+                      <div class="arrow arrow-right2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_item">
+                  <div class="prev prev3">
+                    <i class="fas fa-angle-left"></i>
+                  </div>
+                  <div class="next next3">
+                    <i class="fas fa-angle-right"></i>
+                  </div>
+                  <div class="wrapper">
+                    <div class="top-header pt-4">
+                      <h3>PLEASE SELECT THE REGION</h3>
+                      <span class="my-2 line"></span>
 
-		<div class="row">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<div class="ptw d-flex flex-wrap justify-content-around mt-5">
-					<a href="countries.html" class="item item-link">
-						<p class="white-space-nowrap">included <span class="round-red">75</span> countries</p>
-					</a>
+                      <div class="sel-box mt-4">
+                        <div class="map-item-1 flex-grow-1 w-100">
+                          <input type="text" class="map-filter-input w-100 mb-3" id="chosen_country"
+                            placeholder="Select the country below" readonly />
 
-					<div class="item">
-						<input type="text" class="form-control tarif" placeholder="Enter or choose GB">
-					</div>
+                          <span class="close"><i class="fas fa-angle-down select-icon"></i></span>
+                        </div>
 
-					<div class="item" style="min-width: 190px;">
-						<p class="text-red-italic white-space-nowrap">
-							$ <span class="big-price">0</span> <span class="text-dark">us/month</span>
-						</p>
-					</div>
+                        <div class="under-select">
+                          <div class="">
+                            <div class="row map-country mt-3 p-2" id="map-coverage">
+                              <ul class="map-country-list col-md-2">
+                                <li class="let">A</li>
+                                <li>ALBANIA</li>
+                                <li>ALGERIA</li>
+                                <li>ANGUILLA</li>
+                                <li>ANTIGUA AND BARBUDA</li>
+                                <li>ARMENIA</li>
+                                <li>AUSTRALIA</li>
+                                <li>AUSTRIA</li>
+                                <li>AZERBAIJAN</li>
+                                <li class="let">B</li>
+                                <li>BAHRAIN</li>
+                                <li>BANGLADESH</li>
+                                <li>BARBADOS</li>
+                                <li>BELARUS</li>
+                                <li>BELGIUM</li>
+                                <li>BELIZE</li>
+                                <li>BOSNIA & HERZEGOVINA</li>
+                                <li>BRAZIL</li>
+                                <li>BRUNEI</li>
+                                <li>BULGARIA</li>
+                                <li>BURKINA FASO</li>
+                                <li class="let">C</li>
+                                <li>CAMBODIA</li>
+                                <li>CAMEROON</li>
+                                <li>CANADA</li>
+                                <li>CAYMAN ISLANDS</li>
+                                <li>CHAD</li>
+                                <li>CHILE</li>
+                                <li>CHINA</li>
+                                <li>COLOMBIA</li>
+                                <li>CONGO</li>
+                                <li>CONGO DEM REP</li>
+                                <li>COSTA RICA</li>
+                              </ul>
 
-					<div class="item">
-						<a href="buy.html" class="buy-link disabled">BUY</a>
-					</div>
-				</div>
-			</div>
-		</div>
+                              <ul class="map-country-list col-md-2">
+                                <li>COTE D'IVOIRE (IVORY COAST)</li>
+                                <li>CROATIA</li>
+                                <li>CURACAO</li>
+                                <li>CYPRUS</li>
+                                <li>CZECH REPUBLIC</li>
+                                <li class="let">D</li>
+                                <li>DENMARK</li>
+                                <li>DOMINICA</li>
+                                <li>ECUADOR</li>
+                                <li>EGYPT</li>
+                                <li>EL SALVADOR</li>
+                                <li>ESTONIA</li>
+                                <li>ETHIOPIA</li>
+                                <li class="let">F</li>
+                                <li>FAROE ISLANDS</li>
+                                <li>FIJI</li>
+                                <li>FINLAND</li>
+                                <li>FRANCE</li>
+                                <li>FRENCH GUIANA</li>
+                                <li class="let">G</li>
+                                <li>GABON</li>
+                                <li>GEORGIA</li>
+                                <li>GERMANY</li>
+                                <li>GHANA</li>
+                                <li>GIBRALTAR</li>
+                                <li>GREECE</li>
+                                <li>GREENLAND</li>
+                                <li>GRENADA</li>
+                                <li>GUADELOUPE</li>
+                                <li>GUINEA</li>
+                                <li>GUYANA</li>
+                                <li class="let">H</li>
+                              </ul>
 
-		<div class="row mt-5" id="country-data">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<span class="red-line mb-2"></span>
-				<h3 class="unlim-headline">Choose your favorite country</h3>
-			</div>
-		</div>
+                              <ul class="map-country-list col-md-2">
+                                <li>HAITI</li>
+                                <li>HAWAII - USA</li>
+                                <li>HONDURAS</li>
+                                <li>HONG KONG</li>
+                                <li>HUNGARY</li>
+                                <li class="let">I</li>
+                                <li>ICELAND</li>
+                                <li>INDIA</li>
+                                <li>INDONESIA</li>
+                                <li>IRAN</li>
+                                <li>IRELAND</li>
+                                <li>ISRAEL</li>
+                                <li>ITALY</li>
+                                <li class="let">J</li>
+                                <li>JAMAICA</li>
+                                <li>JAPAN</li>
+                                <li>JERSEY ISLAND</li>
+                                <li>JORDAN</li>
+                                <li class="let">K</li>
+                                <li>KAZAKHSTAN</li>
+                                <li>KENYA</li>
+                                <li>KUWAIT</li>
+                                <li>KYRGYZSTAN</li>
+                                <li class="let">L</li>
+                                <li>LAOS</li>
+                                <li>LATVIA</li>
+                                <li>LIECHTENSTEIN</li>
+                                <li>LITHUANIA</li>
+                                <li>LUXEMBOURG</li>
+                                <li class="let">M</li>
+                                <li>MACAU</li>
+                                <li>MACEDONIA</li>
+                                <li>MADAGASCAR</li>
+                              </ul>
 
-		<div class="row mt-5">
-			<div class="col-12">
+                              <ul class="map-country-list col-md-2">
+                                <li>MALAWI</li>
+                                <li>MALAYSIA</li>
+                                <li>MALTA</li>
+                                <li>MARTINIQUE</li>
+                                <li>MEXICO</li>
+                                <li>MOLDOVA</li>
+                                <li>MONGOLIA</li>
+                                <li>MONTENEGRO</li>
+                                <li>MONTSERRAT</li>
+                                <li>MOROCCO</li>
+                                <li>MOZAMBIQUE</li>
+                                <li>MYANMAR</li>
+                                <li class="let">N</li>
+                                <li>NAMIBIA</li>
+                                <li>NAURU</li>
+                                <li>NEPAL</li>
+                                <li>NETHERLANDS</li>
+                                <li>NETHERLANDS ANTILLES</li>
+                                <li>NEW ZEALAND</li>
+                                <li>NICARAGUA</li>
+                                <li>NIGERIA</li>
+                                <li>NORTHERN IRELAND</li>
+                                <li>NORWAY</li>
+                                <li class="let">O</li>
+                                <li>OMAN</li>
 
-				<div class="w-100">
-					<ul class="continent-list" id="continent-list">
-						<li class="active">All</li>
-						<li>Africa</li>
-						<li>Asia</li>
-						<li>Europe</li>
-						<li>Oceania</li>
-						<li>North America</li>
-						<li>South America</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+                                <li class="let">P</li>
+                                <li>PAKISTAN</li>
+                                <li>PALESTINE</li>
+                                <li>PANAMA</li>
+                                <li>PAPUA NEW GUINEA</li>
+                                <li>PARAGUAY</li>
+                                <li>PERU</li>
+                              </ul>
 
-		<div class="row ptw">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<div class="d-flex justify-content-around flex-wrap mt-5">
-					<div class="item">
-						<select name="" id="countries-list" class="form-control">
-							<option value="">Enter or choose country</option>
-							<!-- Other options generated from json file -->
-						</select>
-					</div>
-					
-					<div class="item">
-						<input type="text" class="form-control tarif" placeholder="Enter or choose GB">
-					</div>
+                              <ul class="map-country-list col-md-2">
+                                <li>PHILIPPINES</li>
+                                <li>POLAND</li>
+                                <li>PORTUGAL</li>
+                                <li class="let">Q</li>
+                                <li>QATAR</li>
+                                <li class="let">R</li>
+                                <li>ROMANIA</li>
+                                <li>RUSSIAN FEDERATION</li>
+                                <li>RWANDA</li>
+                                <li class="let">S</li>
+                                <li>SAINT KITTS & NEVIS</li>
+                                <li>SAINT MARTIN(FRENCH)</li>
+                                <li>SAUDI ARABIA</li>
+                                <li>SCOTLAND</li>
+                                <li>SENEGAL</li>
+                                <li>SERBIA</li>
+                                <li>SINGAPORE</li>
+                                <li>SINT MAARTEN(DUTCH)</li>
+                                <li>SLOVAKIA</li>
+                                <li>SLOVENIA</li>
+                                <li>SOUTH AFRICA</li>
+                                <li>SOUTH KOREA</li>
+                                <li>SPAIN</li>
+                                <li>SRI LANKA</li>
+                                <li>ST BARTHELEMY</li>
+                                <li>ST LUCIA</li>
+                                <li>ST VINCENT AND THE GRENADINES</li>
+                                <li>SURINAME</li>
+                                <li>SWEDEN</li>
+                                <li>SWITZERLAND</li>
+                              </ul>
 
-					<div class="item" style="min-width: 190px;">
-						<p class="text-red-italic">
-							$ <span class="big-price">0</span> <span class="text-dark">us/month</span>
-						</p>
-					</div>
-					<div class="item">
-						<a href="buy.html" class="buy-link disabled">BUY</a>
-					</div>
-				</div>
-			</div>
-		</div>
+                              <ul class="map-country-list col-md-2">
+                                <li class="let">T</li>
+                                <li>TAIWAN</li>
+                                <li>TAJIKISTAN</li>
+                                <li>TANZANIA</li>
+                                <li>THAILAND</li>
+                                <li>TONGA</li>
+                                <li>TRINIDAD AND TOBAGO</li>
+                                <li>TUNISIA</li>
+                                <li>TURKEY</li>
+                                <li>TURKS & CAICOS ISLANDS</li>
+                                <li class="let">U</li>
+                                <li>UGANDA</li>
+                                <li>UKRAINE</li>
+                                <li>UNITED ARAB EMIRATES</li>
+                                <li>UNITED KINGDOM</li>
+                                <li>UNITED STATES</li>
+                                <li>URUGUAY</li>
+                                <li>UZBEKISTAN</li>
+                                <li class="let">V</li>
+                                <li>VANUATU</li>
+                                <li>VENEZUELA</li>
+                                <li>VIETNAM</li>
+                                <li>VIRGIN ISLANDS BRITISH</li>
+                                <li>VIRGIN ISLANDS U.S</li>
+                                <li class="let">W</li>
+                                <li>WALES</li>
+                                <li class="let">Z</li>
+                                <li>ZAMBIA</li>
+                                <li>ZIMBABWE</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-		<div class="row mt-5">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-12">
-				<div class="title">
-					<div class="red-line mx-auto mb-3"></div>
-					<h4 class="title-heading title-heading-large">What is <span>eSim</span></h4>
-					<p class="title-subtitle">and how does it work</p>
-				</div>
-			</div>
-		</div>
+                    <div class="carousel3">
+                      <div class="inner">
+                        <div class="slide active">
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
 
-		<div class="row mt-4">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-				<img src="img/src/1.png" alt="" class="w-100">
-			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-				<div class="d-flex flex-column justify-content-between h-100">
-					<div class="empty"></div>
-					<p>This is a special technology that has been introduced into new smartphones. Smartphones that currently support this technology are Iphone Xr, Xs, XsMax, Iphone 11. You will not need to buy a SIM card, just get a QR code and register. We can say that this is an electronic sim card! In the production process, a special сhip is built into the gadget, which is responsible for the communication.</p>
-				</div>
-			</div>
-		</div>
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
 
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
 
-		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-5">
-				<div class="d-flex flex-column justify-content-between h-100">
-					<div class="empty"></div>
-					<div>
-						<div class="red-line float-right"></div>
-						<h3 class="headline text-right mt-2">UnlimSim</h3>
-						<p class="text-right">Through our website or application, you can connect to any
-							operator with whom we are currently cooperating.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-				<img src="img/src/2.png" alt="" class="w-100">
-			</div>
-		</div>
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p>YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
+                                <p style="padding-top: 10px;">
+                                  Voice and SMS
+                                </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
+                                <p style="padding-top: 10px;">
+                                  Substitution of numbers
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
 
-		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ordered-block">
-				<img src="img/src/3.png" alt="" class="w-100">
-			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-5">
-				<div class="d-flex flex-column justify-content-between h-100">
-					<div class="empty"></div>
-					<div>
-						<div class="red-line"></div>
-						<h3 class="headline mt-2">Worldwide Coverage</h3>
-						<p>With our service, you can use eSim technology in more than 150
-							countries of the world.</p>
-					</div>
-				</div>
-			</div>
-		</div>
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
 
-		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-5">
-				<div class="d-flex flex-column justify-content-between h-100">
-					<div class="empty"></div>
-					<div>
-						<div class="red-line float-right"></div>
-						<h3 class="headline text-right mt-2">Simple <span>•</span> Convenient <span>•</span>
-							Fast</h3>
-						<p class="text-right">With our service you can quickly and easily manage your account.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-				<img src="img/src/4.png" alt="" class="w-100">
-			</div>
-		</div>
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
 
-		<div class="row">
-			<div class="col-12">
-				<div class="title mt-5">
-					<div class="red-line mx-auto mb-3"></div>
-					<h4 class="title-heading">How to activate <span>eSim</span>?</h4>
-				</div>
-			</div>
-		</div>
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p>YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
+                                <p style="padding-top: 10px;">
+                                  Voice and SMS
+                                </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
+                                <p style="padding-top: 10px;">
+                                  Substitution of numbers
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
 
-		<!-- IOS & Android -->
-		<div class="h2a mt-3">
-			<div class="d-flex justify-content-center mx-2">
-				<p class="link toggle-ios">iOS</p>
-				<p class="link toggle-android">Android</p>
-			</div>
-		</div>
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
 
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
 
-		<!-- IOS instructions start -->
-		<div class="row instruction mt-5" id="instruction-ios">
-			<div class="offset-lg-2 col-lg-8 col-12">
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p>YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
+                                <p style="padding-top: 10px;">
+                                  Voice and SMS
+                                </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
+                                <p style="padding-top: 10px;">
+                                  Substitution of numbers
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slide">
+                          <h1>2</h1>
+                        </div>
+                      </div>
+                      <div class="arrow arrow-left3"></div>
+                      <div class="arrow arrow-right3"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_item">
+                  <div class="row last-tab py-5">
+                    <div class="col-md-7 col-sm-12 left-item">
+                      <div class="inner-box">
+                        <h5>Location</h5>
+                        <div class="item-box my-3">
+                          <div class="row">
+                            <div class="col-sm-2 d-flex justify-content-center align-items-center">
+                              <img src="img/icons/icon1.png" alt="icon1" width="85" height="50" />
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="browser-default custom-select left-select">
+                                <option selected>Select location</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="browser-default custom-select right-select">
+                                <option selected>Select location</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
 
-				<div class="instruction-header">
-					Please follow the steps below to activate the <span class="text-red">UNLIM</span>
-					feature on an <span class="text-red">eSIM</span>-enabled iPhone.
-				</div>
+                                <option class="let">A</option>
+                                <option>ALBANIA</option>
+                                <option>ALGERIA</option>
+                                <option>ANGUILLA</option>
+                                <option>ANTIGUA AND BARBUDA</option>
+                                <option>ARMENIA</option>
+                                <option>AUSTRALIA</option>
+                                <option>AUSTRIA</option>
+                                <option>AZERBAIJAN</option>
+                                <option class="let">B</option>
+                                <option>BAHRAIN</option>
+                                <option>BANGLADESH</option>
+                                <option>BARBADOS</option>
+                                <option>BELARUS</option>
+                                <option>BELGIUM</option>
+                                <option>BELIZE</option>
+                                <option>BOSNIA & HERZEGOVINA</option>
+                                <option>BRAZIL</option>
+                                <option>BRUNEI</option>
+                                <option>BULGARIA</option>
+                                <option>BURKINA FASO</option>
+                                <option class="let">C</option>
+                                <option>CAMBODIA</option>
+                                <option>CAMEROON</option>
+                                <option>CANADA</option>
+                                <option>CAYMAN ISLANDS</option>
+                                <option>CHAD</option>
+                                <option>CHILE</option>
+                                <option>CHINA</option>
+                                <option>COLOMBIA</option>
+                                <option>CONGO</option>
+                                <option>CONGO DEM REP</option>
+                                <option>COSTA RICA</option>
+                                <option>COTE D'IVOIRE (IVORY COAST)</option>
+                                <option>CROATIA</option>
+                                <option>CURACAO</option>
+                                <option>CYPRUS</option>
+                                <option>CZECH REPUBLIC</option>
+                                <option class="let">D</option>
+                                <option>DENMARK</option>
+                                <option>DOMINICA</option>
+                                <option>ECUADOR</option>
+                                <option>EGYPT</option>
+                                <option>EL SALVADOR</option>
+                                <option>ESTONIA</option>
+                                <option>ETHIOPIA</option>
+                                <option class="let">F</option>
+                                <option>FAROE ISLANDS</option>
+                                <option>FIJI</option>
+                                <option>FINLAND</option>
+                                <option>FRANCE</option>
+                                <option>FRENCH GUIANA</option>
+                                <option class="let">G</option>
+                                <option>GABON</option>
+                                <option>GEORGIA</option>
+                                <option>GERMANY</option>
+                                <option>GHANA</option>
+                                <option>GIBRALTAR</option>
+                                <option>GREECE</option>
+                                <option>GREENLAND</option>
+                                <option>GRENADA</option>
+                                <option>GUADELOUPE</option>
+                                <option>GUINEA</option>
+                                <option>GUYANA</option>
+                                <option class="let">H</option>
+                                <option>HAITI</option>
+                                <option>HAWAII - USA</option>
+                                <option>HONDURAS</option>
+                                <option>HONG KONG</option>
+                                <option>HUNGARY</option>
+                                <option class="let">I</option>
+                                <option>ICELAND</option>
+                                <option>INDIA</option>
+                                <option>INDONESIA</option>
+                                <option>IRAN</option>
+                                <option>IRELAND</option>
+                                <option>ISRAEL</option>
+                                <option>ITALY</option>
+                                <option class="let">J</option>
+                                <option>JAMAICA</option>
+                                <option>JAPAN</option>
+                                <option>JERSEY ISLAND</option>
+                                <option>JORDAN</option>
+                                <option class="let">K</option>
+                                <option>KAZAKHSTAN</option>
+                                <option>KENYA</option>
+                                <option>KUWAIT</option>
+                                <option>KYRGYZSTAN</option>
+                                <option class="let">L</option>
+                                <option>LAOS</option>
+                                <option>LATVIA</option>
+                                <option>LIECHTENSTEIN</option>
+                                <option>LITHUANIA</option>
+                                <option>LUXEMBOURG</option>
+                                <option class="let">M</option>
+                                <option>MACAU</option>
+                                <option>MACEDONIA</option>
+                                <option>MADAGASCAR</option>
+                                <option>MALAWI</option>
+                                <option>MALAYSIA</option>
+                                <option>MALTA</option>
+                                <option>MARTINIQUE</option>
+                                <option>MEXICO</option>
+                                <option>MOLDOVA</option>
+                                <option>MONGOLIA</option>
+                                <option>MONTENEGRO</option>
+                                <option>MONTSERRAT</option>
+                                <option>MOROCCO</option>
+                                <option>MOZAMBIQUE</option>
+                                <option>MYANMAR</option>
+                                <option class="let">N</option>
+                                <option>NAMIBIA</option>
+                                <option>NAURU</option>
+                                <option>NEPAL</option>
+                                <option>NETHERLANDS</option>
+                                <option>NETHERLANDS ANTILLES</option>
+                                <option>NEW ZEALAND</option>
+                                <option>NICARAGUA</option>
+                                <option>NIGERIA</option>
+                                <option>NORTHERN IRELAND</option>
+                                <option>NORWAY</option>
+                                <option class="let">O</option>
+                                <option>OMAN</option>
+                                <option class="let">P</li>
+                                <option>PAKISTAN</option>
+                                <option>PALESTINE</li>
+                                <option>PANAMA</li>
+                                <option>PAPUA NEW GUINEA</li>
+                                <option>PARAGUAY</option>
+                                <option>PERU</option>
+                                <option>PHILIPPINES</option>
+                                <option>POLAND</option>
+                                <option>PORTUGAL</option>
+                                <option class="let">Q</option>
+                                <option>QATAR</option>
+                                <option class="let">R</option>
+                                <option>ROMANIA</option>
+                                <option>RUSSIAN FEDERATION</option>
+                                <option>RWANDA</option>
+                                <option class="let">S</option>
+                                <option>SAINT KITTS & NEVIS</option>
+                                <option>SAINT MARTIN(FRENCH)</option>
+                                <option>SAUDI ARABIA</option>
+                                <option>SCOTLAND</option>
+                                <option>SENEGAL</option>
+                                <option>SERBIA</option>
+                                <option>SINGAPORE</option>
+                                <option>SINT MAARTEN(DUTCH)</option>
+                                <option>SLOVAKIA</option>
+                                <option>SLOVENIA</option>
+                                <option>SOUTH AFRICA</option>
+                                <option>SOUTH KOREA</option>
+                                <option>SPAIN</option>
+                                <option>SRI LANKA</option>
+                                <option>ST BARTHELEMY</option>
+                                <option>ST LUCIA</option>
+                                <option>ST VINCENT AND THE GRENADINES</option>
+                                <option>SURINAME</option>
+                                <option>SWEDEN</option>
+                                <option>SWITZERLAND</option>
+                                <option class="let">T</option>
+                                <option>TAIWAN</option>
+                                <option>TAJIKISTAN</option>
+                                <option>TANZANIA</option>
+                                <option>THAILAND</option>
+                                <option>TONGA</option>
+                                <option>TRINIDAD AND TOBAGO</option>
+                                <option>TUNISIA</option>
+                                <option>TURKEY</option>
+                                <option>TURKS & CAICOS ISLANDS</option>
+                                <option class="let">U</option>
+                                <option>UGANDA</option>
+                                <option>UKRAINE</option>
+                                <option>UNITED ARAB EMIRATES</option>
+                                <option>UNITED KINGDOM</option>
+                                <option>UNITED STATES</option>
+                                <option>URUGUAY</option>
+                                <option>UZBEKISTAN</option>
+                                <option class="let">V</option>
+                                <option>VANUATU</option>
+                                <option>VENEZUELA</option>
+                                <option>VIETNAM</option>
+                                <option>VIRGIN ISLANDS BRITISH</option>
+                                <option>VIRGIN ISLANDS U.S</option>
+                                <option class="let">W</option>
+                                <option>WALES</option>
+                                <option class="let">Z</option>
+                                <option>ZAMBIA</option>
+                                <option>ZIMBABWE</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-2"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="inner-box">
+                        <h5>Internet data</h5>
+                        <div class="item-box my-3">
+                          <div class="row">
+                            <div class="col-sm-2 d-flex justify-content-center align-items-center">
+                              <img src="img/icons/icon2.png" alt="icon1" width="30" height="30" />
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="browser-default custom-select">
+                                <option selected>Enter Gb</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="browser-default custom-select">
+                                <option selected>Enter Gb</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-2 last-text">
+                              .
+                              <p>
+                                $ <span class="number"> 0 </span> us/month
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="inner-box">
+                        <h5>Voice / SMS</h5>
+                        <div class="item-box my-3">
+                          <div class="row">
+                            <div class="col-sm-2 d-flex justify-content-center align-items-center">
+                              <img src="img/icons/icon5.png" alt="icon1" width="42" height="35" />
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="browser-default custom-select">
+                                <option selected>Enter Balance $</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="browser-default custom-select">
+                                <option selected>Enter period</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-2 last-text">
+                              .
+                              <p>
+                                $ <span class="number"> 0 </span> us/month
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="inner-box">
+                        <h5>Virtual number</h5>
+                        <div class="item-box my-3">
+                          <div class="row">
+                            <div class="col-sm-2 d-flex justify-content-center align-items-center">
+                              <img src="img/icons/icon3.png" alt="icon1" width="56" height="56" />
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="browser-default custom-select">
+                                <option selected>Enter period</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-2 last-text">
+                              .
+                              <p>
+                                $ <span class="number"> 0 </span> us/month
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="inner-box">
+                        <h5>Substitution of numbers</h5>
+                        <div class="item-box my-3">
+                          <div class="row">
+                            <div class="col-sm-2 d-flex justify-content-center align-items-center">
+                              <img src="img/icons/icon4.png" alt="icon1" width="36" height="35" />
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="browser-default custom-select">
+                                <option selected>Enter period</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-2 last-text">
+                              .
+                              <p>
+                                $ <span class="number"> 0 </span> us/month
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-5 col-sm-12 right-item">
+                      <fieldset>
+                        <legend>eSim or Sim</legend>
+                        <div class="top-one">
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="materialUnchecked"
+                              name="materialExampleRadios" />
+                            <div class="circle">
+                              <div class="inner"></div>
+                            </div>
+                            <label class="form-check-label" for="materialUnchecked">
+                              <img src="img/icons/left-sim.png" width="37" height="37" alt="left" />
+                              eSim</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="materialUnchecked1"
+                              name="materialExampleRadios" />
+                            <div class="circle">
+                              <div class="inner"></div>
+                            </div>
+                            <label class="form-check-label" for="materialUnchecked1">
+                              <img src="img/icons/right-sim.png" width="50" height="37" alt="left" />
+                              Sim</label>
+                          </div>
+                        </div>
 
-				<!-- Step 1 -->
-				<div class="instruction-step">
-					<div class="instruction-text">
-						<span class="red-border">1</span> Go to <span class="semibold"> Settings > Cellular / Mobile Data > Add Cellular Plan / Add Data Plan</span>
-					</div>
-					<div class="instruction-image">
-						<img src="./img/instructions/ios-1a.jpg" alt="">
-						<img src="./img/instructions/ios-1b.jpg" alt="">
-					</div>
-				</div>
+                        <div class="top-two mt-3">
+                          <p>• Compatible with eSIM phones *</p>
+                          <p>• No hassle of changing SIM cards</p>
+                          <p>• Instant Activation</p>
+                        </div>
 
-				<!-- Step 2 -->
-				<div class="instruction-step">
-					<div class="instruction-text">
-						<span class="red-border">2</span> <span class="semibold">Scan the QR code</span> in your email
-					</div>
-					<div class="instruction-image">
-						<img src="./img/instructions/ios-2.jpg" alt="">
-					</div>
-				</div>
+                        <p class="pt-1">
+                          <a style="color: azure;" href="#" data-toggle="modal" data-target="#exampleModal">* View
+                            compatibile devices</a>
+                        </p>
+                      </fieldset>
 
-				<!-- Step 3 -->
-				<div class="instruction-step">
-					<div class="instruction-text">
-						<span class="red-border">3</span> Tap <span class="semibold">Add Data Plan</span>
-					</div>
-					<div class="instruction-image">
-						<img src="./img/instructions/ios-3.jpg" alt="">
-					</div>
-				</div>
+                      <div class="under-text my-3">
+                        <h3>
+                          <em>Balance $ <span>0</span> </em>
+                        </h3>
+                        <button>
+                          BUY
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-				<!-- Step 4 -->
-				<div class="instruction-step">
-					<div class="instruction-text">
-						<span class="red-border">4</span> Choose <span class="semibold"> Secondary Label.</span> Name the label <span class="semibold">"UNLIM"</span>
-					</div>
-					<div class="instruction-image">
-						<img src="./img/instructions/ios-4a.jpg" alt="">
-						<img src="./img/instructions/ios-4b.jpg" alt="">
-					</div>
-				</div>
+  <div class="container unlim">
+    <!--       
+      <div class="row" id="worldwide-data">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <span class="red-line mb-2"></span>
+          <h3 class="unlim-headline">Buy Worldwide Data</h3>
+          <p class="unlim-paragraph">included 75 countries</p>
+        </div>
+      </div>
 
-				<div class="instruction-step">
-					<div class="instruction-text">
-						Choose <span class="semibold"> Use "UNLIM"</span> for mobile data only
-					</div>
-					<div class="instruction-image">
-						<img src="./img/instructions/ios-4c.jpg" alt="">
-					</div>
-				</div>
+      <div class="row justify-content-center">
+        <div class="unlim-wrapper col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="unlim-plan scale-on-hover">
+            <img src="img/logo.svg" alt="" />
+            <p class="unlim-plan-title">SuperNet <b>START</b></p>
+            <p class="unlim-plan-size">1<span class="size-gb">Gb</span></p>
+            <div class="white-line"></div>
+            <p class="unlim-plan-price">$ <span>25</span> us/month</p>
+            <div class="d-block px-5">
+              <a href="buy.html" class="unlim-plan-link">BUY</a>
+            </div>
+          </div>
+        </div>
 
-				<!-- Step 5 -->
-				<div class="instruction-step">
-					<div class="instruction-text">
-						<span class="red-border">5</span> Go to <span class="semibold"> Settings > Mobile Data > Mobile Data > Select Flexiroam</span>
-					</div>
-					<div class="instruction-image">
-						<img src="./img/instructions/ios-5a.jpg" alt="">
-					</div>
-				</div>
+        <div class="unlim-wrapper col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="unlim-plan scale-on-hover">
+            <img src="img/logo.svg" alt="" />
+            <p class="unlim-plan-title">SuperNet <b>PRO</b></p>
+            <p class="unlim-plan-size">3<span class="size-gb">Gb</span></p>
+            <div class="white-line"></div>
+            <p class="unlim-plan-price">$ <span>70</span> us/month</p>
+            <div class="d-block px-5">
+              <a href="buy.html" class="unlim-plan-link">BUY</a>
+            </div>
+          </div>
+        </div>
 
-				<div class="instruction-step">
-					<div class="instruction-text">
-						Choose <span class="semibold"> Use "UNLIM"</span> for mobile data only
-					</div>
-					<div class="instruction-image">
-						<img src="./img/instructions/ios-5b.jpg" alt="">
-					</div>
-				</div>
+        <div class="unlim-wrapper col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="unlim-plan scale-on-hover">
+            <img src="img/logo.svg" alt="" />
+            <p class="unlim-plan-title">SuperNet <b>MAX</b></p>
+            <p class="unlim-plan-size">5<span class="size-gb">Gb</span></p>
+            <div class="white-line"></div>
+            <p class="unlim-plan-price">$ <span>85</span> us/month</p>
+            <div class="d-block px-5">
+              <a href="buy.html" class="unlim-plan-link">BUY</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			</div>
+      <div class="row">
+        <div class="col-12">
+          <div class="unlim-additional mt-4">
+            <p>Price for one extra megabyte 5 euro cents</p>
+            <p>
+              • The approximate amounts of debiting from the balance of the
+              registered and authorized UNLIM client while in the selected
+              country are shown above, and in fact there may be severalhigher or
+              lower!
+            </p>
+          </div>
+        </div>
+      </div>
 
-			<!-- Close instruction -->
-			<div class="col-12">
-				<a href="#" class="text-center mt-5 close-instructions">
-					<img src="img/icons/up-arrow.svg" alt="up">
-				</a>
-			</div>
-		</div>
-		<!-- IOS instructions end -->
+      <div class="row mt-5">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="red-line mb-2"></span>
+          <h3 class="unlim-headline">Personal Tariff Worldwide</h3>
+        </div>
+      </div>
 
-		<!-- Android instructions start -->
-		<div class="row instruction mt-5" id="instruction-android">
-			<div class="offset-2 col-8">
-				<div class="text-center"><i>No data found</i></div>
-			</div>
-			
-			<!-- Close instruction -->
-			<div class="col-12">
-				<a href="#" class="text-center mt-5 close-instructions">
-					<img src="img/icons/up-arrow.svg" alt="up">
-				</a>
-			</div>
-		</div>
-		<!-- Android instructions end -->
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <div class="ptw d-flex flex-wrap justify-content-around mt-5">
+            <a href="countries.html" class="item item-link">
+              <p class="white-space-nowrap">
+                included <span class="round-red">75</span> countries
+              </p>
+            </a>
 
-	</div> <!-- /.container -->
+            <div class="item">
+              <input
+                type="text"
+                class="form-control tarif"
+                placeholder="Enter or choose GB"
+              />
+            </div>
 
-	<!-- Footer -->
-	<div class="container-fluid footer mt-5 pb-3">
-		<div class="row">
-			<div class="container mt-5">
-				<div class="d-flex mb-2">
-					<h4>CONTACT US</h4>
-				</div>
+            <div class="item" style="min-width: 190px;">
+              <p class="text-red-italic white-space-nowrap">
+                $ <span class="big-price">0</span>
+                <span class="text-dark">us/month</span>
+              </p>
+            </div>
 
-				<div class="row">
-					<!-- WhatsApp -->
-					<div class="col-lg-3 col-sm-6 mb-3">
-						<p class="font-weight-semibold">WhatsApp</p>
-						<p>+49 36628 60335</p>
-					</div>
+            <div class="item">
+              <a href="buy.html" class="buy-link disabled">BUY</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-					<!-- Email -->
-					<div class="col-lg-3 col-sm-6 mb-3">
-						<p class="font-weight-semibold">Email</p>
-						<p>info@unlimsim.com</p>
-						<p>help@unlimsim.com</p>
-					</div>
+      <div class="row mt-5" id="country-data">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="red-line mb-2"></span>
+          <h3 class="unlim-headline">Choose your favorite country</h3>
+        </div>
+      </div>
 
-					<div class="col-lg-6 col-sm-12 mb-3">
-						<p class="font-weight-semibold">Address</p>
-						<p>Germany: 07937 Zeulenroda Triebes, August-Bebel-Str. 8</p>
-					</div>
-				</div>
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="w-100">
+            <ul class="continent-list" id="continent-list">
+              <li class="active">All</li>
+              <li>Africa</li>
+              <li>Asia</li>
+              <li>Europe</li>
+              <li>Oceania</li>
+              <li>North America</li>
+              <li>South America</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-				<!-- Mobile Apps -->
-				<div class="row">
-					<div class="offset-lg-3 col-lg-9 col-sm-12">
-						<p class="font-weight-semibold mb-2">Mobile App</p>
-						
-						<!-- Download mobile app -->
-						<div class="app_grid">
-							<button class="apple_btn" data-toggle="modal" data-target="#appStoreModal">
-								<span class="icon">
-									<img src="./img/icons/apple-store.svg" alt="ios">
-								</span>
-								<span class="title">App Store</span>
-								<span class="subtitle">Available now on the</span>
-							</button>
+      <div class="row ptw">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <div class="d-flex justify-content-around flex-wrap mt-5">
+            <div class="item">
+              <select name="" id="countries-list" class="form-control">
+                <option value="">Enter or choose country</option>
+               
+              </select>
+            </div>
 
-							<button class="play_store_btn" data-toggle="modal" data-target="#appStoreModal">
-								<span class="icon">
-									<img src="./img/icons/google-play.svg" alt="android">
-								</span>
-								<span class="title">Google Play</span>
-								<span class="subtitle">Get in on</span>
-							</button>
-						</div>
-					</div>	
-				</div>
+            <div class="item">
+              <input
+                type="text"
+                class="form-control tarif"
+                placeholder="Enter or choose GB"
+              />
+            </div>
 
-				<div class="footer-bottom mt-5">
-					<div class="footer-el-1">
-						<span class="small-text"> © 2020 UNLIM </span>
-					</div>
-					<div class="footer-el-2">
-						<a href="#"><img src="img/icons/fb.svg" alt=""></a>
-						<a href="#"><img src="img/icons/in.svg" alt=""></a>
-						<a href="#"><img src="img/icons/ig.svg" alt=""></a>
-					</div>
-					<div class="footer-el-3">
-						<a href="#"><img src="img/icons/pay-2.svg" alt=""></a>
-						<a href="#"><img src="img/icons/pay-3.svg" alt=""></a>
-						<a href="#"><img src="img/icons/pay-4.svg" alt=""></a>
-						<a href="#"><img src="img/icons/pay-1.svg" alt=""></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <div class="item" style="min-width: 190px;">
+              <p class="text-red-italic">
+                $ <span class="big-price">0</span>
+                <span class="text-dark">us/month</span>
+              </p>
+            </div>
+            <div class="item">
+              <a href="buy.html" class="buy-link disabled">BUY</a>
+            </div>
+          </div>
+        </div>
+      </div> -->
 
-	<!-- Modal for app store -->
-	<div class="modal fade" id="appStoreModal" tabindex="-1" role="dialog" aria-labelledby="appStoreModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="appStoreModalLabel">Внимание</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<p class="text-center mb-0">Приложение находится в разработке</p>
-				</div>
-				<div class="modal-footer justify-content-center">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Хорошо, спасибо</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Modal end -->
+    <div class="row mt-5">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <div class="title">
+          <div class="red-line mx-auto mb-3"></div>
+          <h4 class="title-heading title-heading-large">
+            What is <span>eSim</span>
+          </h4>
+          <p class="title-subtitle">and how does it work</p>
+        </div>
+      </div>
+    </div>
 
-	<!-- JS Files -->
-	<script src="dist/main.js"></script>
+    <div class="row mt-4">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+        <img src="img/src/1.png" alt="" class="w-100" />
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="empty"></div>
+          <p>
+            This is a special technology that has been introduced into new
+            smartphones. Smartphones that currently support this technology
+            are Iphone Xr, Xs, XsMax, Iphone 11. You will not need to buy a
+            SIM card, just get a QR code and register. We can say that this is
+            an electronic sim card! In the production process, a special сhip
+            is built into the gadget, which is responsible for the
+            communication.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-5">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="empty"></div>
+          <div>
+            <div class="red-line float-right"></div>
+            <h3 class="headline text-right mt-2">UnlimSim</h3>
+            <p class="text-right">
+              Through our website or application, you can connect to any
+              operator with whom we are currently cooperating.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+        <img src="img/src/2.png" alt="" class="w-100" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ordered-block">
+        <img src="img/src/3.png" alt="" class="w-100" />
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-5">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="empty"></div>
+          <div>
+            <div class="red-line"></div>
+            <h3 class="headline mt-2">Worldwide Coverage</h3>
+            <p>
+              With our service, you can use eSim technology in more than 150
+              countries of the world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-5">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="empty"></div>
+          <div>
+            <div class="red-line float-right"></div>
+            <h3 class="headline text-right mt-2">
+              Simple <span>•</span> Convenient <span>•</span> Fast
+            </h3>
+            <p class="text-right">
+              With our service you can quickly and easily manage your account.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+        <img src="img/src/4.png" alt="" class="w-100" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="title mt-5">
+          <div class="red-line mx-auto mb-3"></div>
+          <h4 class="title-heading">How to activate <span>eSim</span>?</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- IOS & Android -->
+    <div class="h2a mt-3">
+      <div class="d-flex justify-content-center mx-2">
+        <p class="link toggle-ios">iOS</p>
+        <p class="link toggle-android">Android</p>
+      </div>
+    </div>
+
+    <!-- IOS instructions start -->
+    <div class="row instruction mt-5" id="instruction-ios">
+      <div class="offset-lg-2 col-lg-8 col-12">
+        <div class="instruction-header">
+          Please follow the steps below to activate the
+          <span class="text-red">UNLIM</span> feature on an
+          <span class="text-red">eSIM</span>-enabled iPhone.
+        </div>
+
+        <!-- Step 1 -->
+        <div class="instruction-step">
+          <div class="instruction-text">
+            <span class="red-border">1</span> Go to
+            <span class="semibold">
+              Settings > Cellular / Mobile Data > Add Cellular Plan / Add Data
+              Plan</span>
+          </div>
+          <div class="instruction-image">
+            <img src="./img/instructions/ios-1a.jpg" alt="" />
+            <img src="./img/instructions/ios-1b.jpg" alt="" />
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="instruction-step">
+          <div class="instruction-text">
+            <span class="red-border">2</span>
+            <span class="semibold">Scan the QR code</span> in your email
+          </div>
+          <div class="instruction-image">
+            <img src="./img/instructions/ios-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="instruction-step">
+          <div class="instruction-text">
+            <span class="red-border">3</span> Tap
+            <span class="semibold">Add Data Plan</span>
+          </div>
+          <div class="instruction-image">
+            <img src="./img/instructions/ios-3.jpg" alt="" />
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="instruction-step">
+          <div class="instruction-text">
+            <span class="red-border">4</span> Choose
+            <span class="semibold"> Secondary Label.</span> Name the label
+            <span class="semibold">"UNLIM"</span>
+          </div>
+          <div class="instruction-image">
+            <img src="./img/instructions/ios-4a.jpg" alt="" />
+            <img src="./img/instructions/ios-4b.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-text">
+            Choose <span class="semibold"> Use "UNLIM"</span> for mobile data
+            only
+          </div>
+          <div class="instruction-image">
+            <img src="./img/instructions/ios-4c.jpg" alt="" />
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="instruction-step">
+          <div class="instruction-text">
+            <span class="red-border">5</span> Go to
+            <span class="semibold">
+              Settings > Mobile Data > Mobile Data > Select Flexiroam</span>
+          </div>
+          <div class="instruction-image">
+            <img src="./img/instructions/ios-5a.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-text">
+            Choose <span class="semibold"> Use "UNLIM"</span> for mobile data
+            only
+          </div>
+          <div class="instruction-image">
+            <img src="./img/instructions/ios-5b.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Close instruction -->
+      <div class="col-12">
+        <a href="#" class="text-center mt-5 close-instructions">
+          <img src="img/icons/up-arrow.svg" alt="up" />
+        </a>
+      </div>
+    </div>
+    <!-- IOS instructions end -->
+
+    <!-- Android instructions start -->
+    <div class="row instruction mt-5" id="instruction-android">
+      <div class="offset-2 col-8">
+        <div class="text-center"><i>No data found</i></div>
+      </div>
+
+      <!-- Close instruction -->
+      <div class="col-12">
+        <a href="#" class="text-center mt-5 close-instructions">
+          <img src="img/icons/up-arrow.svg" alt="up" />
+        </a>
+      </div>
+    </div>
+    <!-- Android instructions end -->
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <div class="container-fluid footer mt-5 pb-3">
+    <div class="row">
+      <div class="container mt-5">
+        <div class="d-flex mb-2">
+          <h4>CONTACT US</h4>
+        </div>
+
+        <div class="row">
+          <!-- WhatsApp -->
+          <div class="col-lg-3 col-sm-6 mb-3">
+            <p class="font-weight-semibold">WhatsApp</p>
+            <p>+49 36628 60335</p>
+          </div>
+
+          <!-- Email -->
+          <div class="col-lg-3 col-sm-6 mb-3">
+            <p class="font-weight-semibold">Email</p>
+            <p>info@unlimsim.com</p>
+            <p>help@unlimsim.com</p>
+          </div>
+
+          <div class="col-lg-6 col-sm-12 mb-3">
+            <p class="font-weight-semibold">Address</p>
+            <p>Germany: 07937 Zeulenroda Triebes, August-Bebel-Str. 8</p>
+          </div>
+        </div>
+
+        <!-- Mobile Apps -->
+        <div class="row">
+          <div class="offset-lg-3 col-lg-9 col-sm-12">
+            <p class="font-weight-semibold mb-2">Mobile App</p>
+
+            <!-- Download mobile app -->
+            <div class="app_grid">
+              <button class="apple_btn" data-toggle="modal" data-target="#appStoreModal">
+                <span class="icon">
+                  <img src="./img/icons/apple-store.svg" alt="ios" />
+                </span>
+                <span class="title">App Store</span>
+                <span class="subtitle">Available now on the</span>
+              </button>
+
+              <button class="play_store_btn" data-toggle="modal" data-target="#appStoreModal">
+                <span class="icon">
+                  <img src="./img/icons/google-play.svg" alt="android" />
+                </span>
+                <span class="title">Google Play</span>
+                <span class="subtitle">Get in on</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom mt-5">
+          <div class="footer-el-1">
+            <span class="small-text"> © 2020 UNLIM </span>
+          </div>
+          <div class="footer-el-2">
+            <a href="#"><img src="img/icons/fb.svg" alt="" /></a>
+            <a href="#"><img src="img/icons/in.svg" alt="" /></a>
+            <a href="#"><img src="img/icons/ig.svg" alt="" /></a>
+          </div>
+          <div class="footer-el-3">
+            <a href="#"><img src="img/icons/pay-2.svg" alt="" /></a>
+            <a href="#"><img src="img/icons/pay-3.svg" alt="" /></a>
+            <a href="#"><img src="img/icons/pay-4.svg" alt="" /></a>
+            <a href="#"><img src="img/icons/pay-1.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for app store -->
+  <div class="modal fade" id="appStoreModal" tabindex="-1" role="dialog" aria-labelledby="appStoreModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="appStoreModalLabel">Внимание</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="text-center mb-0">Приложение находится в разработке</p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            Хорошо, спасибо
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+
+  <!-- JS Files -->
+  <script src="./dist/main.js"></script>
 </body>
 
 </html>
