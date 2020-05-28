@@ -19,100 +19,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#FF0000" />
 
   <link rel="stylesheet" href="./dist/main.css" />
-  <link rel="stylesheet" href="./dist/index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 </head>
 
 <body>
-  <!-- modal -->
-  <!-- Modal -->
-
-  <div class="modal fade modal-add" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            <span class="modal-line"></span>
-            compatibile devices
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="title-box">
-            <p>Apple iPhones</p>
-            <span class="tit-line"></span>
-          </div>
-
-          <ul>
-            <li>iPhone 11</li>
-            <li>iPhone 11 Pro</li>
-            <li>iPhone 11 Pro Max</li>
-            <li>iPhone XS</li>
-            <li>iPhone XS Max</li>
-            <li>iPhone XS Max Global</li>
-            <li>iPhone XR</li>
-          </ul>
-
-          <div class="title-box">
-            <p>Apple iPads</p>
-            <span class="tit-line"></span>
-          </div>
-
-          <ul>
-            <li>iPad Pro 3rd Gen (12.9 inch, WiFi+Cellular)</li>
-            <li>iPad Pro 3rd Gen (12.9 inch, 1TB, WiFi+Cellular)</li>
-            <li>iPad mini 5th Gen</li>
-            <li>iPad Air 3rd Gen</li>
-          </ul>
-          <div class="title-box">
-            <p>Google</p>
-            <span class="tit-line"></span>
-          </div>
-
-          <ul>
-            <li>Pixel 3</li>
-            <li>Pixel 3 XL</li>
-            <li>Pixel 4</li>
-          </ul>
-          <div class="title-box">
-            <p>Samsung</p>
-            <span class="tit-line"></span>
-          </div>
-
-          <ul>
-            <li>Galaxy Fold LTE</li>
-            <li>Samsung Galaxy Z Flip</li>
-            <li>Samsung Galaxy S20, s20+ and S20 Ultra</li>
-            <li style="list-style: none;">
-              (Single SIM Nano-SIM and/or eSIM models )
-            </li>
-          </ul>
-
-          <div class="under-footer">
-            <ul>
-              <li>* Not compatible with carrier-locked phone</li>
-              <li>
-                * Not compatible with iPhone XR, XS models and 11 models
-                purchased in Hong Kong, Macau and Mainland China
-              </li>
-              <li>
-                * Not compatible with iPhones with 2 physical SIM card slots
-              </li>
-              <li>
-                * Not compatible with Pixel devices purchased in Australia
-              </li>
-              <li>
-                * Not compatible with devices on Android Q Beta versions
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- ========= Background Blurry Overlay ========= -->
   <div style="display: none;">
@@ -152,7 +62,7 @@
             <a href="#" class="nav-link">Region Plans</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Country PLans</a>
+            <a href="#" class="nav-link">Country Plans</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Personal Plans</a>
@@ -181,9 +91,10 @@
             <img src="img/icons/user.svg" alt="user" class="user-btn" />
           </a>
         </li>
+
         <li class="nav-item ml-3">
           <a href="#" class="nav-link">
-            <img src="img/icons/basket.svg" alt="user" class="user-btn" />
+            <img src="img/icons/basket.svg" alt="user" class="w-22 user-btn" />
           </a>
         </li>
       </ul>
@@ -194,7 +105,8 @@
             <a class="nav-link" href="#">
               <span class="line-top"></span>
               PLANS
-              <img src="img/icons/down-arrow.svg" class="drowdown-icon" alt="" /></a>
+              <img src="img/icons/down-arrow.svg" class="drowdown-icon" alt="" />
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#country-data">
@@ -249,8 +161,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link link-bas">
-              <img src="img/icons/basket.svg" class="user-btn" alt="bra" />
+            <a href="#" class="nav-link extra-bar-toggle-large link-basket">
+              <img src="img/icons/basket.svg" class="w-22 user-btn" />
             </a>
           </li>
         </ul>
@@ -346,10 +258,12 @@
               <div class="container">
                 <div class="tab_item">
                   <div class="prev prev1">
-                    <i class="fas fa-angle-left"></i>
+                    <img src="./img/icons/arrow-left.png" width="16" alt="">
+                    <!-- <i class="fas fa-angle-left"></i> -->
                   </div>
                   <div class="next next1">
-                    <i class="fas fa-angle-right"></i>
+                    <img src="./img/icons/arrow-right.png" width="16" alt="">
+                    <!-- <i class="fas fa-angle-right"></i> -->
                   </div>
                   <div class="wrapper">
                     <div class="carousel">
@@ -374,23 +288,19 @@
                             </h2>
 
                             <a href="#" class="btn-buy">BUY</a>
-                            <p>YOU CAN ALSO ADD:</p>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
                             <div class="top3">
                               <div class="box-item">
-                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
-                                <p style="padding-top: 10px;">
-                                  Voice and SMS
-                                </p>
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
                                 <p>Virtual number</p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
-                                <p style="padding-top: 10px;">
-                                  Substitution of numbers
-                                </p>
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
                               </div>
                             </div>
                           </div>
@@ -413,23 +323,19 @@
                             </h2>
 
                             <a href="#" class="btn-buy">BUY</a>
-                            <p>YOU CAN ALSO ADD:</p>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
                             <div class="top3">
                               <div class="box-item">
-                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
-                                <p style="padding-top: 10px;">
-                                  Voice and SMS
-                                </p>
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
                                 <p>Virtual number</p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
-                                <p style="padding-top: 10px;">
-                                  Substitution of numbers
-                                </p>
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
                               </div>
                             </div>
                           </div>
@@ -452,29 +358,60 @@
                             </h2>
 
                             <a href="#" class="btn-buy">BUY</a>
-                            <p>YOU CAN ALSO ADD:</p>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
                             <div class="top3">
                               <div class="box-item">
-                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
-                                <p style="padding-top: 10px;">
-                                  Voice and SMS
-                                </p>
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
                                 <p>Virtual number</p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
-                                <p style="padding-top: 10px;">
-                                  Substitution of numbers
-                                </p>
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
                               </div>
                             </div>
                           </div>
                         </div>
+
                         <div class="slide">
-                          <h1>2</h1>
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
+
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
+
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
+
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="arrow arrow-left"></div>
@@ -484,10 +421,12 @@
                 </div>
                 <div class="tab_item">
                   <div class="prev prev2">
-                    <i class="fas fa-angle-left"></i>
+                    <img src="./img/icons/arrow-left.png" width="16" alt="">
+                    <!-- <i class="fas fa-angle-left"></i> -->
                   </div>
                   <div class="next next2">
-                    <i class="fas fa-angle-right"></i>
+                    <img src="./img/icons/arrow-right.png" width="16" alt="">
+                    <!-- <i class="fas fa-angle-right"></i> -->
                   </div>
                   <div class="wrapper">
                     <div class="top-header pt-4">
@@ -518,7 +457,7 @@
                       </div>
                     </div>
 
-                    <div class="carousel2">
+                    <div class="carousel2 mt--40">
                       <div class="inner">
                         <div class="slide active">
                           <div class="item">
@@ -540,23 +479,19 @@
                             </h2>
 
                             <a href="#" class="btn-buy">BUY</a>
-                            <p>YOU CAN ALSO ADD:</p>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
                             <div class="top3">
                               <div class="box-item">
-                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
-                                <p style="padding-top: 10px;">
-                                  Voice and SMS
-                                </p>
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
                                 <p>Virtual number</p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
-                                <p style="padding-top: 10px;">
-                                  Substitution of numbers
-                                </p>
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
                               </div>
                             </div>
                           </div>
@@ -579,23 +514,19 @@
                             </h2>
 
                             <a href="#" class="btn-buy">BUY</a>
-                            <p>YOU CAN ALSO ADD:</p>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
                             <div class="top3">
                               <div class="box-item">
-                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
-                                <p style="padding-top: 10px;">
-                                  Voice and SMS
-                                </p>
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
                                 <p>Virtual number</p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
-                                <p style="padding-top: 10px;">
-                                  Substitution of numbers
-                                </p>
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
                               </div>
                             </div>
                           </div>
@@ -618,29 +549,59 @@
                             </h2>
 
                             <a href="#" class="btn-buy">BUY</a>
-                            <p>YOU CAN ALSO ADD:</p>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
                             <div class="top3">
                               <div class="box-item">
-                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
-                                <p style="padding-top: 10px;">
-                                  Voice and SMS
-                                </p>
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
                                 <p>Virtual number</p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
-                                <p style="padding-top: 10px;">
-                                  Substitution of numbers
-                                </p>
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="slide">
-                          <h1>2</h1>
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
+
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
+
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
+
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="arrow arrow-left2"></div>
@@ -650,241 +611,242 @@
                 </div>
                 <div class="tab_item">
                   <div class="prev prev3">
-                    <i class="fas fa-angle-left"></i>
+                    <img src="./img/icons/arrow-left.png" width="16" alt="">
+                    <!-- <i class="fas fa-angle-left"></i> -->
                   </div>
                   <div class="next next3">
-                    <i class="fas fa-angle-right"></i>
+                    <img src="./img/icons/arrow-right.png" width="16" alt="">
+                    <!-- <i class="fas fa-angle-right"></i> -->
                   </div>
                   <div class="wrapper">
                     <div class="top-header pt-4">
                       <h3>PLEASE SELECT THE REGION</h3>
                       <span class="my-2 line"></span>
 
-                      <div class="sel-box mt-4">
-                        <div class="map-item-1 flex-grow-1 w-100">
-                          <input type="text" class="map-filter-input w-100 mb-3" id="chosen_country"
+                      <div class="sel-box my-4">
+                        <div class="map-item-1 w-100">
+                          <input type="text" class="map-filter-input w-100" id="chosen_country"
                             placeholder="Select the country below" readonly />
-
-                          <span class="close"><i class="fas fa-angle-down select-icon"></i></span>
+                          <span class="close">
+                            <i class="fas fa-angle-down select-icon"></i>
+                          </span>
                         </div>
 
                         <div class="under-select">
-                          <div class="">
-                            <div class="row map-country mt-3 p-2" id="map-coverage">
-                              <ul class="map-country-list col-md-2">
-                                <li class="let">A</li>
-                                <li>ALBANIA</li>
-                                <li>ALGERIA</li>
-                                <li>ANGUILLA</li>
-                                <li>ANTIGUA AND BARBUDA</li>
-                                <li>ARMENIA</li>
-                                <li>AUSTRALIA</li>
-                                <li>AUSTRIA</li>
-                                <li>AZERBAIJAN</li>
-                                <li class="let">B</li>
-                                <li>BAHRAIN</li>
-                                <li>BANGLADESH</li>
-                                <li>BARBADOS</li>
-                                <li>BELARUS</li>
-                                <li>BELGIUM</li>
-                                <li>BELIZE</li>
-                                <li>BOSNIA & HERZEGOVINA</li>
-                                <li>BRAZIL</li>
-                                <li>BRUNEI</li>
-                                <li>BULGARIA</li>
-                                <li>BURKINA FASO</li>
-                                <li class="let">C</li>
-                                <li>CAMBODIA</li>
-                                <li>CAMEROON</li>
-                                <li>CANADA</li>
-                                <li>CAYMAN ISLANDS</li>
-                                <li>CHAD</li>
-                                <li>CHILE</li>
-                                <li>CHINA</li>
-                                <li>COLOMBIA</li>
-                                <li>CONGO</li>
-                                <li>CONGO DEM REP</li>
-                                <li>COSTA RICA</li>
-                              </ul>
+                          <div class="row map-country mt-3 p-2" id="map-coverage">
+                            <ul class="map-country-list col-md-2">
+                              <li class="let">A</li>
+                              <li>ALBANIA</li>
+                              <li>ALGERIA</li>
+                              <li>ANGUILLA</li>
+                              <li>ANTIGUA AND BARBUDA</li>
+                              <li>ARMENIA</li>
+                              <li>AUSTRALIA</li>
+                              <li>AUSTRIA</li>
+                              <li>AZERBAIJAN</li>
+                              <li class="let">B</li>
+                              <li>BAHRAIN</li>
+                              <li>BANGLADESH</li>
+                              <li>BARBADOS</li>
+                              <li>BELARUS</li>
+                              <li>BELGIUM</li>
+                              <li>BELIZE</li>
+                              <li>BOSNIA & HERZEGOVINA</li>
+                              <li>BRAZIL</li>
+                              <li>BRUNEI</li>
+                              <li>BULGARIA</li>
+                              <li>BURKINA FASO</li>
+                              <li class="let">C</li>
+                              <li>CAMBODIA</li>
+                              <li>CAMEROON</li>
+                              <li>CANADA</li>
+                              <li>CAYMAN ISLANDS</li>
+                              <li>CHAD</li>
+                              <li>CHILE</li>
+                              <li>CHINA</li>
+                              <li>COLOMBIA</li>
+                              <li>CONGO</li>
+                              <li>CONGO DEM REP</li>
+                              <li>COSTA RICA</li>
+                            </ul>
 
-                              <ul class="map-country-list col-md-2">
-                                <li>COTE D'IVOIRE (IVORY COAST)</li>
-                                <li>CROATIA</li>
-                                <li>CURACAO</li>
-                                <li>CYPRUS</li>
-                                <li>CZECH REPUBLIC</li>
-                                <li class="let">D</li>
-                                <li>DENMARK</li>
-                                <li>DOMINICA</li>
-                                <li>ECUADOR</li>
-                                <li>EGYPT</li>
-                                <li>EL SALVADOR</li>
-                                <li>ESTONIA</li>
-                                <li>ETHIOPIA</li>
-                                <li class="let">F</li>
-                                <li>FAROE ISLANDS</li>
-                                <li>FIJI</li>
-                                <li>FINLAND</li>
-                                <li>FRANCE</li>
-                                <li>FRENCH GUIANA</li>
-                                <li class="let">G</li>
-                                <li>GABON</li>
-                                <li>GEORGIA</li>
-                                <li>GERMANY</li>
-                                <li>GHANA</li>
-                                <li>GIBRALTAR</li>
-                                <li>GREECE</li>
-                                <li>GREENLAND</li>
-                                <li>GRENADA</li>
-                                <li>GUADELOUPE</li>
-                                <li>GUINEA</li>
-                                <li>GUYANA</li>
-                                <li class="let">H</li>
-                              </ul>
+                            <ul class="map-country-list col-md-2">
+                              <li>COTE D'IVOIRE (IVORY COAST)</li>
+                              <li>CROATIA</li>
+                              <li>CURACAO</li>
+                              <li>CYPRUS</li>
+                              <li>CZECH REPUBLIC</li>
+                              <li class="let">D</li>
+                              <li>DENMARK</li>
+                              <li>DOMINICA</li>
+                              <li>ECUADOR</li>
+                              <li>EGYPT</li>
+                              <li>EL SALVADOR</li>
+                              <li>ESTONIA</li>
+                              <li>ETHIOPIA</li>
+                              <li class="let">F</li>
+                              <li>FAROE ISLANDS</li>
+                              <li>FIJI</li>
+                              <li>FINLAND</li>
+                              <li>FRANCE</li>
+                              <li>FRENCH GUIANA</li>
+                              <li class="let">G</li>
+                              <li>GABON</li>
+                              <li>GEORGIA</li>
+                              <li>GERMANY</li>
+                              <li>GHANA</li>
+                              <li>GIBRALTAR</li>
+                              <li>GREECE</li>
+                              <li>GREENLAND</li>
+                              <li>GRENADA</li>
+                              <li>GUADELOUPE</li>
+                              <li>GUINEA</li>
+                              <li>GUYANA</li>
+                              <li class="let">H</li>
+                            </ul>
 
-                              <ul class="map-country-list col-md-2">
-                                <li>HAITI</li>
-                                <li>HAWAII - USA</li>
-                                <li>HONDURAS</li>
-                                <li>HONG KONG</li>
-                                <li>HUNGARY</li>
-                                <li class="let">I</li>
-                                <li>ICELAND</li>
-                                <li>INDIA</li>
-                                <li>INDONESIA</li>
-                                <li>IRAN</li>
-                                <li>IRELAND</li>
-                                <li>ISRAEL</li>
-                                <li>ITALY</li>
-                                <li class="let">J</li>
-                                <li>JAMAICA</li>
-                                <li>JAPAN</li>
-                                <li>JERSEY ISLAND</li>
-                                <li>JORDAN</li>
-                                <li class="let">K</li>
-                                <li>KAZAKHSTAN</li>
-                                <li>KENYA</li>
-                                <li>KUWAIT</li>
-                                <li>KYRGYZSTAN</li>
-                                <li class="let">L</li>
-                                <li>LAOS</li>
-                                <li>LATVIA</li>
-                                <li>LIECHTENSTEIN</li>
-                                <li>LITHUANIA</li>
-                                <li>LUXEMBOURG</li>
-                                <li class="let">M</li>
-                                <li>MACAU</li>
-                                <li>MACEDONIA</li>
-                                <li>MADAGASCAR</li>
-                              </ul>
+                            <ul class="map-country-list col-md-2">
+                              <li>HAITI</li>
+                              <li>HAWAII - USA</li>
+                              <li>HONDURAS</li>
+                              <li>HONG KONG</li>
+                              <li>HUNGARY</li>
+                              <li class="let">I</li>
+                              <li>ICELAND</li>
+                              <li>INDIA</li>
+                              <li>INDONESIA</li>
+                              <li>IRAN</li>
+                              <li>IRELAND</li>
+                              <li>ISRAEL</li>
+                              <li>ITALY</li>
+                              <li class="let">J</li>
+                              <li>JAMAICA</li>
+                              <li>JAPAN</li>
+                              <li>JERSEY ISLAND</li>
+                              <li>JORDAN</li>
+                              <li class="let">K</li>
+                              <li>KAZAKHSTAN</li>
+                              <li>KENYA</li>
+                              <li>KUWAIT</li>
+                              <li>KYRGYZSTAN</li>
+                              <li class="let">L</li>
+                              <li>LAOS</li>
+                              <li>LATVIA</li>
+                              <li>LIECHTENSTEIN</li>
+                              <li>LITHUANIA</li>
+                              <li>LUXEMBOURG</li>
+                              <li class="let">M</li>
+                              <li>MACAU</li>
+                              <li>MACEDONIA</li>
+                              <li>MADAGASCAR</li>
+                            </ul>
 
-                              <ul class="map-country-list col-md-2">
-                                <li>MALAWI</li>
-                                <li>MALAYSIA</li>
-                                <li>MALTA</li>
-                                <li>MARTINIQUE</li>
-                                <li>MEXICO</li>
-                                <li>MOLDOVA</li>
-                                <li>MONGOLIA</li>
-                                <li>MONTENEGRO</li>
-                                <li>MONTSERRAT</li>
-                                <li>MOROCCO</li>
-                                <li>MOZAMBIQUE</li>
-                                <li>MYANMAR</li>
-                                <li class="let">N</li>
-                                <li>NAMIBIA</li>
-                                <li>NAURU</li>
-                                <li>NEPAL</li>
-                                <li>NETHERLANDS</li>
-                                <li>NETHERLANDS ANTILLES</li>
-                                <li>NEW ZEALAND</li>
-                                <li>NICARAGUA</li>
-                                <li>NIGERIA</li>
-                                <li>NORTHERN IRELAND</li>
-                                <li>NORWAY</li>
-                                <li class="let">O</li>
-                                <li>OMAN</li>
+                            <ul class="map-country-list col-md-2">
+                              <li>MALAWI</li>
+                              <li>MALAYSIA</li>
+                              <li>MALTA</li>
+                              <li>MARTINIQUE</li>
+                              <li>MEXICO</li>
+                              <li>MOLDOVA</li>
+                              <li>MONGOLIA</li>
+                              <li>MONTENEGRO</li>
+                              <li>MONTSERRAT</li>
+                              <li>MOROCCO</li>
+                              <li>MOZAMBIQUE</li>
+                              <li>MYANMAR</li>
+                              <li class="let">N</li>
+                              <li>NAMIBIA</li>
+                              <li>NAURU</li>
+                              <li>NEPAL</li>
+                              <li>NETHERLANDS</li>
+                              <li>NETHERLANDS ANTILLES</li>
+                              <li>NEW ZEALAND</li>
+                              <li>NICARAGUA</li>
+                              <li>NIGERIA</li>
+                              <li>NORTHERN IRELAND</li>
+                              <li>NORWAY</li>
+                              <li class="let">O</li>
+                              <li>OMAN</li>
 
-                                <li class="let">P</li>
-                                <li>PAKISTAN</li>
-                                <li>PALESTINE</li>
-                                <li>PANAMA</li>
-                                <li>PAPUA NEW GUINEA</li>
-                                <li>PARAGUAY</li>
-                                <li>PERU</li>
-                              </ul>
+                              <li class="let">P</li>
+                              <li>PAKISTAN</li>
+                              <li>PALESTINE</li>
+                              <li>PANAMA</li>
+                              <li>PAPUA NEW GUINEA</li>
+                              <li>PARAGUAY</li>
+                              <li>PERU</li>
+                            </ul>
 
-                              <ul class="map-country-list col-md-2">
-                                <li>PHILIPPINES</li>
-                                <li>POLAND</li>
-                                <li>PORTUGAL</li>
-                                <li class="let">Q</li>
-                                <li>QATAR</li>
-                                <li class="let">R</li>
-                                <li>ROMANIA</li>
-                                <li>RUSSIAN FEDERATION</li>
-                                <li>RWANDA</li>
-                                <li class="let">S</li>
-                                <li>SAINT KITTS & NEVIS</li>
-                                <li>SAINT MARTIN(FRENCH)</li>
-                                <li>SAUDI ARABIA</li>
-                                <li>SCOTLAND</li>
-                                <li>SENEGAL</li>
-                                <li>SERBIA</li>
-                                <li>SINGAPORE</li>
-                                <li>SINT MAARTEN(DUTCH)</li>
-                                <li>SLOVAKIA</li>
-                                <li>SLOVENIA</li>
-                                <li>SOUTH AFRICA</li>
-                                <li>SOUTH KOREA</li>
-                                <li>SPAIN</li>
-                                <li>SRI LANKA</li>
-                                <li>ST BARTHELEMY</li>
-                                <li>ST LUCIA</li>
-                                <li>ST VINCENT AND THE GRENADINES</li>
-                                <li>SURINAME</li>
-                                <li>SWEDEN</li>
-                                <li>SWITZERLAND</li>
-                              </ul>
+                            <ul class="map-country-list col-md-2">
+                              <li>PHILIPPINES</li>
+                              <li>POLAND</li>
+                              <li>PORTUGAL</li>
+                              <li class="let">Q</li>
+                              <li>QATAR</li>
+                              <li class="let">R</li>
+                              <li>ROMANIA</li>
+                              <li>RUSSIAN FEDERATION</li>
+                              <li>RWANDA</li>
+                              <li class="let">S</li>
+                              <li>SAINT KITTS & NEVIS</li>
+                              <li>SAINT MARTIN(FRENCH)</li>
+                              <li>SAUDI ARABIA</li>
+                              <li>SCOTLAND</li>
+                              <li>SENEGAL</li>
+                              <li>SERBIA</li>
+                              <li>SINGAPORE</li>
+                              <li>SINT MAARTEN(DUTCH)</li>
+                              <li>SLOVAKIA</li>
+                              <li>SLOVENIA</li>
+                              <li>SOUTH AFRICA</li>
+                              <li>SOUTH KOREA</li>
+                              <li>SPAIN</li>
+                              <li>SRI LANKA</li>
+                              <li>ST BARTHELEMY</li>
+                              <li>ST LUCIA</li>
+                              <li>ST VINCENT AND THE GRENADINES</li>
+                              <li>SURINAME</li>
+                              <li>SWEDEN</li>
+                              <li>SWITZERLAND</li>
+                            </ul>
 
-                              <ul class="map-country-list col-md-2">
-                                <li class="let">T</li>
-                                <li>TAIWAN</li>
-                                <li>TAJIKISTAN</li>
-                                <li>TANZANIA</li>
-                                <li>THAILAND</li>
-                                <li>TONGA</li>
-                                <li>TRINIDAD AND TOBAGO</li>
-                                <li>TUNISIA</li>
-                                <li>TURKEY</li>
-                                <li>TURKS & CAICOS ISLANDS</li>
-                                <li class="let">U</li>
-                                <li>UGANDA</li>
-                                <li>UKRAINE</li>
-                                <li>UNITED ARAB EMIRATES</li>
-                                <li>UNITED KINGDOM</li>
-                                <li>UNITED STATES</li>
-                                <li>URUGUAY</li>
-                                <li>UZBEKISTAN</li>
-                                <li class="let">V</li>
-                                <li>VANUATU</li>
-                                <li>VENEZUELA</li>
-                                <li>VIETNAM</li>
-                                <li>VIRGIN ISLANDS BRITISH</li>
-                                <li>VIRGIN ISLANDS U.S</li>
-                                <li class="let">W</li>
-                                <li>WALES</li>
-                                <li class="let">Z</li>
-                                <li>ZAMBIA</li>
-                                <li>ZIMBABWE</li>
-                              </ul>
-                            </div>
+                            <ul class="map-country-list col-md-2">
+                              <li class="let">T</li>
+                              <li>TAIWAN</li>
+                              <li>TAJIKISTAN</li>
+                              <li>TANZANIA</li>
+                              <li>THAILAND</li>
+                              <li>TONGA</li>
+                              <li>TRINIDAD AND TOBAGO</li>
+                              <li>TUNISIA</li>
+                              <li>TURKEY</li>
+                              <li>TURKS & CAICOS ISLANDS</li>
+                              <li class="let">U</li>
+                              <li>UGANDA</li>
+                              <li>UKRAINE</li>
+                              <li>UNITED ARAB EMIRATES</li>
+                              <li>UNITED KINGDOM</li>
+                              <li>UNITED STATES</li>
+                              <li>URUGUAY</li>
+                              <li>UZBEKISTAN</li>
+                              <li class="let">V</li>
+                              <li>VANUATU</li>
+                              <li>VENEZUELA</li>
+                              <li>VIETNAM</li>
+                              <li>VIRGIN ISLANDS BRITISH</li>
+                              <li>VIRGIN ISLANDS U.S</li>
+                              <li class="let">W</li>
+                              <li>WALES</li>
+                              <li class="let">Z</li>
+                              <li>ZAMBIA</li>
+                              <li>ZIMBABWE</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <div class="carousel3">
+                    <div class="carousel3 mt--30">
                       <div class="inner">
                         <div class="slide active">
                           <div class="item">
@@ -906,23 +868,19 @@
                             </h2>
 
                             <a href="#" class="btn-buy">BUY</a>
-                            <p>YOU CAN ALSO ADD:</p>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
                             <div class="top3">
                               <div class="box-item">
-                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
-                                <p style="padding-top: 10px;">
-                                  Voice and SMS
-                                </p>
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
                                 <p>Virtual number</p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
-                                <p style="padding-top: 10px;">
-                                  Substitution of numbers
-                                </p>
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
                               </div>
                             </div>
                           </div>
@@ -945,23 +903,19 @@
                             </h2>
 
                             <a href="#" class="btn-buy">BUY</a>
-                            <p>YOU CAN ALSO ADD:</p>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
                             <div class="top3">
                               <div class="box-item">
-                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
-                                <p style="padding-top: 10px;">
-                                  Voice and SMS
-                                </p>
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
                                 <p>Virtual number</p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
-                                <p style="padding-top: 10px;">
-                                  Substitution of numbers
-                                </p>
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
                               </div>
                             </div>
                           </div>
@@ -984,29 +938,59 @@
                             </h2>
 
                             <a href="#" class="btn-buy">BUY</a>
-                            <p>YOU CAN ALSO ADD:</p>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
                             <div class="top3">
                               <div class="box-item">
-                                <img src="img/icons/left1.svg" alt="icon" width="27" height="23" />
-                                <p style="padding-top: 10px;">
-                                  Voice and SMS
-                                </p>
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left2.svg" alt="icon" width="37" height="37" />
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
                                 <p>Virtual number</p>
                               </div>
                               <div class="box-item">
-                                <img src="img/icons/left3.svg" alt="icon" width="23" height="22" />
-                                <p style="padding-top: 10px;">
-                                  Substitution of numbers
-                                </p>
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="slide">
-                          <h1>2</h1>
+                          <div class="item">
+                            <div class="top1">
+                              <img src="img/logo.svg" alt="logo" />
+                              <span class="right-span">
+                                <div class="text">START</div>
+                              </span>
+                            </div>
+
+                            <h1><span class="let">1</span> Gb</h1>
+                            <div class="top2">
+                              <h4><em>INTERNET DATA</em></h4>
+                              <span class="line"></span>
+                            </div>
+
+                            <h2>
+                              <em>$ <span>25</span> us / 7 days </em>
+                            </h2>
+
+                            <a href="#" class="btn-buy">BUY</a>
+                            <p class="my-2">YOU CAN ALSO ADD:</p>
+                            <div class="top3">
+                              <div class="box-item">
+                                <img src="./img/icons/c_voice.svg" class="mb-2" alt="icon" width="27" />
+                                <p> Voice and SMS </p>
+                              </div>
+                              <div class="box-item">
+                                <img src="./img/icons/c_virtual.svg" class="rotate--45 mb-1" alt="icon" width="27" />
+                                <p>Virtual number</p>
+                              </div>
+                              <div class="box-item">
+                                <img src="./img/icons/c_substitution.svg" class="mb-2" alt="icon" width="23" />
+                                <p> Substitution of numbers </p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="arrow arrow-left3"></div>
@@ -1024,6 +1008,7 @@
                             <div class="col-sm-2 d-flex justify-content-center align-items-center">
                               <img src="img/icons/icon1.png" alt="icon1" width="85" height="50" />
                             </div>
+                            
                             <div class="col-sm-4">
                               <select class="browser-default custom-select left-select">
                                 <option selected>Select location</option>
@@ -1032,202 +1017,248 @@
                                 <option value="3">Three</option>
                               </select>
                             </div>
+
                             <div class="col-sm-4">
                               <select class="browser-default custom-select right-select">
                                 <option selected>Select location</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
 
-                                <option class="let">A</option>
-                                <option>ALBANIA</option>
-                                <option>ALGERIA</option>
-                                <option>ANGUILLA</option>
-                                <option>ANTIGUA AND BARBUDA</option>
-                                <option>ARMENIA</option>
-                                <option>AUSTRALIA</option>
-                                <option>AUSTRIA</option>
-                                <option>AZERBAIJAN</option>
-                                <option class="let">B</option>
-                                <option>BAHRAIN</option>
-                                <option>BANGLADESH</option>
-                                <option>BARBADOS</option>
-                                <option>BELARUS</option>
-                                <option>BELGIUM</option>
-                                <option>BELIZE</option>
-                                <option>BOSNIA & HERZEGOVINA</option>
-                                <option>BRAZIL</option>
-                                <option>BRUNEI</option>
-                                <option>BULGARIA</option>
-                                <option>BURKINA FASO</option>
-                                <option class="let">C</option>
-                                <option>CAMBODIA</option>
-                                <option>CAMEROON</option>
-                                <option>CANADA</option>
-                                <option>CAYMAN ISLANDS</option>
-                                <option>CHAD</option>
-                                <option>CHILE</option>
-                                <option>CHINA</option>
-                                <option>COLOMBIA</option>
-                                <option>CONGO</option>
-                                <option>CONGO DEM REP</option>
-                                <option>COSTA RICA</option>
-                                <option>COTE D'IVOIRE (IVORY COAST)</option>
-                                <option>CROATIA</option>
-                                <option>CURACAO</option>
-                                <option>CYPRUS</option>
-                                <option>CZECH REPUBLIC</option>
-                                <option class="let">D</option>
-                                <option>DENMARK</option>
-                                <option>DOMINICA</option>
-                                <option>ECUADOR</option>
-                                <option>EGYPT</option>
-                                <option>EL SALVADOR</option>
-                                <option>ESTONIA</option>
-                                <option>ETHIOPIA</option>
-                                <option class="let">F</option>
-                                <option>FAROE ISLANDS</option>
-                                <option>FIJI</option>
-                                <option>FINLAND</option>
-                                <option>FRANCE</option>
-                                <option>FRENCH GUIANA</option>
-                                <option class="let">G</option>
-                                <option>GABON</option>
-                                <option>GEORGIA</option>
-                                <option>GERMANY</option>
-                                <option>GHANA</option>
-                                <option>GIBRALTAR</option>
-                                <option>GREECE</option>
-                                <option>GREENLAND</option>
-                                <option>GRENADA</option>
-                                <option>GUADELOUPE</option>
-                                <option>GUINEA</option>
-                                <option>GUYANA</option>
-                                <option class="let">H</option>
-                                <option>HAITI</option>
-                                <option>HAWAII - USA</option>
-                                <option>HONDURAS</option>
-                                <option>HONG KONG</option>
-                                <option>HUNGARY</option>
-                                <option class="let">I</option>
-                                <option>ICELAND</option>
-                                <option>INDIA</option>
-                                <option>INDONESIA</option>
-                                <option>IRAN</option>
-                                <option>IRELAND</option>
-                                <option>ISRAEL</option>
-                                <option>ITALY</option>
-                                <option class="let">J</option>
-                                <option>JAMAICA</option>
-                                <option>JAPAN</option>
-                                <option>JERSEY ISLAND</option>
-                                <option>JORDAN</option>
-                                <option class="let">K</option>
-                                <option>KAZAKHSTAN</option>
-                                <option>KENYA</option>
-                                <option>KUWAIT</option>
-                                <option>KYRGYZSTAN</option>
-                                <option class="let">L</option>
-                                <option>LAOS</option>
-                                <option>LATVIA</option>
-                                <option>LIECHTENSTEIN</option>
-                                <option>LITHUANIA</option>
-                                <option>LUXEMBOURG</option>
-                                <option class="let">M</option>
-                                <option>MACAU</option>
-                                <option>MACEDONIA</option>
-                                <option>MADAGASCAR</option>
-                                <option>MALAWI</option>
-                                <option>MALAYSIA</option>
-                                <option>MALTA</option>
-                                <option>MARTINIQUE</option>
-                                <option>MEXICO</option>
-                                <option>MOLDOVA</option>
-                                <option>MONGOLIA</option>
-                                <option>MONTENEGRO</option>
-                                <option>MONTSERRAT</option>
-                                <option>MOROCCO</option>
-                                <option>MOZAMBIQUE</option>
-                                <option>MYANMAR</option>
-                                <option class="let">N</option>
-                                <option>NAMIBIA</option>
-                                <option>NAURU</option>
-                                <option>NEPAL</option>
-                                <option>NETHERLANDS</option>
-                                <option>NETHERLANDS ANTILLES</option>
-                                <option>NEW ZEALAND</option>
-                                <option>NICARAGUA</option>
-                                <option>NIGERIA</option>
-                                <option>NORTHERN IRELAND</option>
-                                <option>NORWAY</option>
-                                <option class="let">O</option>
-                                <option>OMAN</option>
-                                <option class="let">P</li>
-                                <option>PAKISTAN</option>
-                                <option>PALESTINE</li>
-                                <option>PANAMA</li>
-                                <option>PAPUA NEW GUINEA</li>
-                                <option>PARAGUAY</option>
-                                <option>PERU</option>
-                                <option>PHILIPPINES</option>
-                                <option>POLAND</option>
-                                <option>PORTUGAL</option>
-                                <option class="let">Q</option>
-                                <option>QATAR</option>
-                                <option class="let">R</option>
-                                <option>ROMANIA</option>
-                                <option>RUSSIAN FEDERATION</option>
-                                <option>RWANDA</option>
-                                <option class="let">S</option>
-                                <option>SAINT KITTS & NEVIS</option>
-                                <option>SAINT MARTIN(FRENCH)</option>
-                                <option>SAUDI ARABIA</option>
-                                <option>SCOTLAND</option>
-                                <option>SENEGAL</option>
-                                <option>SERBIA</option>
-                                <option>SINGAPORE</option>
-                                <option>SINT MAARTEN(DUTCH)</option>
-                                <option>SLOVAKIA</option>
-                                <option>SLOVENIA</option>
-                                <option>SOUTH AFRICA</option>
-                                <option>SOUTH KOREA</option>
-                                <option>SPAIN</option>
-                                <option>SRI LANKA</option>
-                                <option>ST BARTHELEMY</option>
-                                <option>ST LUCIA</option>
-                                <option>ST VINCENT AND THE GRENADINES</option>
-                                <option>SURINAME</option>
-                                <option>SWEDEN</option>
-                                <option>SWITZERLAND</option>
-                                <option class="let">T</option>
-                                <option>TAIWAN</option>
-                                <option>TAJIKISTAN</option>
-                                <option>TANZANIA</option>
-                                <option>THAILAND</option>
-                                <option>TONGA</option>
-                                <option>TRINIDAD AND TOBAGO</option>
-                                <option>TUNISIA</option>
-                                <option>TURKEY</option>
-                                <option>TURKS & CAICOS ISLANDS</option>
-                                <option class="let">U</option>
-                                <option>UGANDA</option>
-                                <option>UKRAINE</option>
-                                <option>UNITED ARAB EMIRATES</option>
-                                <option>UNITED KINGDOM</option>
-                                <option>UNITED STATES</option>
-                                <option>URUGUAY</option>
-                                <option>UZBEKISTAN</option>
-                                <option class="let">V</option>
-                                <option>VANUATU</option>
-                                <option>VENEZUELA</option>
-                                <option>VIETNAM</option>
-                                <option>VIRGIN ISLANDS BRITISH</option>
-                                <option>VIRGIN ISLANDS U.S</option>
-                                <option class="let">W</option>
-                                <option>WALES</option>
-                                <option class="let">Z</option>
-                                <option>ZAMBIA</option>
-                                <option>ZIMBABWE</option>
+                                <optgroup label="A">
+                                  <option>ALBANIA</option>
+                                  <option>ALGERIA</option>
+                                  <option>ANGUILLA</option>
+                                  <option>ANTIGUA AND BARBUDA</option>
+                                  <option>ARMENIA</option>
+                                  <option>AUSTRALIA</option>
+                                  <option>AUSTRIA</option>
+                                  <option>AZERBAIJAN</option>
+                                </optgroup>
+
+                                <optgroup label="B">
+                                  <option>BAHRAIN</option>
+                                  <option>BANGLADESH</option>
+                                  <option>BARBADOS</option>
+                                  <option>BELARUS</option>
+                                  <option>BELGIUM</option>
+                                  <option>BELIZE</option>
+                                  <option>BOSNIA & HERZEGOVINA</option>
+                                  <option>BRAZIL</option>
+                                  <option>BRUNEI</option>
+                                  <option>BULGARIA</option>
+                                  <option>BURKINA FASO</option>
+                                </optgroup>
+
+                                <optgroup label="C">
+                                  <option>CAMBODIA</option>
+                                  <option>CAMEROON</option>
+                                  <option>CANADA</option>
+                                  <option>CAYMAN ISLANDS</option>
+                                  <option>CHAD</option>
+                                  <option>CHILE</option>
+                                  <option>CHINA</option>
+                                  <option>COLOMBIA</option>
+                                  <option>CONGO</option>
+                                  <option>CONGO DEM REP</option>
+                                  <option>COSTA RICA</option>
+                                  <option>COTE D'IVOIRE (IVORY COAST)</option>
+                                  <option>CROATIA</option>
+                                  <option>CURACAO</option>
+                                  <option>CYPRUS</option>
+                                  <option>CZECH REPUBLIC</option>
+                                </optgroup>
+
+                                <optgroup label="D">
+                                  <option>DENMARK</option>
+                                  <option>DOMINICA</option>
+                                </optgroup>
+
+                                <optgroup label="E">
+                                  <option>ECUADOR</option>
+                                  <option>EGYPT</option>
+                                  <option>EL SALVADOR</option>
+                                  <option>ESTONIA</option>
+                                  <option>ETHIOPIA</option>
+                                </optgroup>
+
+                                <optgroup label="F">
+                                  <option>FAROE ISLANDS</option>
+                                  <option>FIJI</option>
+                                  <option>FINLAND</option>
+                                  <option>FRANCE</option>
+                                  <option>FRENCH GUIANA</option>
+                                </optgroup>
+
+                                <optgroup label="G">
+                                  <option>GABON</option>
+                                  <option>GEORGIA</option>
+                                  <option>GERMANY</option>
+                                  <option>GHANA</option>
+                                  <option>GIBRALTAR</option>
+                                  <option>GREECE</option>
+                                  <option>GREENLAND</option>
+                                  <option>GRENADA</option>
+                                  <option>GUADELOUPE</option>
+                                  <option>GUINEA</option>
+                                  <option>GUYANA</option>
+                                </optgroup>
+
+                                <optgroup label="H">
+                                  <option>HAITI</option>
+                                  <option>HAWAII - USA</option>
+                                  <option>HONDURAS</option>
+                                  <option>HONG KONG</option>
+                                  <option>HUNGARY</option>
+                                </optgroup>
+
+                                <optgroup label="I">
+                                  <option>ICELAND</option>
+                                  <option>INDIA</option>
+                                  <option>INDONESIA</option>
+                                  <option>IRAN</option>
+                                  <option>IRELAND</option>
+                                  <option>ISRAEL</option>
+                                  <option>ITALY</option>
+                                </optgroup>
+
+                                <optgroup label="J">
+                                  <option>JAMAICA</option>
+                                  <option>JAPAN</option>
+                                  <option>JERSEY ISLAND</option>
+                                  <option>JORDAN</option>
+                                </optgroup>
+
+                                <optgroup label="K">
+                                  <option>KAZAKHSTAN</option>
+                                  <option>KENYA</option>
+                                  <option>KUWAIT</option>
+                                  <option>KYRGYZSTAN</option>
+                                </optgroup>
+                                
+                                <optgroup label="L">
+                                  <option>LAOS</option>
+                                  <option>LATVIA</option>
+                                  <option>LIECHTENSTEIN</option>
+                                  <option>LITHUANIA</option>
+                                  <option>LUXEMBOURG</option>
+                                </optgroup>
+
+                                <optgroup label="M">
+                                  <option>MACAU</option>
+                                  <option>MACEDONIA</option>
+                                  <option>MADAGASCAR</option>
+                                  <option>MALAWI</option>
+                                  <option>MALAYSIA</option>
+                                  <option>MALTA</option>
+                                  <option>MARTINIQUE</option>
+                                  <option>MEXICO</option>
+                                  <option>MOLDOVA</option>
+                                  <option>MONGOLIA</option>
+                                  <option>MONTENEGRO</option>
+                                  <option>MONTSERRAT</option>
+                                  <option>MOROCCO</option>
+                                  <option>MOZAMBIQUE</option>
+                                  <option>MYANMAR</option>
+                                </optgroup>
+
+                                <optgroup label="N">
+                                  <option>NAMIBIA</option>
+                                  <option>NAURU</option>
+                                  <option>NEPAL</option>
+                                  <option>NETHERLANDS</option>
+                                  <option>NETHERLANDS ANTILLES</option>
+                                  <option>NEW ZEALAND</option>
+                                  <option>NICARAGUA</option>
+                                  <option>NIGERIA</option>
+                                  <option>NORTHERN IRELAND</option>
+                                  <option>NORWAY</option>
+                                </optgroup>
+
+                                <optgroup label="O">
+                                  <option>OMAN</option>
+                                </optgroup>
+
+                                <optgroup label="P">
+                                  <option>PAKISTAN</option>
+                                  <option>PALESTINE</li>
+                                  <option>PANAMA</li>
+                                  <option>PAPUA NEW GUINEA</li>
+                                  <option>PARAGUAY</option>
+                                  <option>PERU</option>
+                                  <option>PHILIPPINES</option>
+                                  <option>POLAND</option>
+                                  <option>PORTUGAL</option>
+                                </optgroup>
+
+                                <optgroup label="Q">
+                                  <option>QATAR</option>
+                                </optgroup>
+
+                                <optgroup label="R">
+                                  <option>ROMANIA</option>
+                                  <option>RUSSIAN FEDERATION</option>
+                                  <option>RWANDA</option>
+                                </optgroup>
+
+                                <optgroup label="S">
+                                  <option>SAINT KITTS & NEVIS</option>
+                                  <option>SAINT MARTIN(FRENCH)</option>
+                                  <option>SAUDI ARABIA</option>
+                                  <option>SCOTLAND</option>
+                                  <option>SENEGAL</option>
+                                  <option>SERBIA</option>
+                                  <option>SINGAPORE</option>
+                                  <option>SINT MAARTEN(DUTCH)</option>
+                                  <option>SLOVAKIA</option>
+                                  <option>SLOVENIA</option>
+                                  <option>SOUTH AFRICA</option>
+                                  <option>SOUTH KOREA</option>
+                                  <option>SPAIN</option>
+                                  <option>SRI LANKA</option>
+                                  <option>ST BARTHELEMY</option>
+                                  <option>ST LUCIA</option>
+                                  <option>ST VINCENT AND THE GRENADINES</option>
+                                  <option>SURINAME</option>
+                                  <option>SWEDEN</option>
+                                  <option>SWITZERLAND</option>
+                                </optgroup>
+
+                                <optgroup label="T">
+                                  <option>TAIWAN</option>
+                                  <option>TAJIKISTAN</option>
+                                  <option>TANZANIA</option>
+                                  <option>THAILAND</option>
+                                  <option>TONGA</option>
+                                  <option>TRINIDAD AND TOBAGO</option>
+                                  <option>TUNISIA</option>
+                                  <option>TURKEY</option>
+                                  <option>TURKS & CAICOS ISLANDS</option>
+                                </optgroup>
+
+                                <optgroup label="U">
+                                  <option>UGANDA</option>
+                                  <option>UKRAINE</option>
+                                  <option>UNITED ARAB EMIRATES</option>
+                                  <option>UNITED KINGDOM</option>
+                                  <option>UNITED STATES</option>
+                                  <option>URUGUAY</option>
+                                  <option>UZBEKISTAN</option>
+                                </optgroup>
+
+                                <optgroup label="V">
+                                  <option>VANUATU</option>
+                                  <option>VENEZUELA</option>
+                                  <option>VIETNAM</option>
+                                  <option>VIRGIN ISLANDS BRITISH</option>
+                                  <option>VIRGIN ISLANDS U.S</option>
+                                </optgroup>
+
+                                <optgroup label="W">
+                                  <option>WALES</option>
+                                </optgroup>
+
+                                <optgroup label="Z">
+                                  <option>ZAMBIA</option>
+                                  <option>ZIMBABWE</option>
+                                </optgroup>
                               </select>
                             </div>
                             <div class="col-sm-2"></div>
@@ -1861,6 +1892,8 @@
     </div>
   </div>
 
+
+
   <!-- Modal for app store -->
   <div class="modal fade" id="appStoreModal" tabindex="-1" role="dialog" aria-labelledby="appStoreModalLabel"
     aria-hidden="true">
@@ -1884,10 +1917,98 @@
     </div>
   </div>
   <!-- Modal end -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
+  
 
+  <!-- Modal: Compatible devices -->
+  <div class="modal fade modal-add" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <span class="modal-line"></span>
+            compatibile devices
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="title-box">
+            <p>Apple iPhones</p>
+            <span class="tit-line"></span>
+          </div>
+
+          <ul>
+            <li>iPhone 11</li>
+            <li>iPhone 11 Pro</li>
+            <li>iPhone 11 Pro Max</li>
+            <li>iPhone XS</li>
+            <li>iPhone XS Max</li>
+            <li>iPhone XS Max Global</li>
+            <li>iPhone XR</li>
+          </ul>
+
+          <div class="title-box">
+            <p>Apple iPads</p>
+            <span class="tit-line"></span>
+          </div>
+
+          <ul>
+            <li>iPad Pro 3rd Gen (12.9 inch, WiFi+Cellular)</li>
+            <li>iPad Pro 3rd Gen (12.9 inch, 1TB, WiFi+Cellular)</li>
+            <li>iPad mini 5th Gen</li>
+            <li>iPad Air 3rd Gen</li>
+          </ul>
+          <div class="title-box">
+            <p>Google</p>
+            <span class="tit-line"></span>
+          </div>
+
+          <ul>
+            <li>Pixel 3</li>
+            <li>Pixel 3 XL</li>
+            <li>Pixel 4</li>
+          </ul>
+          <div class="title-box">
+            <p>Samsung</p>
+            <span class="tit-line"></span>
+          </div>
+
+          <ul>
+            <li>Galaxy Fold LTE</li>
+            <li>Samsung Galaxy Z Flip</li>
+            <li>Samsung Galaxy S20, s20+ and S20 Ultra</li>
+            <li style="list-style: none;">
+              (Single SIM Nano-SIM and/or eSIM models )
+            </li>
+          </ul>
+
+          <div class="under-footer">
+            <ul>
+              <li>* Not compatible with carrier-locked phone</li>
+              <li>
+                * Not compatible with iPhone XR, XS models and 11 models
+                purchased in Hong Kong, Macau and Mainland China
+              </li>
+              <li>
+                * Not compatible with iPhones with 2 physical SIM card slots
+              </li>
+              <li>
+                * Not compatible with Pixel devices purchased in Australia
+              </li>
+              <li>
+                * Not compatible with devices on Android Q Beta versions
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end -->
+
+  <!-- Font Awesome -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 
   <!-- JS Files -->

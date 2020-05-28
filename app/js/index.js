@@ -153,7 +153,7 @@ $(document).ready(function () {
 
   $(".select-icon").click(function (e) {
 
-    $(".under-select").slideToggle();
+    $(".under-select").toggle();
 
     if (select_counter % 2 == 0) {
       $(this).css({
@@ -197,19 +197,19 @@ $(document).ready(function () {
 
 
 
-  $('.link-bas').hover(function () {
+  $('.link-basket').hover(function () {
     $(this).children("img").attr("src", "img/icons/basket-hover.svg");
 
   }, function () {
     $(this).children("img").attr("src", "img/icons/basket.svg");
   });
 
-  $('.link-user').hover(function () {
-    $(this).children("img").attr("src", "img/icons/user-outlined.png");
+  // $('.link-user').hover(function () {
+  //   $(this).children("img").attr("src", "img/icons/user-outlined.png");
 
-  }, function () {
-    $(this).children("img").attr("src", "img/icons/user.svg");
-  });
+  // }, function () {
+  //   $(this).children("img").attr("src", "img/icons/user.svg");
+  // });
 
 
   $("select.left-select").change(function () {

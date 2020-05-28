@@ -2,18 +2,29 @@
     display: none;
 }
 
+.mt--40 {
+    margin-top: -40px;
+}
+
+.mt--30 {
+    margin-top: -30px;
+}
+
+.rotate--45 {
+    transform: rotateZ(-45deg);
+}
 
 .modal-add {
     .modal-dialog {
         .modal-content {
-            border-radius: 20px !important;
+            border-radius: 15px !important;
             background: linear-gradient(rgb(163, 159, 159), rgb(48, 48, 48));
 
             .modal-header {
+                padding-top: 25px;
                 border: none !important;
 
                 .modal-title {
-
                     text-transform: uppercase;
 
                     text-align: center !important;
@@ -26,7 +37,7 @@
                     align-content: center;
 
                     .modal-line {
-                        width: 70px;
+                        width: 50px;
                         height: 2px;
                         background-color: red;
                     }
@@ -34,22 +45,24 @@
             }
 
             .modal-body {
-                padding: 20px;
+                padding: 20px 35px;
 
                 .under-footer {
-                    border-radius: 20px;
+                    border-radius: 15px;
                     border: 1px solid white;
                     padding: 10px;
 
                     ul {
                         list-style: none;
-                        padding-bottom: 0;
-                        margin-bottom: 0;
+                        padding: 0;
+                        margin: 0;
+                        padding-left: 10px;
                     }
 
                 }
 
                 ul {
+                    padding-left: 20px;
                     li {
                         color: white;
                         font-size: 14px;
@@ -73,7 +86,7 @@
 
                     span.tit-line {
                         width: 70%;
-                        height: 1.5px;
+                        height: 1px;
                         background-color: #fff;
                     }
                 }
@@ -114,22 +127,19 @@
         background-color: #fff;
         top: 0;
         // left: 0;
-
     }
 }
 
-.unlim-btn {
-    box-shadow: none !important;
-    transition: all 0.2s linear;
-    border: 1.5px solid white;
+// .unlim-btn {
+//     box-shadow: none !important;
+//     transition: all 0.2s linear;
+//     border: 1.5px solid white;
 
-    &:hover {
-        color: white;
-        background-color: rgb(173, 0, 0);
-
-
-    }
-}
+//     &:hover {
+//         color: white;
+//         background-color: #d40000;
+//     }
+// }
 
 input,
 select,
@@ -139,36 +149,7 @@ textarea {
 
 li.let {
     color: rgb(212, 0, 0);
-    padding: 10px;
     pointer-events: none;
-}
-
-.map-item-1 {
-    position: relative;
-
-    input {
-        position: absolute;
-        z-index: 99;
-        width: 100%;
-        top: 0;
-        left: 0;
-    }
-
-    span.close {
-        position: absolute;
-        z-index: 100;
-
-        right: 20px;
-        top: 8px;
-        color: black;
-        font-weight: bold;
-        cursor: pointer;
-
-        i {
-            transition: all 0.2s linear;
-        }
-
-    }
 }
 
 .under-nav {
@@ -216,6 +197,7 @@ div.last-tab {
                 font-weight: 600;
                 padding: 0;
                 margin: 0;
+                font-size: 18px;
             }
 
             div.item-box {
@@ -250,6 +232,14 @@ div.last-tab {
                             @media all and (max-width:576px) {
                                 margin: 5px 0;
                             }
+                        }
+
+                        optgroup[label] {
+                            color: red;
+                        }
+
+                        option {
+                            color: black;
                         }
 
                         p {
@@ -391,7 +381,7 @@ div.last-tab {
 
             h3 {
                 color: white;
-                font-weight: 600;
+                font-weight: 500;
                 display: flex;
                 flex-direction: row;
                 padding: 0;
@@ -430,15 +420,6 @@ div.last-tab {
 
 .section-tab {
 
-    span.active {
-        color: white;
-        background-color: red;
-
-        div.line {
-            background-color: white !important;
-        }
-    }
-
     .tab_item {
         display: none;
         position: relative;
@@ -446,7 +427,7 @@ div.last-tab {
         .prev {
             position: absolute;
             top: 50%;
-            left: -20px;
+            left: -25px;
             color: white;
             z-index: 999;
             font-weight: bold;
@@ -465,7 +446,7 @@ div.last-tab {
 
         .prev2,
         .next2 {
-            top: 60% !important;
+            top: 56% !important;
         }
 
         .prev3,
@@ -528,6 +509,16 @@ div.last-tab {
                 flex-direction: row;
                 justify-content: center;
 
+                .tab.active {
+                    color: white;
+                    background-color: red;
+                    border-color: red;
+            
+                    .line {
+                        background-color: white !important;
+                    }
+                }
+
                 .tab {
                     position: relative;
                     width: 100%;
@@ -539,13 +530,12 @@ div.last-tab {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-
-
+                    cursor: pointer;
 
                     div.line {
-                        width: 60px;
+                        width: 45px;
                         background-color: red;
-                        height: 4px;
+                        height: 3px;
                         margin: 0;
                         margin-top: 5px !important;
 
@@ -576,7 +566,8 @@ div.last-tab {
                         margin: 0;
                         width: auto;
                         text-align: center;
-                        font-size: 25px;
+                        font-size: 24px;
+                        font-weight: 600;
 
                         @media all and (max-width:961px) {
                             font-size: 14px;
@@ -613,10 +604,39 @@ div.last-tab {
             div.sel-box {
                 position: relative;
 
+                .map-item-1 {
+                    position: relative;
+                
+                    input {
+                        position: absolute;
+                        z-index: 99;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        padding-left: 23px;
+                    }
+                
+                    span.close {
+                        position: absolute;
+                        z-index: 100;
+                
+                        right: 20px;
+                        top: 8px;
+                        color: black;
+                        font-weight: bold;
+                        cursor: pointer;
+                
+                        i {
+                            transition: all 0.2s linear;
+                        }
+                    }
+                }
+
                 .under-select {
                     position: absolute;
                     top: 0;
-                    padding-top: 50px;
+                    padding-top: 40px;
+                    padding-bottom: 12px;
                     width: 100%;
                     left: 0;
                     // height: 70px;
@@ -624,8 +644,6 @@ div.last-tab {
                     border-radius: 20px;
                     z-index: 9;
                     background-color: white;
-                    padding-top: 40px !important;
-                    // padding: 10px;
 
                     div.row {
                         height: 500px;
@@ -636,7 +654,6 @@ div.last-tab {
                         &::-webkit-scrollbar {
                             width: 0.7em;
                             padding-right: 10px;
-
                         }
 
                         &::-webkit-scrollbar-track {
@@ -849,7 +866,7 @@ div.last-tab {
                     li.nav-item {
                         a.nav-link {
 
-                            padding: 10px 30px;
+                            padding: 5px 30px;
                             color: red !important;
                             background-color: #fff;
                             font-weight: bold;
@@ -879,9 +896,9 @@ div.last-tab {
     .carousel3 {
         width: 100%;
         position: relative;
-        padding-top: 60%;
+        padding-top: 42px;
         overflow: hidden;
-        min-height: 560px !important;
+        min-height: 625px !important;
     }
 
     .inner {
@@ -1010,9 +1027,10 @@ div.last-tab {
     .indicators {
         width: 100%;
         position: absolute;
-        bottom: 0;
+        bottom: 10px;
         z-index: 4;
         padding: 0;
+        margin-bottom: 0;
         text-align: center;
     }
 
@@ -1096,9 +1114,7 @@ div.last-tab {
     // for the purposes of this demo only. There is no need
     // to use these in any of your own projects
   
-    // .slide {}
-
-    .slide:nth-child(1) {
+    .slide {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -1108,7 +1124,7 @@ div.last-tab {
 
         div.item {
             width: 300px;
-            height: 470px;
+            height: 480px;
 
             @media all and (max-width:992px) {
                 margin: 0 10px;
@@ -1135,7 +1151,7 @@ div.last-tab {
 
                 span.right-span {
                     background-color: red;
-                    border-radius: 5px;
+                    border-radius: 8px;
                     margin-left: 10px;
                     padding: 0 10px;
                     transform: skewX(-20deg);
@@ -1153,7 +1169,8 @@ div.last-tab {
                         align-items: center;
                         align-content: center;
                         top: 0;
-                        font-size: 28px;
+                        font-size: 22px;
+                        font-style: italic;
                     }
                 }
             }
@@ -1206,6 +1223,8 @@ div.last-tab {
                 font-weight: 500;
                 text-align: center;
                 font-size: 28px;
+                margin-top: 8px;
+                margin-bottom: 12px;
 
                 em {
                     span {
@@ -1218,15 +1237,16 @@ div.last-tab {
             a.btn-buy {
                 width: 150px;
                 height: 40px;
+                line-height: 1.8;
                 margin-bottom: 10px;
                 background-color: transparent;
                 border: 2px solid white;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                align-content: center;
+                // align-content: center;
                 color: white;
-                border-radius: 15px;
+                border-radius: 12px;
                 font-size: 20px;
                 font-weight: normal;
                 transition: all 0.2s linear;
@@ -1278,8 +1298,4 @@ div.last-tab {
             }
         }
     }
-
-    // .slide:nth-child(2) {}
-
-    // .slide:nth-child(3) {}
 }
