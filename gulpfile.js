@@ -32,7 +32,7 @@ gulp.task('browser-sync', function() {
 
 // Sass|Scss Styles
 gulp.task('styles', function() {
-	return gulp.src(['app/sass/main.sass', 'app/sass/index.scss'])
+	return gulp.src('app/sass/main.sass')
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(autoprefixer())
 	// .pipe(cleancss()) // Opt., comment out when debugging
@@ -83,8 +83,8 @@ gulp.task('img', gulp.parallel('img1x', 'img2x'));
 
 // Watch changes
 gulp.task('watch', function() {
-	gulp.watch('app/sass/**/*.sass', gulp.parallel('styles'));
-	gulp.watch(['app/js/main.js'], gulp.parallel('scripts'));
+	gulp.watch('app/sass/**/*', gulp.parallel('styles'));
+	gulp.watch('app/js/**/*.js', gulp.parallel('scripts'));
 	gulp.watch('app/*.html', gulp.parallel('code'));
 	// gulp.watch('app/img/_src/**/*', gulp.parallel('img')); // GraphicsMagick watching image sources if allowed.
 });
