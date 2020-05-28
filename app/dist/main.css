@@ -11234,7 +11234,8 @@ strong {
   border-bottom-right-radius: 0.5rem !important;
 }
 
-.right-select {
+#country-select,
+#region-select {
   display: none;
 }
 
@@ -11407,9 +11408,7 @@ div.last-tab .left-item .inner-box h5 {
 }
 
 div.last-tab .left-item .inner-box div.item-box .row {
-  justify-content: space-between;
   align-items: center;
-  align-content: center;
 }
 
 div.last-tab .left-item .inner-box div.item-box .row .last-text {

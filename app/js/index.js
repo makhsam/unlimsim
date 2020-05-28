@@ -212,12 +212,19 @@ $(document).ready(function () {
   // });
 
 
-  $("select.left-select").change(function () {
+  $("#switch-location").change(function () {
 
-    $('select.right-select').css({
-      "display": "inline"
-    });
+    $('#region-select').hide();
+    $('#country-select').hide();
 
+    if (this.value == 'region') {
+      $('#region-select').show();
+    }
+    else if (this.value == 'country') {
+      $('#country-select').show();
+    }
+
+    console.log(this.value);
   });
 
   /*
