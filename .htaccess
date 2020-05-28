@@ -1,0 +1,5 @@
+# Rewrite all requests to subdirectory
+
+RewriteEngine on
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule (.*) /client/$1 [L]
